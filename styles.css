@@ -1,0 +1,75 @@
+#pokerogue-helper-panel {
+  display: flex;
+  flex-direction: column;
+  width: 600px;      /* fixed panel width */
+  height: 950px;     /* fixed panel height */
+  background: #121212;
+  color: white;
+  border-radius: 1px;
+  border: 1px solid #2a2a2a;
+  /*padding: 12px;*/
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#pokerogue-helper-panel h3 {
+  margin: 0 0 8px 0;
+  text-align: center;
+}
+
+/* Make the inner layout fill the panel and allow children to scroll */
+#pokerogue-helper-panel .pr-layout {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;   /* take remaining height in the panel */
+  min-height: 0;    /* important for scrollable children in flexbox */
+}
+
+/* Left side (Base stats + abilities) stays auto-height */
+#pokerogue-helper-panel .pr-left {
+  flex: 0 0 auto;
+  overflow-y: auto;
+  margin-bottom: 8px;
+}
+
+/* Right side (Possible Moves) fills the rest */
+#pokerogue-helper-panel .pr-right {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;    /* allows inner scroll area to shrink */
+}
+
+/* New wrapper: this is where the scrollbar will appear */
+#pokerogue-helper-panel .pr-moves-wrapper {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;   /* vertical scrollbar when needed */
+}
+
+/* Table can be a normal table again */
+#pokerogue-helper-panel .pr-moves {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Keep header fixed at top of wrapper */
+#pokerogue-helper-panel .pr-moves thead {
+  position: sticky;
+  top: 0;
+  background: #121212; /* match panel background */
+  z-index: 1;
+}
+
+#pokerogue-helper-panel .pr-moves th,
+#pokerogue-helper-panel .pr-moves td {
+  border: 1px solid #555;
+  padding: 1px 8px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+#pokerogue-helper-panel .pr-moves tbody tr:nth-child(even) {
+  background-color: rgba(255,255,255,0.05);
+}
