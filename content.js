@@ -137,7 +137,6 @@ function computeShapeSimilarity(currentStats, baseStats) {
 // Uses:
 // - ARC.DB.getSpecies(speciesId).name (arrives as enemy.speciesName)
 // - speciesId ONLY when that name is "."
-// - enemy.baseStats (from ARC.DB.getSpecies)
 // - enemy.abilityName
 // - enemy.passiveName
 //
@@ -158,42 +157,10 @@ function findBestPokedexEntryForEnemy(enemy) {
   const isDotName = rawName === ".";
   const baseNameNorm = rawName ? normalizeBaseSpeciesName(rawName) : "";
   const biome = enemy.biome != null ? Number(enemy.biome) : null;
-  const enemyBaseStats = enemy.baseStats || null; // from ARC.DB.getSpecies(speciesId).baseStats
   const enemyAbilityNorm = enemy.abilityName ? normalizeAbilityName(enemy.abilityName) : null;
   const enemyPassiveNorm = enemy.passiveName ? normalizeAbilityName(enemy.passiveName) : null;
 
   const statKeys = ["hp", "atk", "def", "spa", "spd", "spe"];
-
-  function normalizeEntryBaseStats(entry) {
-    if (!entry || !entry.baseStats) return null;
-    const bs = entry.baseStats;
-
-    // Object form
-    if (typeof bs === "object" && !Array.isArray(bs)) {
-      return {
-        hp: Number(bs.hp ?? bs.HP ?? 0),
-        atk: Number(bs.atk ?? bs.ATK ?? 0),
-        def: Number(bs.def ?? bs.DEF ?? 0),
-        spa: Number(bs.spa ?? bs.SPA ?? 0),
-        spd: Number(bs.spd ?? bs.SPD ?? 0),
-        spe: Number(bs.spe ?? bs.SPE ?? 0),
-      };
-    }
-
-    // Array form [hp, atk, def, spa, spd, spe]
-    if (Array.isArray(bs)) {
-      return {
-        hp: Number(bs[0] ?? 0),
-        atk: Number(bs[1] ?? 0),
-        def: Number(bs[2] ?? 0),
-        spa: Number(bs[3] ?? 0),
-        spd: Number(bs[4] ?? 0),
-        spe: Number(bs[5] ?? 0),
-      };
-    }
-
-    return null;
-  }
 
   let candidates = [];
 
@@ -265,15 +232,15 @@ if (baseNameNorm === "pikachu") {
   // Wormadam's forms are determined by the current biome in PokeRogue:
   // - biome === 30 -> Trash form
   // - biome === 15 -> Plant form
-  // - biome === 5  -> Sandy form
+  // - biome === 8  -> Sandy form
   // - otherwise    -> default Plant form
   if (baseNameNorm === "wormadam") {
     let desiredForm = "Plant";
     if (biome === 30) {
       desiredForm = "Trash";
-    } else if (biome === 5) {
+    } else if (biome === 8) {
       desiredForm = "Sandy";
-    } else if (biome === 15) {
+    } else if (biome === 5) {
       desiredForm = "Plant";
     }
 
@@ -307,16 +274,6 @@ if (baseNameNorm === "pikachu") {
     let best = null;
     let bestScore = -1;
 
-    // Precompute enemy base stats as numbers (if available)
-    let enemyBs = null;
-    if (enemyBaseStats) {
-      enemyBs = {};
-      statKeys.forEach((k) => {
-        const v = enemyBaseStats[k];
-        if (v != null) enemyBs[k] = Number(v);
-      });
-    }
-
     for (const entry of pool) {
       let score = 0;
 
@@ -336,20 +293,6 @@ if (baseNameNorm === "pikachu") {
         }
       }
 
-      // Finally: exact base stat match as a weaker tie-breaker
-      if (enemyBs) {
-        const ebs = normalizeEntryBaseStats(entry);
-        if (ebs) {
-          const allEqual = statKeys.every((k) => {
-            if (enemyBs[k] == null) return false;
-            return Number(ebs[k]) === Number(enemyBs[k]);
-          });
-          if (allEqual) {
-            score += 1;
-          }
-        }
-      }
-
       if (score > bestScore) {
         bestScore = score;
         best = entry;
@@ -361,35 +304,6 @@ if (baseNameNorm === "pikachu") {
       return best;
     }
   }
-
-  // If we get here, we either had no passive/ability info or nothing matched.
-  // Fall back to the old baseStat narrowing logic on the same pool.
-  let statFiltered = pool;
-  if (enemyBaseStats) {
-    const enemyBs = {};
-    statKeys.forEach((k) => {
-      const v = enemyBaseStats[k];
-      if (v != null) enemyBs[k] = Number(v);
-    });
-
-    const matches = pool.filter((entry) => {
-      const ebs = normalizeEntryBaseStats(entry);
-      if (!ebs) return false;
-      return statKeys.every((k) => {
-        if (enemyBs[k] == null) return false;
-        return Number(ebs[k]) === Number(enemyBs[k]);
-      });
-    });
-
-    if (matches.length > 0) {
-      statFiltered = matches;
-    }
-  }
-
-  if (statFiltered.length > 0) {
-    return statFiltered[0];
-  }
-
   // Absolute last resort: first candidate overall.
   return pool[0];
 }
@@ -452,8 +366,8 @@ function initializePanelLayout(panel) {
   panel.innerHTML = `
     <div id="pr-header" class="pr-header">
       <div id="pr-tabs" class="pr-tabs"></div>
-      <h3 id="pr-title">Loading enemy Pokémon...</h3>
     </div>
+    <h3 id="pr-title">Loading enemy Pokémon...</h3>
     <div class="pr-layout">
       <div class="pr-left" id="pr-left"></div>
       <div class="pr-right" id="pr-right">
@@ -705,6 +619,148 @@ function buildEnemyTabs(enemies, moveDB) {
     tabsContainer.appendChild(btn);
   });
 
+  // If any of the provided enemies is Eternatus, append an Eternamax tab
+  const hasEternatus = enemies.some((e) => {
+    const name = e.speciesName || "";
+    return (
+      normalizeBaseSpeciesName(name) === "eternatus" ||
+      String(name).toLowerCase().includes("eternatus")
+    );
+  });
+
+  if (hasEternatus) {
+    let eternamaxEntry = null;
+    if (typeof POKEDEX_COMPACT !== "undefined" && Array.isArray(POKEDEX_COMPACT)) {
+      eternamaxEntry = POKEDEX_COMPACT.find((entry) => {
+        const dn = (entry.displayName || entry.name || "").toLowerCase();
+        return dn.includes("eternamax");
+      });
+    }
+
+    const emDisplayName =
+      (eternamaxEntry && (eternamaxEntry.displayName || eternamaxEntry.name)) ||
+      "Eternamax Eternatus";
+
+    const emBtn = document.createElement("button");
+    emBtn.className = "pr-tab-button pr-eternamax-button";
+    emBtn.textContent = emDisplayName;
+
+    const syntheticEnemy = {
+      id: "eternamax",
+      speciesId: eternamaxEntry ? eternamaxEntry.speciesId : enemies[0]?.speciesId,
+      speciesName: emDisplayName,
+      biome: enemies[0]?.biome ?? null,
+      level: enemies[0]?.level ?? 100,
+    };
+
+    emBtn.addEventListener("click", () => {
+      currentTabIndex = Array.from(tabsContainer.children).indexOf(emBtn);
+      [...tabsContainer.children].forEach((c) => c.classList.remove("active"));
+      emBtn.classList.add("active");
+      renderEnemy(syntheticEnemy, moveDB);
+    });
+
+    tabsContainer.appendChild(emBtn);
+  }
+
+  // If Rotom is present among the enemies, append tabs for all Rotom forms
+  const hasRotom = enemies.some((e) => {
+    const name = e.speciesName || "";
+    return (
+      normalizeBaseSpeciesName(name) === "rotom" ||
+      String(name).toLowerCase().includes("rotom")
+    );
+  });
+
+  if (hasRotom) {
+    let rotomEntries = [];
+    if (typeof POKEDEX_COMPACT !== "undefined" && Array.isArray(POKEDEX_COMPACT)) {
+      rotomEntries = POKEDEX_COMPACT.filter((entry) => {
+        if (!entry) return false;
+        const dn = (entry.displayName || entry.name || "").toLowerCase();
+        return dn.includes("rotom");
+      });
+    }
+
+    const seen = new Set();
+    rotomEntries.forEach((entry) => {
+      const label = (entry.displayName || entry.name || "").trim();
+      if (!label || seen.has(label)) return;
+      seen.add(label);
+
+      const rBtn = document.createElement("button");
+      rBtn.className = "pr-tab-button pr-rotom-button";
+      rBtn.textContent = label;
+
+      const syntheticRotom = {
+        id: `rotom-${label.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`,
+        speciesId: entry.speciesId,
+        speciesName: label,
+        biome: enemies[0]?.biome ?? null,
+        level: enemies[0]?.level ?? 50,
+        baseStats: entry.baseStats || null,
+      };
+
+      rBtn.addEventListener("click", () => {
+        currentTabIndex = Array.from(tabsContainer.children).indexOf(rBtn);
+        [...tabsContainer.children].forEach((c) => c.classList.remove("active"));
+        rBtn.classList.add("active");
+        renderEnemy(syntheticRotom, moveDB);
+      });
+
+      tabsContainer.appendChild(rBtn);
+    });
+  }
+
+    // If Eiscue is present, append a "No Ice" form tab
+    const hasEiscue = enemies.some((e) => {
+      const name = e.speciesName || "";
+      return (
+        normalizeBaseSpeciesName(name) === "eiscue" ||
+        String(name).toLowerCase().includes("eiscue")
+      );
+    });
+
+    if (hasEiscue) {
+      let noIceEntry = null;
+      if (typeof POKEDEX_COMPACT !== "undefined" && Array.isArray(POKEDEX_COMPACT)) {
+        noIceEntry = POKEDEX_COMPACT.find((entry) => {
+          if (!entry) return false;
+          const dn = (entry.displayName || entry.name || "").toLowerCase();
+          const form = (entry.form || "").toLowerCase();
+          return (
+            dn.includes("eiscue") &&
+            (dn.includes("no ice") || dn.includes("no-ice") || dn.includes("noice") || form.includes("no ice") || form.includes("no-ice"))
+          );
+        });
+      }
+
+      const niDisplayName =
+        (noIceEntry && (noIceEntry.displayName || noIceEntry.name)) ||
+        "Eiscue (No Ice)";
+
+      const niBtn = document.createElement("button");
+      niBtn.className = "pr-tab-button pr-eiscue-noice";
+      niBtn.textContent = niDisplayName;
+
+      const syntheticNoIce = {
+        id: "eiscue-noice",
+        speciesId: noIceEntry ? noIceEntry.speciesId : enemies[0]?.speciesId,
+        speciesName: niDisplayName,
+        biome: enemies[0]?.biome ?? null,
+        level: enemies[0]?.level ?? 50,
+      };
+
+      niBtn.addEventListener("click", () => {
+        currentTabIndex = Array.from(tabsContainer.children).indexOf(niBtn);
+        [...tabsContainer.children].forEach((c) => c.classList.remove("active"));
+        niBtn.classList.add("active");
+        renderEnemy(syntheticNoIce, moveDB);
+      });
+
+      tabsContainer.appendChild(niBtn);
+    }
+
   if (tabsContainer.children.length > 0) {
     tabsContainer.children[0].classList.add("active");
   }
@@ -731,6 +787,33 @@ document.addEventListener("keydown", (e) => {
       document.documentElement.style.zoom = panelVisible ? "0.9" : "1";
     } catch (err) {
       console.warn("Failed to adjust zoom on panel toggle:", err);
+    }
+  }
+});
+
+// Hotkey: Q to cycle through tabs
+document.addEventListener("keydown", (e) => {
+  const tag = document.activeElement?.tagName;
+  if (tag === "INPUT" || tag === "TEXTAREA") return;
+
+  if (e.key === "q" || e.key === "Q") {
+    const tabsContainer = document.getElementById("pr-tabs");
+    if (!tabsContainer) return;
+    // If tabs hidden, do nothing
+    if (tabsContainer.style.display === "none") return;
+
+    const children = Array.from(tabsContainer.children);
+    if (children.length === 0) return;
+
+    const activeIndex = children.findIndex((c) => c.classList.contains("active"));
+    const nextIndex = (activeIndex + 1) % children.length;
+
+    // Trigger the existing click handler for the next tab/button
+    children[nextIndex].click();
+    try {
+      children[nextIndex].focus();
+    } catch (err) {
+      /* ignore */
     }
   }
 });
@@ -868,14 +951,32 @@ window.addEventListener("message", async (event) => {
 
     const revealedList = Array.from(revealedEnemies.values());
     const activeCount = currentEnemies.length;
+      const tabsContainer = document.getElementById("pr-tabs");
 
-    const tabsContainer = document.getElementById("pr-tabs");
+      // Show tabs when two active enemies OR when Eternatus is present
+      const isEternatusPresent = currentEnemies.some((e) => {
+        const name = e.speciesName || "";
+        return (
+          normalizeBaseSpeciesName(name) === "eternatus" ||
+          String(name).toLowerCase().includes("eternatus")
+        );
+      });
+      const isEiscuePresent = currentEnemies.some((e) => {
+        const name = e.speciesName || "";
+        return (
+          normalizeBaseSpeciesName(name) === "eiscue" ||
+          String(name).toLowerCase().includes("eiscue")
+        );
+      });
 
-    if (tabsContainer && activeCount === 2) {
-      // Two active enemies: show tabs
-      tabsContainer.style.display = "";
-      buildEnemyTabs(revealedList, moveData);
-    } else {
+      if (tabsContainer && (activeCount > 1 || isEternatusPresent || isEiscuePresent)) {
+        // Two active enemies or Eternatus present: show tabs (Eternamax tab will be added)
+        tabsContainer.style.display = "";
+        // Use the live `currentEnemies` when there are two or more active enemies,
+        // otherwise show tabs derived from revealedList (for single Eiscue/Eternatus cases)
+        const tabSource = activeCount >= 2 ? currentEnemies : revealedList;
+        buildEnemyTabs(tabSource, moveData);
+      } else {
       // Single (or 0) enemy: no tabs, just show most relevant
       if (tabsContainer) {
         tabsContainer.innerHTML = "";

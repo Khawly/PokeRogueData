@@ -73,3 +73,43 @@
 #pokerogue-helper-panel .pr-moves tbody tr:nth-child(even) {
   background-color: rgba(255,255,255,0.05);
 }
+
+/* Tabs and buttons for enemy selection */
+#pokerogue-helper-panel .pr-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#pokerogue-helper-panel .pr-tabs {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 4px 0;
+ /* max-width: 50%;*/
+}
+
+.pr-tab-button {
+  background: #1f1f1f;
+  color: #fff;
+  border: 1px solid #333;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.pr-tab-button.active {
+  background: #3b82f6;
+  border-color: #2563eb;
+}
+
+/* Center the Pokémon name in the header */
+/* Title placed under tabs */
+#pokerogue-helper-panel #pr-title {
+  text-align: center;
+  margin: 6px 0 8px 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
