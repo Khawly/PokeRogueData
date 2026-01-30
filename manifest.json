@@ -15,7 +15,7 @@
   "content_scripts": [
     {
       "matches": ["*://*.pokerogue.net/*"],
-      "js": ["pokedex_compact.js", "content.js"],
+      "js": ["pokedex.js", "content.js"],
       "css": ["styles.css"],
       "run_at": "document_end"
     }
@@ -24,8 +24,9 @@
   "web_accessible_resources": [
     {
       "resources": [
-        "move-data.json",
-        "pageHook.js"
+        "move_data.json",
+        "pageHook.js",
+        "ability_data.json"
       ],
       "matches": ["*://*.pokerogue.net/*"]
     }

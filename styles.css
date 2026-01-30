@@ -88,6 +88,11 @@
   font-weight: bold;
 }
 
+/* Move name text color */
+#pokerogue-helper-panel .pr-move {
+  color: #000 !important;
+}
+
 #pokerogue-helper-panel .pr-moves th {
   background: linear-gradient(45deg, #FFD700, #FFA500); /* Gold to orange */
   color: #000;

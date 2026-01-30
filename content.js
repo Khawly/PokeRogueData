@@ -88,7 +88,8 @@ function normalizeBaseSpeciesName(name) {
 function getMoveInfo(moveDBObj, moveName) {
   if (!moveDBObj || !moveName) return {};
   const id = normalizeMoveNameForId(moveName);
-  return moveDBObj[id] || {};
+  // Try normalized key first, then fallback to original name
+  return moveDBObj[id] || moveDBObj[moveName] || {};
 }
 
 // Compare the *shape* of current stats vs base stats (not used for ID right now,
@@ -142,11 +143,11 @@ function computeShapeSimilarity(currentStats, baseStats) {
 //
 // Special case: Pikachu
 // - All forms appear as "Pikachu" from getSpecies().name.
-// - We gather ALL entries whose base species is Pikachu from POKEDEX_COMPACT,
+// - We gather ALL entries whose base species is Pikachu from POKEDEX,
 //   then pick the correct one with passive (strongest signal) and ability.
 //
 function findBestPokedexEntryForEnemy(enemy) {
-  if (typeof POKEDEX_COMPACT === "undefined" || !Array.isArray(POKEDEX_COMPACT)) {
+  if (typeof POKEDEX === "undefined" || !Array.isArray(POKEDEX)) {
     return null;
   }
   if (!enemy) return null;
@@ -169,7 +170,7 @@ if (hasName && !isDotName) {
   const targetNameNorm = normalizeSpeciesNameForMatch(rawName);
   const targetBaseNorm = baseNameNorm; // e.g. "florges", "golem"
 
-  candidates = POKEDEX_COMPACT.filter((entry) => {
+  candidates = POKEDEX.filter((entry) => {
     if (!entry) return false;
 
     const entryName = entry.name || "";
@@ -197,7 +198,7 @@ if (hasName && !isDotName) {
 // --- Step 2: Pikachu special-case ---
 // Add ALL forms of Pikachu (any entry whose name contains "pikachu")
 if (baseNameNorm === "pikachu") {
-  const pikCandidates = POKEDEX_COMPACT.filter((entry) => {
+  const pikCandidates = POKEDEX.filter((entry) => {
     if (!entry) return false;
 
     const dn = (entry.displayName || entry.name || "").toLowerCase();
@@ -215,10 +216,10 @@ if (baseNameNorm === "pikachu") {
   //    This covers:
   //    - getSpecies(speciesId).name === "."
   //    - cosmetic / color forms where the in-game name
-  //      doesn't match any displayName in pokedex_compact,
+  //      doesn't match any displayName in POKEDEX,
   //      but the speciesId still lines up.
   if (speciesId != null && (!candidates || candidates.length === 0)) {
-    candidates = POKEDEX_COMPACT.filter(
+    candidates = POKEDEX.filter(
       (entry) => entry && entry.speciesId === speciesId
     );
   }
@@ -253,7 +254,7 @@ if (baseNameNorm === "pikachu") {
       // Directly return the Wormadam form dictated by biome
       return wormCandidates[0];
     }
-    // If somehow no matching form exists in pokedex_compact,
+    // If somehow no matching form exists in POKEDEX,
     // fall through to the generic logic below.
   }
 
@@ -313,7 +314,7 @@ if (baseNameNorm === "pikachu") {
 // =======================
 async function loadMoveDB() {
   if (!moveDB) {
-    moveDB = await fetch(chrome.runtime.getURL("move-data.json")).then((r) =>
+    moveDB = await fetch(chrome.runtime.getURL("move_data.json")).then((r) =>
       r.json()
     );
   }
@@ -329,6 +330,7 @@ function ensurePanel() {
 
   panel = document.createElement("div");
   panel.id = "pokerogue-helper-panel";
+  panel.style.position = "relative";
 
   const gameContainer =
     document.querySelector("#game") ||
@@ -359,6 +361,39 @@ function ensurePanel() {
 
   return panel;
 }
+
+function ensurePopupModalInPanel() {
+  const panel = document.getElementById('pokerogue-helper-panel');
+  if (!panel) return;
+  // Remove any duplicate modals
+  const existing = Array.from(document.querySelectorAll('#pr-popup-modal'));
+  let modal = existing[0] || null;
+  if (existing.length > 1) {
+    existing.slice(1).forEach((m) => m.remove());
+  }
+  if (modal && modal.parentElement !== panel) {
+    modal.remove();
+    modal = null;
+  }
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'pr-popup-modal';
+    modal.style.display = 'none';
+    modal.style.position = 'absolute';
+    modal.style.zIndex = '1000';
+    modal.style.top = '50%';
+    modal.style.left = '50%';
+    modal.style.transform = 'translate(-50%, -50%)';
+    modal.style.background = 'rgba(0,0,0,0.15)';
+    modal.style.width = '340px';
+    modal.style.maxWidth = '95%';
+    modal.style.alignItems = 'center';
+    modal.style.justifyContent = 'center';
+    panel.appendChild(modal);
+  }
+}
+// Always ensure the popup modal is in the panel after panel creation
+ensurePopupModalInPanel();
 
 function initializePanelLayout(panel) {
   if (panel.dataset.initialized) return;
@@ -396,6 +431,8 @@ function initializePanelLayout(panel) {
 // Rendering a single enemy
 // =======================
 function renderEnemy(enemy, moveDB) {
+    ensurePopupModalInPanel();
+  ensurePanel();
   if (!enemy) return;
 
   const level = enemy.level;
@@ -514,26 +551,39 @@ function renderEnemy(enemy, moveDB) {
         <li><span>Sp.Def: </span><span>${stats.spDefense}</span></li>
         <li><span>Speed: </span><span>${stats.speed}</span></li>
         <li><span>Total: </span><span>${totalBaseStat}</span></li>
+        <li><span>Weight: </span><span>${entry.weight ?? "—"} kg</span></li>
         </ul>
       </div>
     </div>
 
     <div class="pr-abilities">
       <h4>Possible Abilities</h4>
-      <ul>
+      <ul id="pr-abilities-list">
         ${
           abilities.length > 0
-            ? abilities.map((a) => `<li>${a}</li>`).join("")
+            ? abilities.map((a) => `<li class="pr-ability" data-ability="${a}">${a}</li>`).join("")
             : "<li>Unknown</li>"
         }
         ${
           passive
-            ? `<li>${passive} <span class="pr-passive-tag">(Passive)</span></li>`
+            ? `<li class="pr-ability" data-ability="${passive}">${passive} <span class="pr-passive-tag">(Passive)</span></li>`
             : ""
         }
       </ul>
     </div>
   `;
+    // Add event listeners for ability popups
+    setTimeout(() => {
+      const abilityData = window.ABILITY_DATA || {};
+      document.querySelectorAll('.pr-ability').forEach(el => {
+        el.addEventListener('click', e => {
+          e.stopPropagation();
+          const ability = el.getAttribute('data-ability');
+          let desc = abilityData[ability]?.description || 'No description found.';
+          showPopup(ability, desc);
+        });
+      });
+    }, 0);
   }
 
   const tbody = document.querySelector("#pr-moves tbody");
@@ -543,16 +593,63 @@ function renderEnemy(enemy, moveDB) {
         (m) => `
       <tr class="type-${m.type ? m.type.toLowerCase() : ''}">
         <td>${m.level ?? "—"}</td>
-        <td>${capitalize(m.name)}</td>
-        <td>${
-          m.type ? capitalize(m.type) : "—"
-        } / ${m.category ? capitalize(m.category) : "—"}</td>
+        <td><span class="pr-move" data-move="${m.name}">${capitalize(m.name)}</span></td>
+        <td>${m.type ? capitalize(m.type) : "—"} / ${m.category ? capitalize(m.category) : "—"}</td>
         <td>${m.power ?? "—"} / ${m.accuracy ?? "—"}</td>
       </tr>
     `
       )
       .join("");
+    // Add event listeners for move popups
+    setTimeout(() => {
+      document.querySelectorAll('.pr-move').forEach(el => {
+        el.addEventListener('click', e => {
+          e.stopPropagation();
+          const move = el.getAttribute('data-move');
+          const moveInfo = getMoveInfo(moveDB, move);
+          let desc = moveInfo.description || 'No description found.';
+          showPopup(move, desc);
+        });
+      });
+    }, 0);
   }
+
+  // Helper to show popup
+  function showPopup(title, desc) {
+    ensurePopupModalInPanel();
+    const modal = document.getElementById('pr-popup-modal');
+    if (modal) {
+      const safeTitle = title ? String(title) : "Unknown";
+      const safeDesc = desc ? String(desc) : "No description found.";
+      modal.innerHTML = `
+        <div id="pr-popup-content" style="background:#000;padding:16px 18px 16px 18px;border-radius:8px;max-width:320px;box-shadow:0 2px 16px #0008;position:relative;">
+          <button id="pr-popup-close" style="position:absolute;top:8px;right:8px;font-size:18px;background:none;border:none;cursor:pointer;color:#fff;">&times;</button>
+          <div id="pr-popup-title" style="font-weight:bold;margin-bottom:8px;color:#fff;">${safeTitle}</div>
+          <div id="pr-popup-desc" style="white-space:pre-wrap;color:#fff;">${safeDesc}</div>
+        </div>
+      `;
+      // Reattach close handlers after rendering
+      modal.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
+      const closeBtn = modal.querySelector('#pr-popup-close');
+      if (closeBtn) closeBtn.onclick = (ev) => { ev.stopPropagation(); modal.style.display = 'none'; };
+      // Position modal relative to the panel
+      modal.style.display = 'block';
+      modal.style.position = 'absolute'; // Ensure modal is absolute within panel
+    }
+  }
+// ===============
+// Load ability_data.json for popups
+// ===============
+(async function loadAbilityDataForPanel() {
+  if (!window.ABILITY_DATA) {
+    try {
+      const resp = await fetch(chrome.runtime.getURL('ability_data.json'));
+      window.ABILITY_DATA = await resp.json();
+    } catch (e) {
+      window.ABILITY_DATA = {};
+    }
+  }
+})();
 }
 
 // =======================
@@ -630,8 +727,8 @@ function buildEnemyTabs(enemies, moveDB) {
 
   if (hasEternatus) {
     let eternamaxEntry = null;
-    if (typeof POKEDEX_COMPACT !== "undefined" && Array.isArray(POKEDEX_COMPACT)) {
-      eternamaxEntry = POKEDEX_COMPACT.find((entry) => {
+    if (typeof POKEDEX !== "undefined" && Array.isArray(POKEDEX)) {
+      eternamaxEntry = POKEDEX.find((entry) => {
         const dn = (entry.displayName || entry.name || "").toLowerCase();
         return dn.includes("eternamax");
       });
@@ -674,8 +771,8 @@ function buildEnemyTabs(enemies, moveDB) {
 
   if (hasRotom) {
     let rotomEntries = [];
-    if (typeof POKEDEX_COMPACT !== "undefined" && Array.isArray(POKEDEX_COMPACT)) {
-      rotomEntries = POKEDEX_COMPACT.filter((entry) => {
+    if (typeof POKEDEX !== "undefined" && Array.isArray(POKEDEX)) {
+      rotomEntries = POKEDEX.filter((entry) => {
         if (!entry) return false;
         const dn = (entry.displayName || entry.name || "").toLowerCase();
         return dn.includes("rotom");
@@ -723,8 +820,8 @@ function buildEnemyTabs(enemies, moveDB) {
 
     if (hasEiscue) {
       let noIceEntry = null;
-      if (typeof POKEDEX_COMPACT !== "undefined" && Array.isArray(POKEDEX_COMPACT)) {
-        noIceEntry = POKEDEX_COMPACT.find((entry) => {
+      if (typeof POKEDEX !== "undefined" && Array.isArray(POKEDEX)) {
+        noIceEntry = POKEDEX.find((entry) => {
           if (!entry) return false;
           const dn = (entry.displayName || entry.name || "").toLowerCase();
           const form = (entry.form || "").toLowerCase();
