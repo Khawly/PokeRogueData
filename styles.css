@@ -3,19 +3,22 @@
   flex-direction: column;
   width: 600px;      /* fixed panel width */
   height: 950px;     /* fixed panel height */
-  background: #121212;
-  color: white;
-  border-radius: 1px;
-  border: 1px solid #2a2a2a;
-  /*padding: 12px;*/
-  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #8B0000 0%, #FF0000 100%); /* More red gradient */
+  color: black;
+  border-radius: 15px; /* More rounded for a modern look */
+  border: 1px solid #FFD700; /* Gold border like Poké Ball */
+  font-weight: bold;
   box-sizing: border-box;
   overflow: hidden;
+ /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);  Shadow for depth */
 }
 
 #pokerogue-helper-panel h3 {
-  margin: 0 0 8px 0;
+  margin: 0 0 2px 0;
   text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);  /* Text shadow for depth */
 }
 
 /* Make the inner layout fill the panel and allow children to scroll */
@@ -30,7 +33,11 @@
 #pokerogue-helper-panel .pr-left {
   flex: 0 0 auto;
   overflow-y: auto;
-  margin-bottom: 8px;
+  margin-bottom: 1px;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  border-radius: 1px;
+  padding: 1px;
+  border: 1px solid rgba(255, 215, 0, 0.5);
 }
 
 /* Right side (Possible Moves) fills the rest */
@@ -39,6 +46,10 @@
   display: flex;
   flex-direction: column;
   min-height: 0;    /* allows inner scroll area to shrink */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1px;
+  padding: 1px;
+  border: 1px solid rgba(255, 215, 0, 0.5);
 }
 
 /* New wrapper: this is where the scrollbar will appear */
@@ -46,6 +57,10 @@
   flex: 1 1 auto;
   min-height: 0;
   overflow-y: auto;   /* vertical scrollbar when needed */
+  scrollbar-width: none; /* Firefox */
+  #pokerogue-helper-panel .pr-moves-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
 }
 
 /* Table can be a normal table again */
@@ -58,20 +73,85 @@
 #pokerogue-helper-panel .pr-moves thead {
   position: sticky;
   top: 0;
-  background: #121212; /* match panel background */
+  background: rgba(0, 0, 0, 0.8); /* Dark background for header */
   z-index: 1;
+  border-radius: 1px;
 }
 
 #pokerogue-helper-panel .pr-moves th,
 #pokerogue-helper-panel .pr-moves td {
+  color: black !important;
   border: 1px solid #555;
-  padding: 1px 8px;
+  padding: 1px 4px;
   text-align: center;
   white-space: nowrap;
+  font-weight: bold;
+}
+
+#pokerogue-helper-panel .pr-moves th {
+  background: linear-gradient(45deg, #FFD700, #FFA500); /* Gold to orange */
+  color: #000;
+  font-weight: bold;
 }
 
 #pokerogue-helper-panel .pr-moves tbody tr:nth-child(even) {
   background-color: rgba(255,255,255,0.05);
+}
+
+/* Type-based row colors for moves */
+#pokerogue-helper-panel .pr-moves tbody tr.type-normal {
+  background-color: #A8A878 !important;
+}
+#pokerogue-helper-panel .pr-moves tbody tr.type-fire {
+  background-color: #F08030 !important;
+}
+#pokerogue-helper-panel .pr-moves tbody tr.type-water {
+  background-color: #6890F0 !important;
+}
+#pokerogue-helper-panel .pr-moves tbody tr.type-electric {
+  background-color: #F8D030 !important;
+}
+#pokerogue-helper-panel .pr-moves tbody tr.type-grass {
+  background-color: #78C850 !important;
+}
+#pokerogue-helper-panel .pr-moves tbody tr.type-ice {
+  background-color: #98D8D8 !important;
+}
+#pokerogue-helper-panel .pr-moves tbody tr.type-fighting {
+  background-color: #C03028 !important;
+}
+#pokerogue-helper-panel .pr-moves tbody tr.type-poison {
+  background-color: #A040A0 !important;
+}
+#pokerogue-helper-panel .pr-moves tbody tr.type-ground {
+  background-color: #E0C068 !important;
+}
+#pokerogue-helper-panel .pr-moves tbody tr.type-flying {
+  background-color: #A890F0 !important;
+}
+#pokerogue-helper-panel .pr-moves tbody tr.type-psychic {
+  background-color: #F85888 !important;
+}
+#pokerogue-helper-panel .pr-moves tbody tr.type-bug {
+  background-color: #A8B820 !important;
+}
+#pokerogue-helper-panel .pr-moves tbody tr.type-rock {
+  background-color: #B8A038 !important;
+}
+#pokerogue-helper-panel .pr-moves tbody tr.type-ghost {
+  background-color: #705898 !important;
+}
+#pokerogue-helper-panel .pr-moves tbody tr.type-dragon {
+  background-color: #7038F8 !important;
+}
+#pokerogue-helper-panel .pr-moves tbody tr.type-dark {
+  background-color: #705848 !important;
+}
+#pokerogue-helper-panel .pr-moves tbody tr.type-steel {
+  background-color: #B8B8D0 !important;
+}
+#pokerogue-helper-panel .pr-moves tbody tr.type-fairy {
+  background-color: #EE99AC !important;
 }
 
 /* Tabs and buttons for enemy selection */
@@ -79,37 +159,88 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
 }
 
 #pokerogue-helper-panel .pr-tabs {
   display: flex;
   gap: 6px;
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+ /* -webkit-overflow-scrolling: touch;*/
   padding: 4px 0;
  /* max-width: 50%;*/
+  scrollbar-width: none; /* Firefox */
+  #pokerogue-helper-panel .pr-tabs::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
 }
 
 .pr-tab-button {
-  background: #1f1f1f;
-  color: #fff;
-  border: 1px solid #333;
-  padding: 4px 8px;
+  background: #4169E1; /* Regular blue */
+  color: #000; /* Black text */
+  border: 2px solid #FFD700;
+  padding: 6px 12px;
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: 20px; /* Pill shape */
   white-space: nowrap;
+  font-weight: bold;
+  transition: all 0.3s ease; /* Smooth hover */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.pr-tab-button:hover {
+  background: #00008B; /* Darker blue on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
 }
 
 .pr-tab-button.active {
-  background: #3b82f6;
-  border-color: #2563eb;
+  background: #4169E1; /* Same blue for active */
+  border-color: #FF4500;
+  box-shadow: 0 0 8px rgba(65, 105, 225, 0.5); /* Blue glow effect */
 }
 
 /* Center the Pokémon name in the header */
 /* Title placed under tabs */
 #pokerogue-helper-panel #pr-title {
   text-align: center;
-  margin: 6px 0 8px 0;
-  font-size: 1.05rem;
-  font-weight: 600;
+  margin: 6px 0 2px 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #FFD700; /* Gold color */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Additional Pokémon-style styling for stats and abilities */
+#pokerogue-helper-panel .pr-stats h4,
+#pokerogue-helper-panel .pr-abilities h4,
+#pokerogue-helper-panel .pr-right h4 {
+  color: #FFD700; /* Gold for headings */
+  font-weight: bold;
+  margin-bottom: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+#pokerogue-helper-panel .pr-stats-grid ul li {
+  margin: 2px 0;
+  padding: 2px;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#pokerogue-helper-panel .pr-abilities ul li {
+  margin: 2px 0;
+  padding: 2px;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#pokerogue-helper-panel .pr-passive-tag {
+  color: #FF69B4; /* Hot pink for passive */
+  font-style: italic;
+}
+
+#pokerogue-helper-panel, #pokerogue-helper-panel * {
+  color: white !important;
 }

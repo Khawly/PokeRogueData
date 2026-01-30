@@ -379,7 +379,7 @@ function initializePanelLayout(panel) {
                 <th>Lv</th>
                 <th>Move</th>
                 <th>Type / Category</th>
-                <th>Power / Accuracy</th>
+                <th>Power / Acc</th>
               </tr>
             </thead>
             <tbody></tbody>
@@ -508,12 +508,12 @@ function renderEnemy(enemy, moveDB) {
       <div class="pr-stats-grid">
         <ul>
         <li><span>HP: </span><span>${stats.hp}</span></li>
-        <li><span>Atk: </span><span>${stats.attack}</span></li>
-        <li><span>Def: </span><span>${stats.defense}</span></li>
-        <li><span>SpA: </span><span>${stats.spAttack}</span></li>
-        <li><span>SpD: </span><span>${stats.spDefense}</span></li>
+        <li><span>Attack: </span><span>${stats.attack}</span></li>
+        <li><span>Defense: </span><span>${stats.defense}</span></li>
+        <li><span>Sp.Atk: </span><span>${stats.spAttack}</span></li>
+        <li><span>Sp.Def: </span><span>${stats.spDefense}</span></li>
         <li><span>Speed: </span><span>${stats.speed}</span></li>
-        <li><span>BST: </span><span>${totalBaseStat}</span></li>
+        <li><span>Total: </span><span>${totalBaseStat}</span></li>
         </ul>
       </div>
     </div>
@@ -541,7 +541,7 @@ function renderEnemy(enemy, moveDB) {
     tbody.innerHTML = possibleMoves
       .map(
         (m) => `
-      <tr>
+      <tr class="type-${m.type ? m.type.toLowerCase() : ''}">
         <td>${m.level ?? "—"}</td>
         <td>${capitalize(m.name)}</td>
         <td>${
