@@ -605,7 +605,7 @@ function buildEnemyTabs(enemies, moveDB) {
 
     const btn = document.createElement("button");
     btn.className = "pr-tab-button";
-    btn.textContent = displayName;
+    btn.textContent = `Poké ${idx + 1}`;
 
     btn.addEventListener("click", () => {
       currentTabIndex = idx;
