@@ -184292,7 +184292,8 @@ const POKEDEX = [
     "abilities": [
       "Intimidate",
       "Hustle",
-      "Guts"
+      "Guts (Green and Blue Plumage Only)",
+      "Sheer Force (Yellow and White Plumage Only)"
     ],
     "passive": "Moxie",
     "baseStats": {
