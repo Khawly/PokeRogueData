@@ -1065,8 +1065,15 @@ window.addEventListener("message", async (event) => {
           String(name).toLowerCase().includes("eiscue")
         );
       });
+      const isRotomPresent = currentEnemies.some((e) => {
+        const name = e.speciesName || "";
+        return (
+          normalizeBaseSpeciesName(name) === "rotom" ||
+          String(name).toLowerCase().includes("rotom")
+        );
+      });
 
-      if (tabsContainer && (activeCount > 1 || isEternatusPresent || isEiscuePresent)) {
+      if (tabsContainer && (activeCount > 1 || isEternatusPresent || isEiscuePresent || isRotomPresent)) {
         // Two active enemies or Eternatus present: show tabs (Eternamax tab will be added)
         tabsContainer.style.display = "";
         // Use the live `currentEnemies` when there are two or more active enemies,

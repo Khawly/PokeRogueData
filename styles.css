@@ -173,13 +173,24 @@
   display: flex;
   gap: 6px;
   overflow-x: auto;
- /* -webkit-overflow-scrolling: touch;*/
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
   padding: 4px 0;
- /* max-width: 50%;*/
-  scrollbar-width: none; /* Firefox */
-  #pokerogue-helper-panel .pr-tabs::-webkit-scrollbar {
-    display: none; /* Chrome, Safari */
-  }
+  max-width: 100%;
+  scrollbar-width: auto; /* Firefox */
+}
+
+#pokerogue-helper-panel .pr-tabs::-webkit-scrollbar {
+  height: 6px;
+}
+
+#pokerogue-helper-panel .pr-tabs::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+}
+
+#pokerogue-helper-panel .pr-tabs::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .pr-tab-button {
