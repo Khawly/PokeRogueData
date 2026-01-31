@@ -208845,7 +208845,7 @@ const POKEDEX = [
     ]
   },
   {
-    "speciesId": 1447,
+    "speciesId": 8128,
     "name": "Paldea Tauros",
     "form": "Combat",
     "displayName": "Combat Paldea Tauros",
@@ -208978,7 +208978,7 @@ const POKEDEX = [
     ]
   },
   {
-    "speciesId": 1448,
+    "speciesId": 8128,
     "name": "Paldea Tauros",
     "form": "Blaze",
     "displayName": "Blaze Paldea Tauros",
@@ -209117,7 +209117,7 @@ const POKEDEX = [
     ]
   },
   {
-    "speciesId": 1449,
+    "speciesId": 8128,
     "name": "Paldea Tauros",
     "form": "Aqua",
     "displayName": "Aqua Paldea Tauros",

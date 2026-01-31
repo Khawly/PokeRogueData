@@ -812,6 +812,58 @@ function buildEnemyTabs(enemies, moveDB) {
     });
   }
 
+  // If Paldea Tauros speciesId is present, append tabs for all Paldean Tauros forms
+  const hasPaldeaTauros = enemies.some((e) => Number(e.speciesId) === 8128);
+  if (hasPaldeaTauros) {
+    let taurosEntries = [];
+    if (typeof POKEDEX !== "undefined" && Array.isArray(POKEDEX)) {
+      taurosEntries = POKEDEX.filter((entry) => {
+        if (!entry) return false;
+        const dn = (entry.displayName || entry.name || "").toLowerCase();
+        const form = (entry.form || "").toLowerCase();
+        const isTauros = dn.includes("tauros") || (entry.name || "").toLowerCase().includes("tauros");
+        const isPaldeaForm =
+          dn.includes("paldea") ||
+          dn.includes("paldean") ||
+          form.includes("paldea") ||
+          form.includes("paldean") ||
+          form.includes("combat") ||
+          form.includes("blaze") ||
+          form.includes("aqua");
+        return isTauros && isPaldeaForm;
+      });
+    }
+
+    const seenTauros = new Set();
+    taurosEntries.forEach((entry) => {
+      const label = (entry.displayName || entry.name || "").trim();
+      if (!label || seenTauros.has(label)) return;
+      seenTauros.add(label);
+
+      const tBtn = document.createElement("button");
+      tBtn.className = "pr-tab-button pr-tauros-pal";
+      tBtn.textContent = label;
+
+      const syntheticTauros = {
+        id: `tauros-${label.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`,
+        speciesId: entry.speciesId,
+        speciesName: label,
+        biome: enemies[0]?.biome ?? null,
+        level: enemies[0]?.level ?? 50,
+        baseStats: entry.baseStats || null,
+      };
+
+      tBtn.addEventListener("click", () => {
+        currentTabIndex = Array.from(tabsContainer.children).indexOf(tBtn);
+        [...tabsContainer.children].forEach((c) => c.classList.remove("active"));
+        tBtn.classList.add("active");
+        renderEnemy(syntheticTauros, moveDB);
+      });
+
+      tabsContainer.appendChild(tBtn);
+    });
+  }
+
     // If Eiscue is present, append a "No Ice" form tab
     const hasEiscue = enemies.some((e) => {
       const name = e.speciesName || "";
@@ -1075,8 +1127,9 @@ window.addEventListener("message", async (event) => {
           String(name).toLowerCase().includes("rotom")
         );
       });
+      const isPaldeaTaurosPresent = currentEnemies.some((e) => Number(e.speciesId) === 8128);
 
-      if (tabsContainer && (activeCount > 1 || isEternatusPresent || isEiscuePresent || isRotomPresent)) {
+      if (tabsContainer && (activeCount > 1 || isEternatusPresent || isEiscuePresent || isRotomPresent || isPaldeaTaurosPresent)) {
         // Two active enemies or Eternatus present: show tabs (Eternamax tab will be added)
         tabsContainer.style.display = "";
         // Use the live `currentEnemies` when there are two or more active enemies,
