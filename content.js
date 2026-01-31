@@ -782,6 +782,9 @@ function buildEnemyTabs(enemies, moveDB) {
     const seen = new Set();
     rotomEntries.forEach((entry) => {
       const label = (entry.displayName || entry.name || "").trim();
+      const formName = (entry.form || "").trim();
+      const isBaseRotom = label.toLowerCase() === "rotom" || formName === "";
+      if (isBaseRotom) return;
       if (!label || seen.has(label)) return;
       seen.add(label);
 
