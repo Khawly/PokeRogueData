@@ -14,7 +14,7 @@
 // =======================
 (function injectPageHook() {
   const script = document.createElement("script");
-  script.src = chrome.runtime.getURL("pageHook.js");
+  script.src = chrome.runtime.getURL("pagehook.js");
   script.onload = () => script.remove();
   document.documentElement.appendChild(script);
 })();
