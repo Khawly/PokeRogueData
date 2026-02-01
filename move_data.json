@@ -1737,7 +1737,7 @@
     "description": "If used by a Ghost type, the user loses HP equal to half its max HP to Curse the target, dealing damage every turn. Otherwise, the user lowers its Speed stat but boosts its Attack and Defense stats.",
     "priority": 0,
     "contact": false,
-    "target": "CURSE"
+    "target": "SELF"
   },
   "Flail": {
     "type": "NORMAL",
