@@ -2814,7 +2814,7 @@
     "category": "PHYSICAL",
     "power": 65,
     "accuracy": 100,
-    "description": "The user slaps down the target’s held item, and that item can’t be used in that battle. The move does more damage if the target has a held item.",
+    "description": "The user slaps down the target’s held item, and that item can’t be used in that battle. The move does 50% more damage if the target has a held item.",
     "priority": 0,
     "contact": true,
     "target": "NEAR_FOE"
