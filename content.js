@@ -63,6 +63,23 @@ function normalizeMoveNameForId(name) {
     .replace(/^-+|-+$/g, "");
 }
 
+function formatMoveTarget(target) {
+  const map = {
+    NEAR_FOE: "Single",
+    ALL_NEAR_ENEMIES: "Double",
+    SELF: "Self",
+    NEAR_ALLY: "Ally",
+    RANDOM_NEAR_ENEMY: "Random Enemy",
+    ALL_NEAR_OTHERS: "Everyone Else",
+    USER_SIDE: "Allies",
+    BOTH_SIDES: "Everyone",
+  };
+
+  if (!target) return "—";
+  const key = String(target).toUpperCase();
+  return map[key] || target;
+}
+
 function normalizeSpeciesNameForMatch(name) {
   if (!name) return "";
   return String(name)
@@ -612,7 +629,18 @@ function renderEnemy(enemy, moveDB) {
           const move = el.getAttribute('data-move');
           const moveInfo = getMoveInfo(moveDB, move);
           let desc = moveInfo.description || 'No description found.';
-          showPopup(move, desc);
+
+          const target = formatMoveTarget(moveInfo.target);
+          const priority = moveInfo.priority ?? "—";
+          const contact =
+            moveInfo.contact === true
+              ? "Yes"
+              : moveInfo.contact === false
+              ? "No"
+              : "—";
+
+          const extra = `\n\nTarget: ${target}\nPriority: ${priority}\nContact: ${contact}`;
+          showPopup(move, `${desc}${extra}`);
         });
       });
     }, 0);
