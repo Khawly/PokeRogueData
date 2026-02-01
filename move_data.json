@@ -1137,7 +1137,7 @@
     "description": "The user creates a haze that eliminates every stat change among all the Pokémon engaged in battle.",
     "priority": 0,
     "contact": false,
-    "target": "SELF"
+    "target": "ALL"
   },
   "Reflect": {
     "type": "PSYCHIC",
