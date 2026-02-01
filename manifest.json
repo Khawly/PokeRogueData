@@ -25,7 +25,7 @@
     {
       "resources": [
         "move_data.json",
-        "pageHook.js",
+        "pagehook.js",
         "ability_data.json"
       ],
       "matches": ["*://*.pokerogue.net/*"]
