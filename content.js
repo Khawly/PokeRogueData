@@ -65,7 +65,11 @@ function normalizeMoveNameForId(name) {
 
 function normalizeSpeciesNameForMatch(name) {
   if (!name) return "";
-  return String(name).trim().toLowerCase();
+  return String(name)
+    .trim()
+    .toLowerCase()
+    .replace(/-/g, " ")
+    .replace(/\s+/g, " ");
 }
 
 // Treat "Golem", "Golem (Alola)", "Alolan Golem" as same base species
