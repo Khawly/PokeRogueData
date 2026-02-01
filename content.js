@@ -110,7 +110,12 @@ function getMoveInfo(moveDBObj, moveName) {
   if (!moveDBObj || !moveName) return {};
   const id = normalizeMoveNameForId(moveName);
   // Try normalized key first, then fallback to original name
-  return moveDBObj[id] || moveDBObj[moveName] || {};
+  return (
+    moveDBObj[id] ||
+    (moveDBObj._normalized && moveDBObj._normalized[id]) ||
+    moveDBObj[moveName] ||
+    {}
+  );
 }
 
 // Compare the *shape* of current stats vs base stats (not used for ID right now,
@@ -338,6 +343,15 @@ async function loadMoveDB() {
     moveDB = await fetch(chrome.runtime.getURL("move_data.json")).then((r) =>
       r.json()
     );
+    if (moveDB && !moveDB._normalized) {
+      const normalized = {};
+      Object.keys(moveDB).forEach((key) => {
+        if (key === "_normalized") return;
+        const norm = normalizeMoveNameForId(key);
+        if (norm) normalized[norm] = moveDB[key];
+      });
+      moveDB._normalized = normalized;
+    }
   }
   return moveDB;
 }
