@@ -59,6 +59,7 @@ function normalizeMoveNameForId(name) {
   if (!name) return "";
   return String(name)
     .toLowerCase()
+    .replace(/[\u2018\u2019\u0060']/g, "")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
 }
@@ -112,13 +113,20 @@ function normalizeBaseSpeciesName(name) {
 function getMoveInfo(moveDBObj, moveName) {
   if (!moveDBObj || !moveName) return {};
   const id = normalizeMoveNameForId(moveName);
-  // Try normalized key first, then fallback to original name
-  return (
-    moveDBObj[id] ||
-    (moveDBObj._normalized && moveDBObj._normalized[id]) ||
-    moveDBObj[moveName] ||
-    {}
-  );
+  
+  // Try multiple lookup strategies
+  if (moveDBObj[id]) return moveDBObj[id];
+  if (moveDBObj._normalized && moveDBObj._normalized[id]) return moveDBObj._normalized[id];
+  if (moveDBObj[moveName]) return moveDBObj[moveName];
+  
+  // Try with apostrophe variations as final fallback
+  const withApostrophe = String(moveName).replace(/s\s/g, "'s ");
+  if (moveDBObj[withApostrophe]) return moveDBObj[withApostrophe];
+  
+  const withoutApostrophe = String(moveName).replace(/'/g, "");
+  if (moveDBObj[withoutApostrophe]) return moveDBObj[withoutApostrophe];
+  
+  return {};
 }
 
 // Compare the *shape* of current stats vs base stats (not used for ID right now,
