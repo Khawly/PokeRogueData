@@ -67,12 +67,15 @@ function formatMoveTarget(target) {
   const map = {
     NEAR_FOE: "Single",
     ALL_NEAR_ENEMIES: "Double",
+    ENEMY_SIDE: "Double",
     SELF: "Self",
     NEAR_ALLY: "Ally",
     RANDOM_NEAR_ENEMY: "Random Enemy",
     ALL_NEAR_OTHERS: "Everyone Else",
     USER_SIDE: "Allies",
+    USER_AND_ALLIES: "Allies",
     BOTH_SIDES: "Everyone",
+    ALL: "Everyone",
   };
 
   if (!target) return "—";
