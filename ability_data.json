@@ -183,7 +183,7 @@
     "description": "The Pokémon has a 33% chance to cure its own status conditions at the end of each turn by shedding its skin."
   },
   "Guts": {
-    "description": "It’s so gutsy that having a status condition boosts the Pokémon’s Attack stat by 50%."
+    "description": "It’s so gutsy that having a status condition boosts the Pokémon’s Attack stat by 50%. If burnt, the Pokémon does not suffer the usual drop in Attack."
   },
   "Marvel Scale": {
     "description": "The Pokémon’s marvelous scales boost its Defense stat by 50% if it has a status condition."
