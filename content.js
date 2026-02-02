@@ -880,56 +880,52 @@ function buildEnemyTabs(enemies, moveDB) {
     });
   }
 
-  // If Paldea Tauros speciesId is present, append tabs for all Paldean Tauros forms
-  const hasPaldeaTauros = enemies.some((e) => Number(e.speciesId) === 8128);
-  if (hasPaldeaTauros) {
-    let taurosEntries = [];
-    if (typeof POKEDEX !== "undefined" && Array.isArray(POKEDEX)) {
-      taurosEntries = POKEDEX.filter((entry) => {
-        if (!entry) return false;
-        const dn = (entry.displayName || entry.name || "").toLowerCase();
-        const form = (entry.form || "").toLowerCase();
-        const isTauros = dn.includes("tauros") || (entry.name || "").toLowerCase().includes("tauros");
-        const isPaldeaForm =
-          dn.includes("paldea") ||
-          dn.includes("paldean") ||
-          form.includes("paldea") ||
-          form.includes("paldean") ||
-          form.includes("combat") ||
-          form.includes("blaze") ||
-          form.includes("aqua");
-        return isTauros && isPaldeaForm;
-      });
-    }
+  // If Blaze Paldea Tauros is present, append Aqua Paldea Tauros tab
+  const blazeTauros = enemies.find((e) => {
+    const name = e.speciesName || "";
+    const dn = String(name).toLowerCase();
+    return (
+      (Number(e.speciesId) === 8128 || dn.includes("tauros")) &&
+      (dn.includes("blaze") || dn.includes("paldea blaze") || dn.includes("paldean blaze"))
+    );
+  });
 
-    const seenTauros = new Set();
-    taurosEntries.forEach((entry) => {
-      const label = (entry.displayName || entry.name || "").trim();
-      if (!label || seenTauros.has(label)) return;
-      seenTauros.add(label);
-
-      const tBtn = document.createElement("button");
-      tBtn.className = "pr-tab-button pr-tauros-pal";
-      tBtn.textContent = label;
-
-      const syntheticTauros = {
-        id: `tauros-${label.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`,
-        speciesId: entry.speciesId,
-        speciesName: label,
-        biome: enemies[0]?.biome ?? null,
-        level: enemies[0]?.level ?? 50,
-        baseStats: entry.baseStats || null,
-      };
-
-      tBtn.addEventListener("click", () => {
-        currentTabIndex = Array.from(tabsContainer.children).indexOf(tBtn);
-        [...tabsContainer.children].forEach((c) => c.classList.remove("active"));
-        tBtn.classList.add("active");
-        renderEnemy(syntheticTauros, moveDB);
-      });
-
-      tabsContainer.appendChild(tBtn);
+  if (blazeTauros && typeof POKEDEX !== "undefined" && Array.isArray(POKEDEX)) {
+    const aquaEntry = POKEDEX.find((entry) => {
+      if (!entry) return false;
+      const dn = (entry.displayName || entry.name || "").toLowerCase();
+      const form = (entry.form || "").toLowerCase();
+      const isTauros = dn.includes("tauros") || (entry.name || "").toLowerCase().includes("tauros");
+      const isAqua = dn.includes("aqua") || form.includes("aqua");
+      const isPaldea = dn.includes("paldea") || dn.includes("paldean") || form.includes("paldea") || form.includes("paldean");
+      return isTauros && isAqua && isPaldea;
     });
+
+    const label =
+      (aquaEntry && (aquaEntry.displayName || aquaEntry.name)) ||
+      "Aqua Paldea Tauros";
+
+    const tBtn = document.createElement("button");
+    tBtn.className = "pr-tab-button pr-tauros-pal";
+    tBtn.textContent = label;
+
+    const syntheticTauros = {
+      id: "tauros-pal-aqua",
+      speciesId: aquaEntry ? aquaEntry.speciesId : blazeTauros.speciesId,
+      speciesName: label,
+      biome: blazeTauros.biome ?? null,
+      level: blazeTauros.level ?? 50,
+      baseStats: aquaEntry?.baseStats || null,
+    };
+
+    tBtn.addEventListener("click", () => {
+      currentTabIndex = Array.from(tabsContainer.children).indexOf(tBtn);
+      [...tabsContainer.children].forEach((c) => c.classList.remove("active"));
+      tBtn.classList.add("active");
+      renderEnemy(syntheticTauros, moveDB);
+    });
+
+    tabsContainer.appendChild(tBtn);
   }
 
     // If Eiscue is present, append a "No Ice" form tab
