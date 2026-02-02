@@ -1077,6 +1077,60 @@ function buildEnemyTabs(enemies, moveDB) {
     }
   }
 
+  // If Wishiwashi is present, append its alternate form tab
+  const wishEnemy = enemies.find((e) => {
+    const name = e.speciesName || "";
+    return (
+      normalizeBaseSpeciesName(name) === "wishiwashi" ||
+      String(name).toLowerCase().includes("wishiwashi")
+    );
+  });
+
+  if (wishEnemy && typeof POKEDEX !== "undefined" && Array.isArray(POKEDEX)) {
+    const wishEntry = findBestPokedexEntryForEnemy(wishEnemy);
+    const wishName =
+      (wishEntry && (wishEntry.displayName || wishEntry.name)) ||
+      (wishEnemy.speciesName || "");
+
+    const wishLower = String(wishName).toLowerCase();
+    const targetLabel = wishLower.includes("school")
+      ? "wishiwashi"
+      : "school wishiwashi";
+
+    const targetEntry = POKEDEX.find((entry) => {
+      const dn = (entry.displayName || entry.name || "").toLowerCase();
+      return dn.includes(targetLabel);
+    });
+
+    const targetDisplayName =
+      (targetEntry && (targetEntry.displayName || targetEntry.name)) ||
+      (targetLabel === "school wishiwashi" ? "School Wishiwashi" : "Wishiwashi");
+
+    if (targetDisplayName) {
+      const wishBtn = document.createElement("button");
+      wishBtn.className = "pr-tab-button pr-wishiwashi";
+      wishBtn.textContent = targetDisplayName;
+
+      const syntheticWish = {
+        id: targetLabel.replace(/\s+/g, "-"),
+        speciesId: targetEntry ? targetEntry.speciesId : wishEnemy.speciesId,
+        speciesName: targetDisplayName,
+        biome: wishEnemy.biome ?? null,
+        level: wishEnemy.level ?? 50,
+        baseStats: targetEntry?.baseStats || null,
+      };
+
+      wishBtn.addEventListener("click", () => {
+        currentTabIndex = Array.from(tabsContainer.children).indexOf(wishBtn);
+        [...tabsContainer.children].forEach((c) => c.classList.remove("active"));
+        wishBtn.classList.add("active");
+        renderEnemy(syntheticWish, moveDB);
+      });
+
+      tabsContainer.appendChild(wishBtn);
+    }
+  }
+
   if (tabsContainer.children.length > 0) {
     tabsContainer.children[0].classList.add("active");
   }
@@ -1306,8 +1360,15 @@ window.addEventListener("message", async (event) => {
           String(name).toLowerCase().includes("basculegion")
         );
       });
+      const isWishiwashiPresent = currentEnemies.some((e) => {
+        const name = e.speciesName || "";
+        return (
+          normalizeBaseSpeciesName(name) === "wishiwashi" ||
+          String(name).toLowerCase().includes("wishiwashi")
+        );
+      });
 
-      if (tabsContainer && (activeCount > 1 || isEternatusPresent || isEiscuePresent || isRotomPresent || isPaldeaTaurosPresent || isOinkolognePresent || isBasculegionPresent)) {
+      if (tabsContainer && (activeCount > 1 || isEternatusPresent || isEiscuePresent || isRotomPresent || isPaldeaTaurosPresent || isOinkolognePresent || isBasculegionPresent || isWishiwashiPresent)) {
         // Two active enemies or Eternatus present: show tabs (Eternamax tab will be added)
         tabsContainer.style.display = "";
         // Use the live `currentEnemies` when there are two or more active enemies,
