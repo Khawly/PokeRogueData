@@ -1,5 +1,7 @@
 # PokeRogueData
-PokeRogueData is a browser extension designed to assist players while playing Pokerogue by automatically displaying data of the opposing Pokémon so you don't have to look it up yourself.
+PokeRogueData is a browser extension API designed to assist players while playing Pokerogue by automatically displaying data 
+of the opposing Pokémon so you don't have to look it up yourself. Some alternate forms of Pokemon are not able to be 
+identified through reading the site data alone so all forms for that Pokemon will be shown instead. 
 Click on abilities and moves to see their descriptions.
 Use hotkey 'P' to hide the panel.
 Use hotkey 'Q' to cycle between tabs.
