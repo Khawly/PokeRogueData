@@ -84,6 +84,30 @@ function formatMoveTarget(target) {
   return map[key] || target;
 }
 
+// Helper to show popup
+function showPopup(title, desc) {
+  ensurePopupModalInPanel();
+  const modal = document.getElementById('pr-popup-modal');
+  if (modal) {
+    const safeTitle = title ? String(title) : "Unknown";
+    const safeDesc = desc ? String(desc) : "No description found.";
+    modal.innerHTML = `
+        <div id="pr-popup-content" style="background:#000;padding:16px 18px 16px 18px;border-radius:8px;max-width:320px;box-shadow:0 2px 16px #0008;position:relative;">
+          <button id="pr-popup-close" style="position:absolute;top:8px;right:8px;font-size:18px;background:none;border:none;cursor:pointer;color:#fff;">&times;</button>
+          <div id="pr-popup-title" style="font-weight:bold;margin-bottom:8px;color:#fff;">${safeTitle}</div>
+          <div id="pr-popup-desc" style="white-space:pre-wrap;color:#fff;">${safeDesc}</div>
+        </div>
+      `;
+    // Reattach close handlers after rendering
+    modal.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
+    const closeBtn = modal.querySelector('#pr-popup-close');
+    if (closeBtn) closeBtn.onclick = (ev) => { ev.stopPropagation(); modal.style.display = 'none'; };
+    // Position modal relative to the panel
+    modal.style.display = 'block';
+    modal.style.position = 'absolute'; // Ensure modal is absolute within panel
+  }
+}
+
 function normalizeSpeciesNameForMatch(name) {
   if (!name) return "";
   return String(name)
@@ -127,6 +151,23 @@ function getMoveInfo(moveDBObj, moveName) {
   if (moveDBObj[withoutApostrophe]) return moveDBObj[withoutApostrophe];
   
   return {};
+}
+
+function showMovePopupForName(moveName, moveDBObj) {
+  const moveInfo = getMoveInfo(moveDBObj, moveName);
+  let desc = moveInfo.description || 'No description found.';
+
+  const target = formatMoveTarget(moveInfo.target);
+  const priority = moveInfo.priority ?? "—";
+  const contact =
+    moveInfo.contact === true
+      ? "Yes"
+      : moveInfo.contact === false
+      ? "No"
+      : "—";
+
+  const extra = `\n\nTarget: ${target}\nPriority: ${priority}\nContact: ${contact}`;
+  showPopup(moveName, `${desc}${extra}`);
 }
 
 // Compare the *shape* of current stats vs base stats (not used for ID right now,
@@ -481,6 +522,22 @@ function renderEnemy(enemy, moveDB) {
   ensurePanel();
   if (!enemy) return;
 
+  const panelEl = document.getElementById("pokerogue-helper-panel");
+  if (panelEl && !panelEl.dataset.prMoveHandler) {
+    const handler = (e) => {
+      const targetEl = e.target?.closest?.('.pr-move');
+      if (!targetEl) return;
+      e.stopPropagation();
+      e.preventDefault();
+      const moveName = targetEl.getAttribute('data-move');
+      if (moveName) showMovePopupForName(moveName, moveDB);
+    };
+
+    panelEl.addEventListener('pointerdown', handler, true);
+    panelEl.addEventListener('click', handler, true);
+    panelEl.dataset.prMoveHandler = "true";
+  }
+
   const level = enemy.level;
 
   const entry = findBestPokedexEntryForEnemy(enemy);
@@ -646,54 +703,8 @@ function renderEnemy(enemy, moveDB) {
     `
       )
       .join("");
-    // Add event listeners for move popups
-    setTimeout(() => {
-      document.querySelectorAll('.pr-move').forEach(el => {
-        el.addEventListener('click', e => {
-          e.stopPropagation();
-          const move = el.getAttribute('data-move');
-          const moveInfo = getMoveInfo(moveDB, move);
-          let desc = moveInfo.description || 'No description found.';
-
-          const target = formatMoveTarget(moveInfo.target);
-          const priority = moveInfo.priority ?? "—";
-          const contact =
-            moveInfo.contact === true
-              ? "Yes"
-              : moveInfo.contact === false
-              ? "No"
-              : "—";
-
-          const extra = `\n\nTarget: ${target}\nPriority: ${priority}\nContact: ${contact}`;
-          showPopup(move, `${desc}${extra}`);
-        });
-      });
-    }, 0);
   }
 
-  // Helper to show popup
-  function showPopup(title, desc) {
-    ensurePopupModalInPanel();
-    const modal = document.getElementById('pr-popup-modal');
-    if (modal) {
-      const safeTitle = title ? String(title) : "Unknown";
-      const safeDesc = desc ? String(desc) : "No description found.";
-      modal.innerHTML = `
-        <div id="pr-popup-content" style="background:#000;padding:16px 18px 16px 18px;border-radius:8px;max-width:320px;box-shadow:0 2px 16px #0008;position:relative;">
-          <button id="pr-popup-close" style="position:absolute;top:8px;right:8px;font-size:18px;background:none;border:none;cursor:pointer;color:#fff;">&times;</button>
-          <div id="pr-popup-title" style="font-weight:bold;margin-bottom:8px;color:#fff;">${safeTitle}</div>
-          <div id="pr-popup-desc" style="white-space:pre-wrap;color:#fff;">${safeDesc}</div>
-        </div>
-      `;
-      // Reattach close handlers after rendering
-      modal.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
-      const closeBtn = modal.querySelector('#pr-popup-close');
-      if (closeBtn) closeBtn.onclick = (ev) => { ev.stopPropagation(); modal.style.display = 'none'; };
-      // Position modal relative to the panel
-      modal.style.display = 'block';
-      modal.style.position = 'absolute'; // Ensure modal is absolute within panel
-    }
-  }
 // ===============
 // Load ability_data.json for popups
 // ===============
