@@ -1035,6 +1035,51 @@ function buildEnemyTabs(enemies, moveDB) {
     }
   }
 
+  // If Basculegion is present, append Female Basculegion tab
+  const bascEnemy = enemies.find((e) => {
+    const name = e.speciesName || "";
+    return (
+      normalizeBaseSpeciesName(name) === "basculegion" ||
+      String(name).toLowerCase().includes("basculegion")
+    );
+  });
+
+  if (bascEnemy && typeof POKEDEX !== "undefined" && Array.isArray(POKEDEX)) {
+    const targetLabel = "female basculegion";
+    const targetEntry = POKEDEX.find((entry) => {
+      const dn = (entry.displayName || entry.name || "").toLowerCase();
+      return dn.includes(targetLabel);
+    });
+
+    const targetDisplayName =
+      (targetEntry && (targetEntry.displayName || targetEntry.name)) ||
+      "Female Basculegion";
+
+    if (targetDisplayName) {
+      const bascBtn = document.createElement("button");
+      bascBtn.className = "pr-tab-button pr-basculegion";
+      bascBtn.textContent = targetDisplayName;
+
+      const syntheticBasc = {
+        id: "basculegion-female",
+        speciesId: targetEntry ? targetEntry.speciesId : bascEnemy.speciesId,
+        speciesName: targetDisplayName,
+        biome: bascEnemy.biome ?? null,
+        level: bascEnemy.level ?? 50,
+        baseStats: targetEntry?.baseStats || null,
+      };
+
+      bascBtn.addEventListener("click", () => {
+        currentTabIndex = Array.from(tabsContainer.children).indexOf(bascBtn);
+        [...tabsContainer.children].forEach((c) => c.classList.remove("active"));
+        bascBtn.classList.add("active");
+        renderEnemy(syntheticBasc, moveDB);
+      });
+
+      tabsContainer.appendChild(bascBtn);
+    }
+  }
+
   if (tabsContainer.children.length > 0) {
     tabsContainer.children[0].classList.add("active");
   }
@@ -1257,8 +1302,15 @@ window.addEventListener("message", async (event) => {
         );
       });
       const isPaldeaTaurosPresent = currentEnemies.some((e) => Number(e.speciesId) === 8128);
+      const isBasculegionPresent = currentEnemies.some((e) => {
+        const name = e.speciesName || "";
+        return (
+          normalizeBaseSpeciesName(name) === "basculegion" ||
+          String(name).toLowerCase().includes("basculegion")
+        );
+      });
 
-      if (tabsContainer && (activeCount > 1 || isEternatusPresent || isEiscuePresent || isRotomPresent || isPaldeaTaurosPresent || isOinkolognePresent)) {
+      if (tabsContainer && (activeCount > 1 || isEternatusPresent || isEiscuePresent || isRotomPresent || isPaldeaTaurosPresent || isOinkolognePresent || isBasculegionPresent)) {
         // Two active enemies or Eternatus present: show tabs (Eternamax tab will be added)
         tabsContainer.style.display = "";
         // Use the live `currentEnemies` when there are two or more active enemies,
