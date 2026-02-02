@@ -981,6 +981,60 @@ function buildEnemyTabs(enemies, moveDB) {
       tabsContainer.appendChild(niBtn);
     }
 
+  // If Male Oinkologne is present, append Female Oinkologne tab
+  const oinkEnemy = enemies.find((e) => {
+    const name = e.speciesName || "";
+    return (
+      normalizeBaseSpeciesName(name) === "oinkologne" ||
+      String(name).toLowerCase().includes("oinkologne")
+    );
+  });
+
+  if (oinkEnemy && typeof POKEDEX !== "undefined" && Array.isArray(POKEDEX)) {
+    const oinkEntry = findBestPokedexEntryForEnemy(oinkEnemy);
+    const oinkName =
+      (oinkEntry && (oinkEntry.displayName || oinkEntry.name)) ||
+      (oinkEnemy.speciesName || "");
+
+    const nameLower = String(oinkName).toLowerCase();
+    const isMale = nameLower.includes("male");
+    if (isMale) {
+      const targetLabel = "female oinkologne";
+      const targetEntry = POKEDEX.find((entry) => {
+        const dn = (entry.displayName || entry.name || "").toLowerCase();
+        return dn.includes(targetLabel);
+      });
+
+      const targetDisplayName =
+        (targetEntry && (targetEntry.displayName || targetEntry.name)) ||
+        "Female Oinkologne";
+
+      if (targetDisplayName) {
+        const oinkBtn = document.createElement("button");
+        oinkBtn.className = "pr-tab-button pr-oinkologne";
+        oinkBtn.textContent = targetDisplayName;
+
+        const syntheticOink = {
+          id: "oinkologne-female",
+          speciesId: targetEntry ? targetEntry.speciesId : oinkEnemy.speciesId,
+          speciesName: targetDisplayName,
+          biome: oinkEnemy.biome ?? null,
+          level: oinkEnemy.level ?? 50,
+          baseStats: targetEntry?.baseStats || null,
+        };
+
+        oinkBtn.addEventListener("click", () => {
+          currentTabIndex = Array.from(tabsContainer.children).indexOf(oinkBtn);
+          [...tabsContainer.children].forEach((c) => c.classList.remove("active"));
+          oinkBtn.classList.add("active");
+          renderEnemy(syntheticOink, moveDB);
+        });
+
+        tabsContainer.appendChild(oinkBtn);
+      }
+    }
+  }
+
   if (tabsContainer.children.length > 0) {
     tabsContainer.children[0].classList.add("active");
   }
@@ -1195,9 +1249,16 @@ window.addEventListener("message", async (event) => {
           String(name).toLowerCase().includes("rotom")
         );
       });
+      const isOinkolognePresent = currentEnemies.some((e) => {
+        const name = e.speciesName || "";
+        return (
+          normalizeBaseSpeciesName(name) === "oinkologne" ||
+          String(name).toLowerCase().includes("oinkologne")
+        );
+      });
       const isPaldeaTaurosPresent = currentEnemies.some((e) => Number(e.speciesId) === 8128);
 
-      if (tabsContainer && (activeCount > 1 || isEternatusPresent || isEiscuePresent || isRotomPresent || isPaldeaTaurosPresent)) {
+      if (tabsContainer && (activeCount > 1 || isEternatusPresent || isEiscuePresent || isRotomPresent || isPaldeaTaurosPresent || isOinkolognePresent)) {
         // Two active enemies or Eternatus present: show tabs (Eternamax tab will be added)
         tabsContainer.style.display = "";
         // Use the live `currentEnemies` when there are two or more active enemies,
