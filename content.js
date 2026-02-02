@@ -728,6 +728,16 @@ function buildEnemyTabs(enemies, moveDB) {
   const tabsContainer = document.getElementById("pr-tabs");
   if (!tabsContainer) return;
 
+  const altCountsByIndex = new Map();
+  const buildAltTabLabel = (baseIndex) => {
+    const prefix = Number.isInteger(baseIndex) && baseIndex >= 0
+      ? `Poké ${baseIndex + 1}`
+      : "Poké";
+    const nextCount = (altCountsByIndex.get(baseIndex) || 0) + 1;
+    altCountsByIndex.set(baseIndex, nextCount);
+    return nextCount === 1 ? `${prefix} (Alt)` : `${prefix} (Alt ${nextCount})`;
+  };
+
   const newHash = enemies
     .map(
       (e) =>
@@ -786,13 +796,15 @@ function buildEnemyTabs(enemies, moveDB) {
   });
 
   // If any of the provided enemies is Eternatus, append an Eternamax tab
-  const hasEternatus = enemies.some((e) => {
+  const eternatusIndex = enemies.findIndex((e) => {
     const name = e.speciesName || "";
     return (
       normalizeBaseSpeciesName(name) === "eternatus" ||
       String(name).toLowerCase().includes("eternatus")
     );
   });
+
+  const hasEternatus = eternatusIndex >= 0;
 
   if (hasEternatus) {
     let eternamaxEntry = null;
@@ -809,7 +821,7 @@ function buildEnemyTabs(enemies, moveDB) {
 
     const emBtn = document.createElement("button");
     emBtn.className = "pr-tab-button pr-eternamax-button";
-    emBtn.textContent = emDisplayName;
+    emBtn.textContent = buildAltTabLabel(eternatusIndex);
 
     const syntheticEnemy = {
       id: "eternamax",
@@ -830,13 +842,15 @@ function buildEnemyTabs(enemies, moveDB) {
   }
 
   // If Rotom is present among the enemies, append tabs for all Rotom forms
-  const hasRotom = enemies.some((e) => {
+  const rotomIndex = enemies.findIndex((e) => {
     const name = e.speciesName || "";
     return (
       normalizeBaseSpeciesName(name) === "rotom" ||
       String(name).toLowerCase().includes("rotom")
     );
   });
+
+  const hasRotom = rotomIndex >= 0;
 
   if (hasRotom) {
     let rotomEntries = [];
@@ -859,7 +873,7 @@ function buildEnemyTabs(enemies, moveDB) {
 
       const rBtn = document.createElement("button");
       rBtn.className = "pr-tab-button pr-rotom-button";
-      rBtn.textContent = label;
+      rBtn.textContent = buildAltTabLabel(rotomIndex);
 
       const syntheticRotom = {
         id: `rotom-${label.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`,
@@ -908,7 +922,8 @@ function buildEnemyTabs(enemies, moveDB) {
 
     const tBtn = document.createElement("button");
     tBtn.className = "pr-tab-button pr-tauros-pal";
-    tBtn.textContent = label;
+    const taurosIndex = enemies.findIndex((e) => e === blazeTauros);
+    tBtn.textContent = buildAltTabLabel(taurosIndex);
 
     const syntheticTauros = {
       id: "tauros-pal-aqua",
@@ -930,13 +945,15 @@ function buildEnemyTabs(enemies, moveDB) {
   }
 
     // If Eiscue is present, append a "No Ice" form tab
-    const hasEiscue = enemies.some((e) => {
+    const eiscueIndex = enemies.findIndex((e) => {
       const name = e.speciesName || "";
       return (
         normalizeBaseSpeciesName(name) === "eiscue" ||
         String(name).toLowerCase().includes("eiscue")
       );
     });
+
+    const hasEiscue = eiscueIndex >= 0;
 
     if (hasEiscue) {
       let noIceEntry = null;
@@ -958,7 +975,7 @@ function buildEnemyTabs(enemies, moveDB) {
 
       const niBtn = document.createElement("button");
       niBtn.className = "pr-tab-button pr-eiscue-noice";
-      niBtn.textContent = niDisplayName;
+      niBtn.textContent = buildAltTabLabel(eiscueIndex);
 
       const syntheticNoIce = {
         id: "eiscue-noice",
@@ -1009,7 +1026,8 @@ function buildEnemyTabs(enemies, moveDB) {
       if (targetDisplayName) {
         const oinkBtn = document.createElement("button");
         oinkBtn.className = "pr-tab-button pr-oinkologne";
-        oinkBtn.textContent = targetDisplayName;
+        const oinkIndex = enemies.findIndex((e) => e === oinkEnemy);
+        oinkBtn.textContent = buildAltTabLabel(oinkIndex);
 
         const syntheticOink = {
           id: "oinkologne-female",
@@ -1055,7 +1073,8 @@ function buildEnemyTabs(enemies, moveDB) {
     if (targetDisplayName) {
       const bascBtn = document.createElement("button");
       bascBtn.className = "pr-tab-button pr-basculegion";
-      bascBtn.textContent = targetDisplayName;
+      const bascIndex = enemies.findIndex((e) => e === bascEnemy);
+      bascBtn.textContent = buildAltTabLabel(bascIndex);
 
       const syntheticBasc = {
         id: "basculegion-female",
@@ -1109,7 +1128,8 @@ function buildEnemyTabs(enemies, moveDB) {
     if (targetDisplayName) {
       const wishBtn = document.createElement("button");
       wishBtn.className = "pr-tab-button pr-wishiwashi";
-      wishBtn.textContent = targetDisplayName;
+      const wishIndex = enemies.findIndex((e) => e === wishEnemy);
+      wishBtn.textContent = buildAltTabLabel(wishIndex);
 
       const syntheticWish = {
         id: targetLabel.replace(/\s+/g, "-"),
