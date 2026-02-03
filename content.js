@@ -50,6 +50,12 @@ function capitalize(str) {
     .replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
+function toSentenceCase(str) {
+  if (!str) return "";
+  const lower = String(str).replace(/-/g, " ").toLowerCase();
+  return lower.charAt(0).toUpperCase() + lower.slice(1);
+}
+
 function normalizeAbilityName(name) {
   if (!name) return "";
   return String(name).trim().toLowerCase();
@@ -699,7 +705,7 @@ function renderEnemy(enemy, moveDB) {
       <tr class="type-${m.type ? m.type.toLowerCase() : ''}">
         <td>${m.level ?? "—"}</td>
         <td><span class="pr-move" data-move="${m.name}">${capitalize(m.name)}</span></td>
-        <td>${m.type ? capitalize(m.type) : "—"} / ${m.category ? capitalize(m.category) : "—"}</td>
+        <td>${m.type ? toSentenceCase(m.type) : "—"} / ${m.category ? toSentenceCase(m.category) : "—"}</td>
         <td>${m.power ?? "—"} / ${m.accuracy ?? "—"}</td>
       </tr>
     `
