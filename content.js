@@ -115,6 +115,7 @@ function normalizeSpeciesNameForMatch(name) {
     .toLowerCase()
     .replace(/[\u2018\u2019\u0060']/g, "")
     .replace(/-/g, " ")
+    .replace(/[^\p{L}\p{N}\s]/gu, "")
     .replace(/\s+/g, " ");
 }
 
