@@ -243,6 +243,7 @@ function findBestPokedexEntryForEnemy(enemy) {
   const hasName = !!rawName;
   const isDotName = rawName === ".";
   const baseNameNorm = rawName ? normalizeBaseSpeciesName(rawName) : "";
+  const targetNameNorm = hasName ? normalizeSpeciesNameForMatch(rawName) : "";
   const biome = enemy.biome != null ? Number(enemy.biome) : null;
   const enemyAbilityNorm = enemy.abilityName ? normalizeAbilityName(enemy.abilityName) : null;
   const enemyPassiveNorm = enemy.passiveName ? normalizeAbilityName(enemy.passiveName) : null;
@@ -253,7 +254,6 @@ function findBestPokedexEntryForEnemy(enemy) {
 
 // 1) Normal case: use display name from ARC.DB.getSpecies(speciesId).name
 if (hasName && !isDotName) {
-  const targetNameNorm = normalizeSpeciesNameForMatch(rawName);
   const targetBaseNorm = baseNameNorm; // e.g. "florges", "golem"
 
   candidates = POKEDEX.filter((entry) => {
@@ -344,17 +344,64 @@ if (baseNameNorm === "pikachu") {
     // fall through to the generic logic below.
   }
 
+  // If the displayed name is a base species (no form keyword), prefer the non-form entry
+  if (hasName && !isDotName) {
+    const formKeywordRegex = /\b(mega|gigantamax|gmax|alolan|galarian|hisuian|paldean|primal|eternamax)\b/i;
+    const isFormName = formKeywordRegex.test(rawName);
 
-  if (candidates.length === 1) {
-    return candidates[0];
+    if (!isFormName && targetNameNorm) {
+      const baseMatch = candidates.find((entry) => {
+        if (!entry || entry.form) return false;
+        const entryNameNorm = normalizeSpeciesNameForMatch(entry.name || "");
+        const entryDisplayNorm = normalizeSpeciesNameForMatch(entry.displayName || "");
+        const entryBaseNorm = normalizeBaseSpeciesName(entry.displayName || entry.name || "");
+        return (
+          entryNameNorm === targetNameNorm ||
+          entryDisplayNorm === targetNameNorm ||
+          (baseNameNorm && entryBaseNorm === baseNameNorm)
+        );
+      });
+
+      if (baseMatch) {
+        return baseMatch;
+      }
+    }
   }
 
+
   // Prefer entries that share the exact same speciesId (forms of the same mon)
-  const sameSpeciesCandidates = candidates.filter(
-    (entry) => entry && entry.speciesId === speciesId
-  );
+  const sameSpeciesCandidates =
+    speciesId != null
+      ? candidates.filter((entry) => entry && entry.speciesId === speciesId)
+      : [];
   const pool =
     sameSpeciesCandidates.length > 0 ? sameSpeciesCandidates : candidates;
+
+  // If the displayed name matches exactly, prefer the non-form entry
+  if (hasName && !isDotName && targetNameNorm) {
+    const exactNameMatches = pool.filter((entry) => {
+      const entryNameNorm = normalizeSpeciesNameForMatch(entry.name || "");
+      const entryDisplayNorm = normalizeSpeciesNameForMatch(entry.displayName || "");
+      return (
+        entryNameNorm === targetNameNorm ||
+        entryDisplayNorm === targetNameNorm
+      );
+    });
+
+    if (exactNameMatches.length > 0) {
+      const noFormExact = exactNameMatches.filter((entry) => !entry.form);
+      if (noFormExact.length > 0) {
+        return noFormExact[0];
+      }
+      if (exactNameMatches.length === 1) {
+        return exactNameMatches[0];
+      }
+    }
+  }
+
+  if (pool.length === 1) {
+    return pool[0];
+  }
 
   // If we know passive and/or ability, use them FIRST to choose among forms.
   if (enemyPassiveNorm || enemyAbilityNorm) {
