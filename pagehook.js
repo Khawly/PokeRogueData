@@ -90,6 +90,21 @@
       try {
         if (e.abilityName) {
           abilityName = String(e.abilityName).trim();
+        } else if (e.ability && typeof e.ability === "object") {
+          if (e.ability.name) abilityName = String(e.ability.name).trim();
+          else if (e.ability.abilityName) abilityName = String(e.ability.abilityName).trim();
+        }
+
+        if (!abilityName && db && typeof db.getAbility === "function") {
+          const abilityId = e.abilityId ?? e.abilityID ?? (typeof e.ability === "number" ? e.ability : null);
+          if (abilityId != null) {
+            try {
+              const ability = db.getAbility(abilityId);
+              if (ability?.name) abilityName = String(ability.name).trim();
+            } catch (err) {
+              console.warn("ARC.DB.getAbility failed:", err);
+            }
+          }
         }
       } catch (err) {
         console.warn("Failed to read abilityName from enemy:", err);
@@ -98,8 +113,23 @@
       try {
         if (e.passiveName != null) {
           passiveName = String(e.passiveName).trim();
+        } else if (e.passive && typeof e.passive === "object") {
+          if (e.passive.name) passiveName = String(e.passive.name).trim();
+          else if (e.passive.passiveName) passiveName = String(e.passive.passiveName).trim();
         } else if (e.passive != null) {
           passiveName = String(e.passive).trim();
+        }
+
+        if (!passiveName && db && typeof db.getAbility === "function") {
+          const passiveId = e.passiveId ?? e.passiveID ?? (typeof e.passive === "number" ? e.passive : null);
+          if (passiveId != null) {
+            try {
+              const passive = db.getAbility(passiveId);
+              if (passive?.name) passiveName = String(passive.name).trim();
+            } catch (err) {
+              console.warn("ARC.DB.getAbility failed (passive):", err);
+            }
+          }
         }
       } catch (err) {
         console.warn("Failed to read passiveName from enemy:", err);

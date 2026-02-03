@@ -58,7 +58,14 @@ function toSentenceCase(str) {
 
 function normalizeAbilityName(name) {
   if (!name) return "";
-  return String(name).trim().toLowerCase();
+  return String(name)
+    .trim()
+    .toLowerCase()
+    .replace(/\([^)]*\)/g, " ")
+    .replace(/\[[^\]]*\]/g, " ")
+    .replace(/[^a-z0-9\s]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function normalizeMoveNameForId(name) {
@@ -69,6 +76,7 @@ function normalizeMoveNameForId(name) {
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
 }
+
 
 function formatMoveTarget(target) {
   const map = {
@@ -344,12 +352,30 @@ if (baseNameNorm === "pikachu") {
     // fall through to the generic logic below.
   }
 
+  // If speciesId matches a Gmax/Gigantamax form, prefer it explicitly
+  if (speciesId != null) {
+    const gmaxCandidate = candidates.find((entry) => {
+      if (!entry || entry.speciesId !== speciesId) return false;
+      const formText = `${entry.form || ""} ${entry.displayName || ""}`.toLowerCase();
+      return formText.includes("gmax") || formText.includes("gigantamax");
+    });
+    if (gmaxCandidate) {
+      return gmaxCandidate;
+    }
+  }
+
   // If the displayed name is a base species (no form keyword), prefer the non-form entry
-  if (hasName && !isDotName) {
+  // only when we don't have ability/passive data to disambiguate forms.
+  if (hasName && !isDotName && !enemyAbilityNorm && !enemyPassiveNorm) {
     const formKeywordRegex = /\b(mega|gigantamax|gmax|alolan|galarian|hisuian|paldean|primal|eternamax)\b/i;
     const isFormName = formKeywordRegex.test(rawName);
 
-    if (!isFormName && targetNameNorm) {
+    const hasStarmobileForm = candidates.some((entry) => {
+      const dn = (entry?.displayName || entry?.name || "").toLowerCase();
+      return dn.includes("starmobile");
+    });
+
+    if (!isFormName && !hasStarmobileForm && targetNameNorm) {
       const baseMatch = candidates.find((entry) => {
         if (!entry || entry.form) return false;
         const entryNameNorm = normalizeSpeciesNameForMatch(entry.name || "");
@@ -376,32 +402,6 @@ if (baseNameNorm === "pikachu") {
       : [];
   const pool =
     sameSpeciesCandidates.length > 0 ? sameSpeciesCandidates : candidates;
-
-  // If the displayed name matches exactly, prefer the non-form entry
-  if (hasName && !isDotName && targetNameNorm) {
-    const exactNameMatches = pool.filter((entry) => {
-      const entryNameNorm = normalizeSpeciesNameForMatch(entry.name || "");
-      const entryDisplayNorm = normalizeSpeciesNameForMatch(entry.displayName || "");
-      return (
-        entryNameNorm === targetNameNorm ||
-        entryDisplayNorm === targetNameNorm
-      );
-    });
-
-    if (exactNameMatches.length > 0) {
-      const noFormExact = exactNameMatches.filter((entry) => !entry.form);
-      if (noFormExact.length > 0) {
-        return noFormExact[0];
-      }
-      if (exactNameMatches.length === 1) {
-        return exactNameMatches[0];
-      }
-    }
-  }
-
-  if (pool.length === 1) {
-    return pool[0];
-  }
 
   // If we know passive and/or ability, use them FIRST to choose among forms.
   if (enemyPassiveNorm || enemyAbilityNorm) {
@@ -434,9 +434,36 @@ if (baseNameNorm === "pikachu") {
     }
 
     // If we found anything with a positive score, use it.
-    if (best && bestScore >= 0) {
+    if (best && bestScore > 0) {
       return best;
     }
+  }
+
+
+  // If the displayed name matches exactly, prefer the non-form entry
+  if (hasName && !isDotName && targetNameNorm) {
+    const exactNameMatches = pool.filter((entry) => {
+      const entryNameNorm = normalizeSpeciesNameForMatch(entry.name || "");
+      const entryDisplayNorm = normalizeSpeciesNameForMatch(entry.displayName || "");
+      return (
+        entryNameNorm === targetNameNorm ||
+        entryDisplayNorm === targetNameNorm
+      );
+    });
+
+    if (exactNameMatches.length > 0) {
+      const noFormExact = exactNameMatches.filter((entry) => !entry.form);
+      if (noFormExact.length > 0) {
+        return noFormExact[0];
+      }
+      if (exactNameMatches.length === 1) {
+        return exactNameMatches[0];
+      }
+    }
+  }
+
+  if (pool.length === 1) {
+    return pool[0];
   }
   // Absolute last resort: first candidate overall.
   return pool[0];
