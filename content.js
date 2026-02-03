@@ -900,10 +900,24 @@ function buildEnemyTabs(enemies, moveDB) {
   const blazeTauros = enemies.find((e) => {
     const name = e.speciesName || "";
     const dn = String(name).toLowerCase();
-    return (
-      (Number(e.speciesId) === 8128 || dn.includes("tauros")) &&
-      (dn.includes("blaze") || dn.includes("paldea blaze") || dn.includes("paldean blaze"))
-    );
+    const entry = findBestPokedexEntryForEnemy(e);
+    const entryName = String(entry?.name || "").toLowerCase();
+    const entryDisplay = String(entry?.displayName || "").toLowerCase();
+    const entryForm = String(entry?.form || "").toLowerCase();
+
+    const isPaldeaTauros =
+      Number(e.speciesId) === 8128 ||
+      entryName.includes("paldea tauros") ||
+      entryDisplay.includes("paldea tauros") ||
+      dn.includes("paldea tauros") ||
+      dn.includes("paldean tauros");
+
+    const isBlaze =
+      dn.includes("blaze") ||
+      entryDisplay.includes("blaze") ||
+      entryForm.includes("blaze");
+
+    return isPaldeaTauros && isBlaze;
   });
 
   if (blazeTauros && typeof POKEDEX !== "undefined" && Array.isArray(POKEDEX)) {
