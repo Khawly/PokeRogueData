@@ -364,17 +364,17 @@ if (baseNameNorm === "pikachu") {
     }
   }
 
+  const formKeywordRegex = /\b(mega|gigantamax|gmax|alolan|galarian|hisuian|paldean|primal|eternamax)\b/i;
+  const isFormName = formKeywordRegex.test(rawName);
+
+  const hasStarmobileForm = candidates.some((entry) => {
+    const dn = (entry?.displayName || entry?.name || "").toLowerCase();
+    return dn.includes("starmobile");
+  });
+
   // If the displayed name is a base species (no form keyword), prefer the non-form entry
   // only when we don't have ability/passive data to disambiguate forms.
   if (hasName && !isDotName && !enemyAbilityNorm && !enemyPassiveNorm) {
-    const formKeywordRegex = /\b(mega|gigantamax|gmax|alolan|galarian|hisuian|paldean|primal|eternamax)\b/i;
-    const isFormName = formKeywordRegex.test(rawName);
-
-    const hasStarmobileForm = candidates.some((entry) => {
-      const dn = (entry?.displayName || entry?.name || "").toLowerCase();
-      return dn.includes("starmobile");
-    });
-
     if (!isFormName && !hasStarmobileForm && targetNameNorm) {
       const baseMatch = candidates.find((entry) => {
         if (!entry || entry.form) return false;
@@ -396,8 +396,10 @@ if (baseNameNorm === "pikachu") {
 
 
   // Prefer entries that share the exact same speciesId (forms of the same mon)
+  // but only when the displayed name indicates a form, or when no name is available.
+  const shouldTrustSpeciesId = !hasName || isDotName || isFormName;
   const sameSpeciesCandidates =
-    speciesId != null
+    shouldTrustSpeciesId && speciesId != null
       ? candidates.filter((entry) => entry && entry.speciesId === speciesId)
       : [];
   const pool =
