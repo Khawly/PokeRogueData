@@ -189700,13 +189700,13 @@ const POKEDEX = [
     ],
     "passive": "Intimidate",
     "baseStats": {
-      "bst": "600",
-      "hp": "110",
+      "bst": "580",
+      "hp": "80",
       "atk": "129",
-      "def": "100",
-      "spa": "77",
-      "spd": "79",
-      "spe": "105"
+      "def": "120",
+      "spa": "69",
+      "spd": "97",
+      "spe": "85"
     },
     "levelUpMoves": [
       {
@@ -189845,13 +189845,13 @@ const POKEDEX = [
     ],
     "passive": "Speed Boost",
     "baseStats": {
-      "bst": "600",
-      "hp": "110",
+      "bst": "580",
+      "hp": "80",
       "atk": "129",
-      "def": "100",
-      "spa": "77",
-      "spd": "79",
-      "spe": "105"
+      "def": "120",
+      "spa": "69",
+      "spd": "97",
+      "spe": "85"
     },
     "levelUpMoves": [
       {
@@ -189986,13 +189986,13 @@ const POKEDEX = [
     ],
     "passive": "Toxic Debris",
     "baseStats": {
-      "bst": "600",
-      "hp": "110",
+      "bst": "580",
+      "hp": "80",
       "atk": "129",
-      "def": "100",
-      "spa": "77",
-      "spd": "79",
-      "spe": "105"
+      "def": "120",
+      "spa": "69",
+      "spd": "97",
+      "spe": "85"
     },
     "levelUpMoves": [
       {
@@ -190127,13 +190127,13 @@ const POKEDEX = [
     ],
     "passive": "Misty Surge",
     "baseStats": {
-      "bst": "600",
-      "hp": "110",
+      "bst": "580",
+      "hp": "80",
       "atk": "129",
-      "def": "100",
-      "spa": "77",
-      "spd": "79",
-      "spe": "105"
+      "def": "120",
+      "spa": "69",
+      "spd": "97",
+      "spe": "85"
     },
     "levelUpMoves": [
       {
@@ -190272,13 +190272,13 @@ const POKEDEX = [
     ],
     "passive": "Stamina",
     "baseStats": {
-      "bst": "600",
-      "hp": "110",
+      "bst": "580",
+      "hp": "80",
       "atk": "129",
-      "def": "100",
-      "spa": "77",
-      "spd": "79",
-      "spe": "105"
+      "def": "120",
+      "spa": "69",
+      "spd": "97",
+      "spe": "85"
     },
     "levelUpMoves": [
       {
