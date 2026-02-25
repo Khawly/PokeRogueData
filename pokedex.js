@@ -394,6 +394,7 @@ const POKEDEX = [
       "Curse",
       "Double Edge",
       "Double Team",
+      "Earth Power",
       "Earthquake",
       "Echoed Voice",
       "Endure",
@@ -554,6 +555,7 @@ const POKEDEX = [
       "Curse",
       "Double Edge",
       "Double Team",
+      "Earth Power",
       "Earthquake",
       "Echoed Voice",
       "Endure",
@@ -714,6 +716,7 @@ const POKEDEX = [
       "Curse",
       "Double Edge",
       "Double Team",
+      "Earth Power",
       "Earthquake",
       "Echoed Voice",
       "Endure",
@@ -860,6 +863,7 @@ const POKEDEX = [
       "Double Edge",
       "Double Team",
       "Dragon Claw",
+      "Dragon Dance",
       "Dragon Pulse",
       "Dragon Tail",
       "Echoed Voice",
@@ -925,7 +929,7 @@ const POKEDEX = [
       "Blaze",
       "Solar Power"
     ],
-    "passive": "Beast Boost",
+    "passive": "Sheer Force",
     "baseStats": {
       "bst": "405",
       "hp": "58",
@@ -1008,6 +1012,7 @@ const POKEDEX = [
       "Double Edge",
       "Double Team",
       "Dragon Claw",
+      "Dragon Dance",
       "Dragon Pulse",
       "Dragon Tail",
       "Echoed Voice",
@@ -1072,7 +1077,7 @@ const POKEDEX = [
       "Blaze",
       "Solar Power"
     ],
-    "passive": "Beast Boost",
+    "passive": "Battle Bond",
     "baseStats": {
       "bst": "534",
       "hp": "78",
@@ -1172,6 +1177,7 @@ const POKEDEX = [
       "Double Edge",
       "Double Team",
       "Dragon Cheer",
+      "Dragon Dance",
       "Dragon Pulse",
       "Dragon Tail",
       "Dual Wingbeat",
@@ -1351,6 +1357,7 @@ const POKEDEX = [
       "Double Edge",
       "Double Team",
       "Dragon Cheer",
+      "Dragon Dance",
       "Dragon Pulse",
       "Dragon Tail",
       "Dual Wingbeat",
@@ -1530,6 +1537,7 @@ const POKEDEX = [
       "Double Edge",
       "Double Team",
       "Dragon Cheer",
+      "Dragon Dance",
       "Dragon Pulse",
       "Dragon Tail",
       "Dual Wingbeat",
@@ -1709,6 +1717,7 @@ const POKEDEX = [
       "Double Edge",
       "Double Team",
       "Dragon Cheer",
+      "Dragon Dance",
       "Dragon Pulse",
       "Dragon Tail",
       "Dual Wingbeat",
@@ -2650,18 +2659,18 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Bug Bite",
-        "level": -1
-      },
-      {
-        "name": "String Shot",
-        "level": -1
-      },
-      {
-        "name": "Tackle",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Harden",
+        "level": 0
+      },
+      {
+        "name": "String Shot",
+        "level": 0
+      },
+      {
+        "name": "Tackle",
         "level": 0
       }
     ],
@@ -3053,18 +3062,18 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Bug Bite",
-        "level": -1
-      },
-      {
-        "name": "Poison Sting",
-        "level": -1
-      },
-      {
-        "name": "String Shot",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Harden",
+        "level": 0
+      },
+      {
+        "name": "Poison Sting",
+        "level": 0
+      },
+      {
+        "name": "String Shot",
         "level": 0
       }
     ],
@@ -6752,6 +6761,7 @@ const POKEDEX = [
       "Fling",
       "Focus Punch",
       "Hidden Power",
+      "High Horsepower",
       "Hone Claws",
       "Iron Tail",
       "Knock Off",
@@ -6924,6 +6934,7 @@ const POKEDEX = [
       "Giga Impact",
       "Gunk Shot",
       "Hidden Power",
+      "High Horsepower",
       "Hone Claws",
       "Hyper Beam",
       "Iron Tail",
@@ -8003,6 +8014,7 @@ const POKEDEX = [
       "Body Slam",
       "Bounce",
       "Brick Break",
+      "Calm Mind",
       "Charge Beam",
       "Chilling Water",
       "Confide",
@@ -8121,71 +8133,71 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "After You",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Charm",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Copycat",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Cosmic Power",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Defense Curl",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Disarming Voice",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Encore",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Follow Me",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Gravity",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Growl",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Healing Wish",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Moonlight",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Pound",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Sing",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Splash",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Stored Power",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Sweet Kiss",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Life Dew",
@@ -8224,6 +8236,7 @@ const POKEDEX = [
       "Body Slam",
       "Bounce",
       "Brick Break",
+      "Calm Mind",
       "Charge Beam",
       "Chilling Water",
       "Confide",
@@ -8405,10 +8418,10 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Infernal Parade",
       "Moonblast",
       "Morning Sun",
-      "Tail Glow"
+      "Tail Glow",
+      "Teleport"
     ],
     "tmMoves": [
       "Agility",
@@ -8488,55 +8501,55 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Confuse Ray",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Disable",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Ember",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Extrasensory",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Fire Blast",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Fire Spin",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Imprison",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Incinerate",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Inferno",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Nasty Plot",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Safeguard",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Spite",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Will O Wisp",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Flamethrower",
@@ -8552,10 +8565,10 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Infernal Parade",
       "Moonblast",
       "Morning Sun",
-      "Tail Glow"
+      "Tail Glow",
+      "Teleport"
     ],
     "tmMoves": [
       "Agility",
@@ -8751,6 +8764,7 @@ const POKEDEX = [
       "Dazzling Gleam",
       "Dig",
       "Double Team",
+      "Drain Punch",
       "Draining Kiss",
       "Dream Eater",
       "Encore",
@@ -8968,6 +8982,7 @@ const POKEDEX = [
       "Dazzling Gleam",
       "Dig",
       "Double Team",
+      "Drain Punch",
       "Draining Kiss",
       "Dream Eater",
       "Encore",
@@ -9442,6 +9457,7 @@ const POKEDEX = [
       "Secret Power",
       "Seed Bomb",
       "Sleep Talk",
+      "Sludge Bomb",
       "Snore",
       "Solar Beam",
       "Substitute",
@@ -9574,6 +9590,7 @@ const POKEDEX = [
       "Secret Power",
       "Seed Bomb",
       "Sleep Talk",
+      "Sludge Bomb",
       "Snore",
       "Solar Beam",
       "Substitute",
@@ -9718,6 +9735,7 @@ const POKEDEX = [
       "Secret Power",
       "Seed Bomb",
       "Sleep Talk",
+      "Sludge Bomb",
       "Sludge Wave",
       "Snore",
       "Solar Beam",
@@ -9837,6 +9855,7 @@ const POKEDEX = [
       "Hidden Power",
       "Hone Claws",
       "Knock Off",
+      "Leech Life",
       "Light Screen",
       "Metal Claw",
       "Nature Power",
@@ -9973,6 +9992,7 @@ const POKEDEX = [
       "Hone Claws",
       "Hyper Beam",
       "Knock Off",
+      "Leech Life",
       "Light Screen",
       "Nature Power",
       "Protect",
@@ -10118,6 +10138,7 @@ const POKEDEX = [
       "Skill Swap",
       "Skitter Smack",
       "Sleep Talk",
+      "Sludge Bomb",
       "Snore",
       "Solar Beam",
       "Struggle Bug",
@@ -10268,6 +10289,7 @@ const POKEDEX = [
       "Skill Swap",
       "Skitter Smack",
       "Sleep Talk",
+      "Sludge Bomb",
       "Sludge Wave",
       "Snore",
       "Solar Beam",
@@ -10413,6 +10435,7 @@ const POKEDEX = [
       "Substitute",
       "Sunny Day",
       "Swagger",
+      "Swords Dance",
       "Take Down",
       "Tera Blast",
       "Thief",
@@ -10567,6 +10590,7 @@ const POKEDEX = [
       "Substitute",
       "Sunny Day",
       "Swagger",
+      "Swords Dance",
       "Take Down",
       "Tera Blast",
       "Thief",
@@ -11522,6 +11546,7 @@ const POKEDEX = [
       "Dig",
       "Double Edge",
       "Double Team",
+      "Drain Punch",
       "Earthquake",
       "Encore",
       "Endeavor",
@@ -11704,6 +11729,7 @@ const POKEDEX = [
       "Dig",
       "Double Edge",
       "Double Team",
+      "Drain Punch",
       "Earthquake",
       "Encore",
       "Endeavor",
@@ -12369,42 +12395,42 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Belly Drum",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Circle Throw",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Double Edge",
-        "level": -1
-      },
-      {
-        "name": "Earth Power",
-        "level": -1
-      },
-      {
-        "name": "Hydro Pump",
-        "level": -1
-      },
-      {
-        "name": "Mud Shot",
-        "level": -1
-      },
-      {
-        "name": "Pound",
-        "level": -1
-      },
-      {
-        "name": "Rain Dance",
-        "level": -1
-      },
-      {
-        "name": "Water Gun",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Dynamic Punch",
+        "level": 0
+      },
+      {
+        "name": "Earth Power",
+        "level": 0
+      },
+      {
+        "name": "Hydro Pump",
+        "level": 0
+      },
+      {
+        "name": "Mud Shot",
+        "level": 0
+      },
+      {
+        "name": "Pound",
+        "level": 0
+      },
+      {
+        "name": "Rain Dance",
+        "level": 0
+      },
+      {
+        "name": "Water Gun",
         "level": 0
       },
       {
@@ -12448,6 +12474,7 @@ const POKEDEX = [
       "Dig",
       "Dive",
       "Double Team",
+      "Drain Punch",
       "Earthquake",
       "Encore",
       "Endeavor",
@@ -14060,50 +14087,50 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Acid",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Gastro Acid",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Growth",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Knock Off",
-        "level": -1
-      },
-      {
-        "name": "Poison Jab",
-        "level": -1
-      },
-      {
-        "name": "Power Whip",
-        "level": -1
-      },
-      {
-        "name": "Slam",
-        "level": -1
-      },
-      {
-        "name": "Spit Up",
-        "level": -1
-      },
-      {
-        "name": "Stockpile",
-        "level": -1
-      },
-      {
-        "name": "Swallow",
-        "level": -1
-      },
-      {
-        "name": "Wrap",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Leaf Storm",
+        "level": 0
+      },
+      {
+        "name": "Poison Jab",
+        "level": 0
+      },
+      {
+        "name": "Power Whip",
+        "level": 0
+      },
+      {
+        "name": "Slam",
+        "level": 0
+      },
+      {
+        "name": "Spit Up",
+        "level": 0
+      },
+      {
+        "name": "Stockpile",
+        "level": 0
+      },
+      {
+        "name": "Swallow",
+        "level": 0
+      },
+      {
+        "name": "Wrap",
         "level": 0
       },
       {
@@ -15191,6 +15218,7 @@ const POKEDEX = [
       "Sunny Day",
       "Swagger",
       "Swift",
+      "Swords Dance",
       "Tera Blast",
       "Throat Chop",
       "Toxic",
@@ -15398,7 +15426,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Future Sight",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Curse",
@@ -15598,7 +15626,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Future Sight",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Curse",
@@ -16884,6 +16912,7 @@ const POKEDEX = [
       "Body Slam",
       "Confide",
       "Confuse Ray",
+      "Curse",
       "Dig",
       "Double Team",
       "Drain Punch",
@@ -17040,6 +17069,7 @@ const POKEDEX = [
       "Brick Break",
       "Confide",
       "Confuse Ray",
+      "Curse",
       "Dark Pulse",
       "Dig",
       "Double Team",
@@ -17219,6 +17249,7 @@ const POKEDEX = [
       "Reflect",
       "Rest",
       "Return",
+      "Rock Blast",
       "Round",
       "Screech",
       "Secret Power",
@@ -17375,6 +17406,7 @@ const POKEDEX = [
       "Reflect",
       "Rest",
       "Return",
+      "Rock Blast",
       "Round",
       "Scary Face",
       "Screech",
@@ -19671,7 +19703,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Growth",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Stomp",
@@ -21522,7 +21554,7 @@ const POKEDEX = [
       "Leaf Guard",
       "Regenerator"
     ],
-    "passive": "Seed Sower",
+    "passive": "Tangling Hair",
     "baseStats": {
       "bst": "435",
       "hp": "65",
@@ -21607,8 +21639,8 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
+      "Jungle Healing",
       "Natures Madness",
-      "Parting Shot",
       "Sappy Seed",
       "Snap Trap"
     ],
@@ -21768,6 +21800,7 @@ const POKEDEX = [
       "Bulldoze",
       "Confide",
       "Counter",
+      "Covet",
       "Curse",
       "Dig",
       "Double Edge",
@@ -21797,6 +21830,7 @@ const POKEDEX = [
       "Mega Kick",
       "Mega Punch",
       "Mud Slap",
+      "Power Up Punch",
       "Protect",
       "Rain Dance",
       "Rest",
@@ -21941,6 +21975,7 @@ const POKEDEX = [
       "Bulldoze",
       "Confide",
       "Counter",
+      "Covet",
       "Curse",
       "Dig",
       "Double Edge",
@@ -21970,6 +22005,7 @@ const POKEDEX = [
       "Mega Kick",
       "Mega Punch",
       "Mud Slap",
+      "Power Up Punch",
       "Protect",
       "Rain Dance",
       "Rest",
@@ -23957,7 +23993,7 @@ const POKEDEX = [
       "Anger Point",
       "Sheer Force"
     ],
-    "passive": "Stamina",
+    "passive": "Moxie",
     "baseStats": {
       "bst": "490",
       "hp": "75",
@@ -24027,8 +24063,8 @@ const POKEDEX = [
     ],
     "eggMoves": [
       "Collision Course",
-      "Fire Lash",
-      "Swords Dance",
+      "Flare Blitz",
+      "Play Rough",
       "Wicked Torque"
     ],
     "tmMoves": [
@@ -25352,11 +25388,11 @@ const POKEDEX = [
     },
     "levelUpMoves": [
       {
-        "name": "Veevee Volley",
-        "level": -1
+        "name": "Bouncy Bubble",
+        "level": 0
       },
       {
-        "name": "Bouncy Bubble",
+        "name": "Veevee Volley",
         "level": 0
       },
       {
@@ -25546,11 +25582,11 @@ const POKEDEX = [
     },
     "levelUpMoves": [
       {
-        "name": "Veevee Volley",
-        "level": -1
+        "name": "Buzzy Buzz",
+        "level": 0
       },
       {
-        "name": "Buzzy Buzz",
+        "name": "Veevee Volley",
         "level": 0
       },
       {
@@ -25740,11 +25776,11 @@ const POKEDEX = [
     },
     "levelUpMoves": [
       {
-        "name": "Veevee Volley",
-        "level": -1
+        "name": "Sizzly Slide",
+        "level": 0
       },
       {
-        "name": "Sizzly Slide",
+        "name": "Veevee Volley",
         "level": 0
       },
       {
@@ -26733,10 +26769,10 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Acrobatics",
+      "Dragon Ascent",
+      "Head Smash",
       "High Horsepower",
-      "Stone Axe",
-      "Swords Dance"
+      "Stone Axe"
     ],
     "tmMoves": [
       "Aerial Ace",
@@ -26884,10 +26920,10 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Acrobatics",
+      "Dragon Ascent",
+      "Head Smash",
       "High Horsepower",
-      "Stone Axe",
-      "Swords Dance"
+      "Stone Axe"
     ],
     "tmMoves": [
       "Aerial Ace",
@@ -27511,6 +27547,7 @@ const POKEDEX = [
       "Aerial Ace",
       "Air Cutter",
       "Air Slash",
+      "Aurora Veil",
       "Avalanche",
       "Brave Bird",
       "Confide",
@@ -29476,10 +29513,10 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Dragon Dance",
-      "Sappy Seed",
-      "Spore",
-      "Stone Axe"
+      "Calm Mind",
+      "Earth Power",
+      "Moonblast",
+      "Spore"
     ],
     "tmMoves": [
       "Attract",
@@ -29604,10 +29641,10 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Dragon Dance",
-      "Sappy Seed",
-      "Spore",
-      "Stone Axe"
+      "Calm Mind",
+      "Earth Power",
+      "Moonblast",
+      "Spore"
     ],
     "tmMoves": [
       "Attract",
@@ -29742,10 +29779,10 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Dragon Dance",
-      "Sappy Seed",
-      "Spore",
-      "Stone Axe"
+      "Calm Mind",
+      "Earth Power",
+      "Moonblast",
+      "Spore"
     ],
     "tmMoves": [
       "Attract",
@@ -30361,6 +30398,7 @@ const POKEDEX = [
       "Double Edge",
       "Double Team",
       "Dragon Claw",
+      "Dragon Dance",
       "Endeavor",
       "Endure",
       "Facade",
@@ -30512,6 +30550,7 @@ const POKEDEX = [
       "Double Edge",
       "Double Team",
       "Dragon Claw",
+      "Dragon Dance",
       "Endeavor",
       "Endure",
       "Facade",
@@ -30671,6 +30710,7 @@ const POKEDEX = [
       "Double Edge",
       "Double Team",
       "Dragon Claw",
+      "Dragon Dance",
       "Dragon Pulse",
       "Dragon Tail",
       "Earthquake",
@@ -32695,6 +32735,7 @@ const POKEDEX = [
       "Amnesia",
       "Attract",
       "Body Slam",
+      "Calm Mind",
       "Chilling Water",
       "Confide",
       "Covet",
@@ -34305,6 +34346,7 @@ const POKEDEX = [
       "Secret Power",
       "Seed Bomb",
       "Sleep Talk",
+      "Sludge Bomb",
       "Snore",
       "Solar Beam",
       "Solar Blade",
@@ -34875,46 +34917,46 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Body Slam",
-        "level": -1
-      },
-      {
-        "name": "Bubble Beam",
-        "level": -1
-      },
-      {
-        "name": "Double Edge",
-        "level": -1
-      },
-      {
-        "name": "Earth Power",
-        "level": -1
-      },
-      {
-        "name": "Hyper Voice",
-        "level": -1
-      },
-      {
-        "name": "Hypnosis",
-        "level": -1
-      },
-      {
-        "name": "Mud Shot",
-        "level": -1
-      },
-      {
-        "name": "Perish Song",
-        "level": -1
-      },
-      {
-        "name": "Swagger",
-        "level": -1
-      },
-      {
-        "name": "Water Gun",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Bounce",
+        "level": 0
+      },
+      {
+        "name": "Bubble Beam",
+        "level": 0
+      },
+      {
+        "name": "Double Edge",
+        "level": 0
+      },
+      {
+        "name": "Earth Power",
+        "level": 0
+      },
+      {
+        "name": "Hyper Voice",
+        "level": 0
+      },
+      {
+        "name": "Hypnosis",
+        "level": 0
+      },
+      {
+        "name": "Mud Shot",
+        "level": 0
+      },
+      {
+        "name": "Perish Song",
+        "level": 0
+      },
+      {
+        "name": "Swagger",
+        "level": 0
+      },
+      {
+        "name": "Water Gun",
         "level": 0
       },
       {
@@ -35784,7 +35826,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Seed Bomb",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Endeavor",
@@ -36374,11 +36416,11 @@ const POKEDEX = [
     },
     "levelUpMoves": [
       {
-        "name": "Veevee Volley",
-        "level": -1
+        "name": "Glitzy Glow",
+        "level": 0
       },
       {
-        "name": "Glitzy Glow",
+        "name": "Veevee Volley",
         "level": 0
       },
       {
@@ -36572,11 +36614,11 @@ const POKEDEX = [
     },
     "levelUpMoves": [
       {
-        "name": "Veevee Volley",
-        "level": -1
+        "name": "Baddy Bad",
+        "level": 0
       },
       {
-        "name": "Baddy Bad",
+        "name": "Veevee Volley",
         "level": 0
       },
       {
@@ -36922,11 +36964,11 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Chilly Reception",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Future Sight",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Curse",
@@ -39592,6 +39634,7 @@ const POKEDEX = [
       "Encore",
       "Endeavor",
       "Endure",
+      "Facade",
       "Fake Tears",
       "Fire Blast",
       "Fire Punch",
@@ -39765,6 +39808,7 @@ const POKEDEX = [
       "Encore",
       "Endeavor",
       "Endure",
+      "Facade",
       "Fire Blast",
       "Fire Punch",
       "Flamethrower",
@@ -40577,7 +40621,7 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Icicle Spear",
+      "Iron Head",
       "Rock Blast",
       "Scale Shot",
       "Storm Throw"
@@ -40622,6 +40666,7 @@ const POKEDEX = [
       "Return",
       "Revenge",
       "Reversal",
+      "Rock Blast",
       "Rock Slide",
       "Rock Smash",
       "Rock Tomb",
@@ -40733,7 +40778,7 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Icicle Spear",
+      "Iron Head",
       "Rock Blast",
       "Scale Shot",
       "Storm Throw"
@@ -40778,6 +40823,7 @@ const POKEDEX = [
       "Return",
       "Revenge",
       "Reversal",
+      "Rock Blast",
       "Rock Slide",
       "Rock Smash",
       "Rock Tomb",
@@ -40960,6 +41006,7 @@ const POKEDEX = [
       "Torment",
       "Toxic",
       "Trailblaze",
+      "Triple Axel",
       "Upper Hand",
       "Water Pulse",
       "Whirlpool",
@@ -41422,6 +41469,7 @@ const POKEDEX = [
       "Nature Power",
       "Overheat",
       "Pain Split",
+      "Power Gem",
       "Protect",
       "Reflect",
       "Rest",
@@ -41572,6 +41620,7 @@ const POKEDEX = [
       "Nature Power",
       "Overheat",
       "Pain Split",
+      "Power Gem",
       "Protect",
       "Reflect",
       "Rest",
@@ -41589,6 +41638,7 @@ const POKEDEX = [
       "Sleep Talk",
       "Smack Down",
       "Snore",
+      "Solar Beam",
       "Stealth Rock",
       "Stomping Tantrum",
       "Stone Edge",
@@ -42011,6 +42061,7 @@ const POKEDEX = [
       "Round",
       "Safeguard",
       "Sandstorm",
+      "Scald",
       "Screech",
       "Secret Power",
       "Self Destruct",
@@ -42646,7 +42697,7 @@ const POKEDEX = [
       "Sturdy",
       "Weak Armor"
     ],
-    "passive": "Stamina",
+    "passive": "Tough Claws",
     "baseStats": {
       "bst": "465",
       "hp": "65",
@@ -42720,8 +42771,8 @@ const POKEDEX = [
     ],
     "eggMoves": [
       "Beak Blast",
-      "Body Press",
       "Ceaseless Edge",
+      "Hard Press",
       "Roost"
     ],
     "tmMoves": [
@@ -42730,6 +42781,7 @@ const POKEDEX = [
       "Air Slash",
       "Assurance",
       "Attract",
+      "Body Press",
       "Confide",
       "Counter",
       "Curse",
@@ -42761,6 +42813,7 @@ const POKEDEX = [
       "Rock Slide",
       "Rock Smash",
       "Rock Tomb",
+      "Roost",
       "Round",
       "Sand Tomb",
       "Sandstorm",
@@ -43293,7 +43346,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Laser Focus",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Leer",
@@ -44868,6 +44921,7 @@ const POKEDEX = [
     "tmMoves": [
       "Attract",
       "Blizzard",
+      "Body Press",
       "Brick Break",
       "Bulldoze",
       "Confide",
@@ -45323,11 +45377,11 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Extreme Speed",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Sacred Fire",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Ember",
@@ -45484,11 +45538,11 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Extreme Speed",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Sheer Cold",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Gust",
@@ -45726,6 +45780,7 @@ const POKEDEX = [
       "Dig",
       "Double Edge",
       "Double Team",
+      "Dragon Dance",
       "Earth Power",
       "Endure",
       "Facade",
@@ -45878,6 +45933,7 @@ const POKEDEX = [
       "Dig",
       "Double Edge",
       "Double Team",
+      "Dragon Dance",
       "Earth Power",
       "Endure",
       "Facade",
@@ -46059,6 +46115,7 @@ const POKEDEX = [
       "Double Edge",
       "Double Team",
       "Dragon Claw",
+      "Dragon Dance",
       "Dragon Pulse",
       "Dragon Tail",
       "Earth Power",
@@ -46272,6 +46329,7 @@ const POKEDEX = [
       "Double Edge",
       "Double Team",
       "Dragon Claw",
+      "Dragon Dance",
       "Dragon Pulse",
       "Dragon Tail",
       "Earth Power",
@@ -46373,7 +46431,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Dragon Rush",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Ancient Power",
@@ -46435,8 +46493,8 @@ const POKEDEX = [
     "eggMoves": [
       "Aura Sphere",
       "Lumina Crash",
-      "Nasty Plot",
-      "Oblivion Wing"
+      "Steam Eruption",
+      "Stored Power"
     ],
     "tmMoves": [
       "Acrobatics",
@@ -46539,7 +46597,7 @@ const POKEDEX = [
       "Pressure",
       "Regenerator"
     ],
-    "passive": "Magic Guard",
+    "passive": "Serene Grace",
     "baseStats": {
       "bst": "680",
       "hp": "106",
@@ -46612,9 +46670,9 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Bolt Beak",
       "Brave Bird",
       "Dragon Dance",
+      "Petal Blizzard",
       "Revival Blessing"
     ],
     "tmMoves": [
@@ -46622,6 +46680,7 @@ const POKEDEX = [
       "Air Cutter",
       "Air Slash",
       "Body Slam",
+      "Brave Bird",
       "Bulldoze",
       "Charge Beam",
       "Confide",
@@ -47029,19 +47088,19 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Energy Ball",
-        "level": -1
+        "level": 0
       },
       {
         "name": "False Swipe",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Fury Cutter",
-        "level": -1
+        "level": 0
       },
       {
         "name": "X Scissor",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Leafage",
@@ -47201,26 +47260,26 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Energy Ball",
-        "level": -1
+        "level": 0
       },
       {
         "name": "False Swipe",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Fury Cutter",
-        "level": -1
-      },
-      {
-        "name": "Shed Tail",
-        "level": -1
-      },
-      {
-        "name": "X Scissor",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Leaf Blade",
+        "level": 0
+      },
+      {
+        "name": "Shed Tail",
+        "level": 0
+      },
+      {
+        "name": "X Scissor",
         "level": 0
       },
       {
@@ -47398,26 +47457,26 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Energy Ball",
-        "level": -1
+        "level": 0
       },
       {
         "name": "False Swipe",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Fury Cutter",
-        "level": -1
-      },
-      {
-        "name": "Shed Tail",
-        "level": -1
-      },
-      {
-        "name": "X Scissor",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Leaf Blade",
+        "level": 0
+      },
+      {
+        "name": "Shed Tail",
+        "level": 0
+      },
+      {
+        "name": "X Scissor",
         "level": 0
       },
       {
@@ -47736,15 +47795,15 @@ const POKEDEX = [
     },
     "levelUpMoves": [
       {
+        "name": "Double Kick",
+        "level": 0
+      },
+      {
         "name": "Feather Dance",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Flamethrower",
-        "level": -1
-      },
-      {
-        "name": "Double Kick",
         "level": 0
       },
       {
@@ -47903,23 +47962,23 @@ const POKEDEX = [
     },
     "levelUpMoves": [
       {
+        "name": "Blaze Kick",
+        "level": 0
+      },
+      {
         "name": "Ember",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Feather Dance",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Fire Punch",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Flamethrower",
-        "level": -1
-      },
-      {
-        "name": "Blaze Kick",
         "level": 0
       },
       {
@@ -48093,23 +48152,23 @@ const POKEDEX = [
     },
     "levelUpMoves": [
       {
+        "name": "Blaze Kick",
+        "level": 0
+      },
+      {
         "name": "Ember",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Feather Dance",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Fire Punch",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Flamethrower",
-        "level": -1
-      },
-      {
-        "name": "Blaze Kick",
         "level": 0
       },
       {
@@ -48422,15 +48481,15 @@ const POKEDEX = [
     },
     "levelUpMoves": [
       {
+        "name": "Mud Shot",
+        "level": 0
+      },
+      {
         "name": "Rock Smash",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Surf",
-        "level": -1
-      },
-      {
-        "name": "Mud Shot",
         "level": 0
       },
       {
@@ -48580,19 +48639,19 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Earthquake",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Hammer Arm",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Rock Smash",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Surf",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Growl",
@@ -48762,19 +48821,19 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Earthquake",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Hammer Arm",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Rock Smash",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Surf",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Growl",
@@ -49610,22 +49669,22 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Bug Bite",
-        "level": -1
-      },
-      {
-        "name": "Poison Sting",
-        "level": -1
-      },
-      {
-        "name": "String Shot",
-        "level": -1
-      },
-      {
-        "name": "Tackle",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Harden",
+        "level": 0
+      },
+      {
+        "name": "Poison Sting",
+        "level": 0
+      },
+      {
+        "name": "String Shot",
+        "level": 0
+      },
+      {
+        "name": "Tackle",
         "level": 0
       }
     ],
@@ -49804,22 +49863,22 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Bug Bite",
-        "level": -1
-      },
-      {
-        "name": "Poison Sting",
-        "level": -1
-      },
-      {
-        "name": "String Shot",
-        "level": -1
-      },
-      {
-        "name": "Tackle",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Harden",
+        "level": 0
+      },
+      {
+        "name": "Poison Sting",
+        "level": 0
+      },
+      {
+        "name": "String Shot",
+        "level": 0
+      },
+      {
+        "name": "Tackle",
         "level": 0
       }
     ],
@@ -50078,6 +50137,7 @@ const POKEDEX = [
       "Grassy Terrain",
       "Hail",
       "Hidden Power",
+      "Ice Beam",
       "Icy Wind",
       "Magical Leaf",
       "Muddy Water",
@@ -50238,6 +50298,7 @@ const POKEDEX = [
       "Hidden Power",
       "Hone Claws",
       "Hyper Voice",
+      "Ice Beam",
       "Ice Punch",
       "Icy Wind",
       "Magical Leaf",
@@ -50304,63 +50365,63 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Absorb",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Astonish",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Energy Ball",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Flail",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Fury Swipes",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Giga Drain",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Growl",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Hydro Pump",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Knock Off",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Leech Seed",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Mega Drain",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Mist",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Teeter Dance",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Water Gun",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Zen Headbutt",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Bubble Beam",
@@ -50414,6 +50475,7 @@ const POKEDEX = [
       "Hone Claws",
       "Hyper Beam",
       "Hyper Voice",
+      "Ice Beam",
       "Ice Punch",
       "Ice Spinner",
       "Icy Wind",
@@ -50591,6 +50653,7 @@ const POKEDEX = [
       "Spite",
       "Substitute",
       "Swagger",
+      "Swords Dance",
       "Take Down",
       "Tera Blast",
       "Toxic",
@@ -50778,6 +50841,7 @@ const POKEDEX = [
       "Strength",
       "Substitute",
       "Swift",
+      "Swords Dance",
       "Take Down",
       "Tera Blast",
       "Thief",
@@ -50812,82 +50876,82 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Absorb",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Astonish",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Beat Up",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Bide",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Explosion",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Extrasensory",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Fake Out",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Growth",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Harden",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Headbutt",
-        "level": -1
-      },
-      {
-        "name": "Mega Drain",
-        "level": -1
-      },
-      {
-        "name": "Razor Leaf",
-        "level": -1
-      },
-      {
-        "name": "Rollout",
-        "level": -1
-      },
-      {
-        "name": "Sucker Punch",
-        "level": -1
-      },
-      {
-        "name": "Swagger",
-        "level": -1
-      },
-      {
-        "name": "Synthesis",
-        "level": -1
-      },
-      {
-        "name": "Tackle",
-        "level": -1
-      },
-      {
-        "name": "Torment",
-        "level": -1
-      },
-      {
-        "name": "Whirlwind",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Leaf Blade",
+        "level": 0
+      },
+      {
+        "name": "Mega Drain",
+        "level": 0
+      },
+      {
+        "name": "Razor Leaf",
+        "level": 0
+      },
+      {
+        "name": "Rollout",
+        "level": 0
+      },
+      {
+        "name": "Sucker Punch",
+        "level": 0
+      },
+      {
+        "name": "Swagger",
+        "level": 0
+      },
+      {
+        "name": "Synthesis",
+        "level": 0
+      },
+      {
+        "name": "Tackle",
+        "level": 0
+      },
+      {
+        "name": "Torment",
+        "level": 0
+      },
+      {
+        "name": "Whirlwind",
         "level": 0
       },
       {
@@ -50994,6 +51058,7 @@ const POKEDEX = [
       "Strength",
       "Substitute",
       "Swift",
+      "Swords Dance",
       "Tailwind",
       "Take Down",
       "Taunt",
@@ -51022,7 +51087,7 @@ const POKEDEX = [
       "Guts",
       "Scrappy"
     ],
-    "passive": "Aerilate",
+    "passive": "Flare Boost",
     "baseStats": {
       "bst": "270",
       "hp": "40",
@@ -51101,6 +51166,7 @@ const POKEDEX = [
       "Double Edge",
       "Echoed Voice",
       "Endure",
+      "Facade",
       "Fly",
       "Heat Wave",
       "Hidden Power",
@@ -51139,7 +51205,7 @@ const POKEDEX = [
       "Guts",
       "Scrappy"
     ],
-    "passive": "Aerilate",
+    "passive": "Flare Boost",
     "baseStats": {
       "bst": "455",
       "hp": "60",
@@ -51222,6 +51288,7 @@ const POKEDEX = [
       "Double Edge",
       "Echoed Voice",
       "Endure",
+      "Facade",
       "Fly",
       "Giga Impact",
       "Heat Wave",
@@ -52418,11 +52485,11 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Baton Pass",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Sticky Web",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Agility",
@@ -52715,11 +52782,11 @@ const POKEDEX = [
     },
     "levelUpMoves": [
       {
-        "name": "Spore",
-        "level": -1
+        "name": "Mach Punch",
+        "level": 0
       },
       {
-        "name": "Mach Punch",
+        "name": "Spore",
         "level": 0
       },
       {
@@ -53040,7 +53107,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Play Rough",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Amnesia",
@@ -53131,6 +53198,7 @@ const POKEDEX = [
       "Dig",
       "Double Edge",
       "Double Team",
+      "Drain Punch",
       "Earthquake",
       "Endeavor",
       "Facade",
@@ -53226,11 +53294,11 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Focus Punch",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Play Rough",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Swagger",
@@ -53338,6 +53406,7 @@ const POKEDEX = [
       "Dig",
       "Double Edge",
       "Double Team",
+      "Drain Punch",
       "Earthquake",
       "Endeavor",
       "Facade",
@@ -54338,8 +54407,8 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Combat Torque",
       "Double Iron Bash",
+      "Hammer Arm",
       "Heat Crash",
       "Slack Off"
     ],
@@ -54510,8 +54579,8 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Combat Torque",
       "Double Iron Bash",
+      "Hammer Arm",
       "Heat Crash",
       "Slack Off"
     ],
@@ -54796,6 +54865,7 @@ const POKEDEX = [
     ],
     "tmMoves": [
       "Attract",
+      "Body Press",
       "Body Slam",
       "Bulldoze",
       "Confide",
@@ -55981,6 +56051,7 @@ const POKEDEX = [
     "tmMoves": [
       "Aerial Ace",
       "Attract",
+      "Body Press",
       "Body Slam",
       "Bulldoze",
       "Confide",
@@ -56124,6 +56195,7 @@ const POKEDEX = [
     "tmMoves": [
       "Aerial Ace",
       "Attract",
+      "Body Press",
       "Body Slam",
       "Bulldoze",
       "Confide",
@@ -56274,6 +56346,7 @@ const POKEDEX = [
       "Attract",
       "Avalanche",
       "Blizzard",
+      "Body Press",
       "Body Slam",
       "Brick Break",
       "Brutal Swing",
@@ -56464,6 +56537,7 @@ const POKEDEX = [
       "Attract",
       "Avalanche",
       "Blizzard",
+      "Body Press",
       "Body Slam",
       "Brick Break",
       "Brutal Swing",
@@ -57535,7 +57609,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Nuzzle",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Growl",
@@ -57695,7 +57769,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Nuzzle",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Growl",
@@ -57926,6 +58000,7 @@ const POKEDEX = [
       "Air Cutter",
       "Air Slash",
       "Attract",
+      "Baton Pass",
       "Body Slam",
       "Brick Break",
       "Bug Bite",
@@ -59492,11 +59567,11 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Double Edge",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Flamethrower",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Rock Slide",
@@ -59656,11 +59731,11 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Double Edge",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Flamethrower",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Rock Slide",
@@ -59901,6 +59976,7 @@ const POKEDEX = [
     ],
     "tmMoves": [
       "Attract",
+      "Body Press",
       "Bulldoze",
       "Burning Jealousy",
       "Confide",
@@ -60056,6 +60132,7 @@ const POKEDEX = [
       "Encore",
       "Endeavor",
       "Endure",
+      "Expanding Force",
       "Facade",
       "Flash",
       "Flash Cannon",
@@ -60222,6 +60299,7 @@ const POKEDEX = [
       "Endeavor",
       "Endure",
       "Energy Ball",
+      "Expanding Force",
       "Facade",
       "Fire Punch",
       "Flash",
@@ -60587,30 +60665,30 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Astonish",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Bulldoze",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Crunch",
-        "level": -1
-      },
-      {
-        "name": "Fissure",
-        "level": -1
-      },
-      {
-        "name": "Superpower",
-        "level": -1
-      },
-      {
-        "name": "Supersonic",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Dragon Breath",
+        "level": 0
+      },
+      {
+        "name": "Fissure",
+        "level": 0
+      },
+      {
+        "name": "Superpower",
+        "level": 0
+      },
+      {
+        "name": "Supersonic",
         "level": 0
       },
       {
@@ -60759,38 +60837,38 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Astonish",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Bite",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Crunch",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Dig",
-        "level": -1
-      },
-      {
-        "name": "Dragon Dance",
-        "level": -1
-      },
-      {
-        "name": "Feint",
-        "level": -1
-      },
-      {
-        "name": "Fissure",
-        "level": -1
-      },
-      {
-        "name": "Superpower",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Dragon Claw",
+        "level": 0
+      },
+      {
+        "name": "Dragon Dance",
+        "level": 0
+      },
+      {
+        "name": "Feint",
+        "level": 0
+      },
+      {
+        "name": "Fissure",
+        "level": 0
+      },
+      {
+        "name": "Superpower",
         "level": 0
       },
       {
@@ -61413,6 +61491,7 @@ const POKEDEX = [
       "Rain Dance",
       "Rest",
       "Return",
+      "Roost",
       "Secret Power",
       "Sleep Talk",
       "Snore",
@@ -61579,6 +61658,7 @@ const POKEDEX = [
       "Return",
       "Roar",
       "Rock Smash",
+      "Roost",
       "Secret Power",
       "Sleep Talk",
       "Snore",
@@ -61748,6 +61828,7 @@ const POKEDEX = [
       "Return",
       "Roar",
       "Rock Smash",
+      "Roost",
       "Secret Power",
       "Sleep Talk",
       "Snore",
@@ -61792,51 +61873,51 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Belly Drum",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Counter",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Curse",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Disable",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Double Hit",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Double Kick",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Feint",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Final Gambit",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Flail",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Fury Swipes",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Night Slash",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Quick Guard",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Leer",
@@ -61925,6 +62006,7 @@ const POKEDEX = [
       "Embargo",
       "Endeavor",
       "Endure",
+      "Facade",
       "Fire Blast",
       "Fire Punch",
       "Flamethrower",
@@ -62573,6 +62655,7 @@ const POKEDEX = [
       "Dive",
       "Double Edge",
       "Double Team",
+      "Dragon Dance",
       "Earth Power",
       "Endure",
       "Facade",
@@ -62714,6 +62797,7 @@ const POKEDEX = [
       "Dive",
       "Double Edge",
       "Double Team",
+      "Dragon Dance",
       "Earth Power",
       "Endure",
       "Facade",
@@ -67274,7 +67358,7 @@ const POKEDEX = [
       "Shell Armor",
       "Rattled"
     ],
-    "passive": "Overcoat",
+    "passive": "Comatose",
     "baseStats": {
       "bst": "345",
       "hp": "35",
@@ -67994,6 +68078,7 @@ const POKEDEX = [
       "Double Team",
       "Draco Meteor",
       "Dragon Cheer",
+      "Dragon Dance",
       "Dragon Pulse",
       "Dragon Tail",
       "Endure",
@@ -68126,6 +68211,7 @@ const POKEDEX = [
       "Double Team",
       "Draco Meteor",
       "Dragon Cheer",
+      "Dragon Dance",
       "Dragon Pulse",
       "Dragon Tail",
       "Endure",
@@ -68187,11 +68273,11 @@ const POKEDEX = [
     },
     "levelUpMoves": [
       {
-        "name": "Outrage",
-        "level": -1
+        "name": "Fly",
+        "level": 0
       },
       {
-        "name": "Fly",
+        "name": "Outrage",
         "level": 0
       },
       {
@@ -68281,6 +68367,7 @@ const POKEDEX = [
       "Double Team",
       "Draco Meteor",
       "Dragon Cheer",
+      "Dragon Dance",
       "Dragon Pulse",
       "Earthquake",
       "Endure",
@@ -68351,11 +68438,11 @@ const POKEDEX = [
     },
     "levelUpMoves": [
       {
-        "name": "Outrage",
-        "level": -1
+        "name": "Fly",
+        "level": 0
       },
       {
-        "name": "Fly",
+        "name": "Outrage",
         "level": 0
       },
       {
@@ -68445,6 +68532,7 @@ const POKEDEX = [
       "Double Team",
       "Draco Meteor",
       "Dragon Cheer",
+      "Dragon Dance",
       "Dragon Pulse",
       "Earthquake",
       "Endure",
@@ -68504,7 +68592,7 @@ const POKEDEX = [
       "Clear Body",
       "Light Metal"
     ],
-    "passive": "Levitate",
+    "passive": "Rock Head",
     "baseStats": {
       "bst": "300",
       "hp": "40",
@@ -68545,7 +68633,7 @@ const POKEDEX = [
       "Clear Body",
       "Light Metal"
     ],
-    "passive": "Levitate",
+    "passive": "Iron Fist",
     "baseStats": {
       "bst": "420",
       "hp": "60",
@@ -68701,7 +68789,7 @@ const POKEDEX = [
       "Clear Body",
       "Light Metal"
     ],
-    "passive": "Levitate",
+    "passive": "Iron Fist",
     "baseStats": {
       "bst": "600",
       "hp": "80",
@@ -68714,14 +68802,14 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Explosion",
-        "level": -1
-      },
-      {
-        "name": "Hone Claws",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Hammer Arm",
+        "level": 0
+      },
+      {
+        "name": "Hone Claws",
         "level": 0
       },
       {
@@ -68884,14 +68972,14 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Explosion",
-        "level": -1
-      },
-      {
-        "name": "Hone Claws",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Hammer Arm",
+        "level": 0
+      },
+      {
+        "name": "Hone Claws",
         "level": 0
       },
       {
@@ -69121,6 +69209,7 @@ const POKEDEX = [
       "Stone Axe"
     ],
     "tmMoves": [
+      "Body Press",
       "Body Slam",
       "Brick Break",
       "Confide",
@@ -69432,6 +69521,7 @@ const POKEDEX = [
     ],
     "tmMoves": [
       "Aerial Ace",
+      "Body Press",
       "Body Slam",
       "Brick Break",
       "Confide",
@@ -70933,7 +71023,7 @@ const POKEDEX = [
     "eggMoves": [
       "Core Enforcer",
       "Dragon Darts",
-      "Oblivion Wing",
+      "Nasty Plot",
       "V Create"
     ],
     "tmMoves": [
@@ -71107,7 +71197,7 @@ const POKEDEX = [
     "eggMoves": [
       "Core Enforcer",
       "Dragon Darts",
-      "Oblivion Wing",
+      "Nasty Plot",
       "V Create"
     ],
     "tmMoves": [
@@ -72545,7 +72635,7 @@ const POKEDEX = [
       "Blaze",
       "Iron Fist"
     ],
-    "passive": "Unnerve",
+    "passive": "Defiant",
     "baseStats": {
       "bst": "309",
       "hp": "44",
@@ -72701,7 +72791,7 @@ const POKEDEX = [
       "Blaze",
       "Iron Fist"
     ],
-    "passive": "Beast Boost",
+    "passive": "Defiant",
     "baseStats": {
       "bst": "405",
       "hp": "64",
@@ -72714,18 +72804,18 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Facade",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Flamethrower",
-        "level": -1
-      },
-      {
-        "name": "Nasty Plot",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Mach Punch",
+        "level": 0
+      },
+      {
+        "name": "Nasty Plot",
         "level": 0
       },
       {
@@ -72879,7 +72969,7 @@ const POKEDEX = [
       "Blaze",
       "Iron Fist"
     ],
-    "passive": "Beast Boost",
+    "passive": "Battle Bond",
     "baseStats": {
       "bst": "534",
       "hp": "76",
@@ -72891,27 +72981,27 @@ const POKEDEX = [
     },
     "levelUpMoves": [
       {
+        "name": "Close Combat",
+        "level": 0
+      },
+      {
         "name": "Facade",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Flamethrower",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Nasty Plot",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Slack Off",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Taunt",
-        "level": -1
-      },
-      {
-        "name": "Close Combat",
         "level": 0
       },
       {
@@ -73618,10 +73708,10 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
+      "Bulk Up",
       "Extreme Speed",
-      "Flare Blitz",
       "Head Charge",
-      "Swords Dance"
+      "High Jump Kick"
     ],
     "tmMoves": [
       "Acrobatics",
@@ -73738,10 +73828,10 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
+      "Bulk Up",
       "Extreme Speed",
-      "Flare Blitz",
       "Head Charge",
-      "Swords Dance"
+      "High Jump Kick"
     ],
     "tmMoves": [
       "Acrobatics",
@@ -73863,10 +73953,10 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
+      "Bulk Up",
       "Extreme Speed",
-      "Flare Blitz",
       "Head Charge",
-      "Swords Dance"
+      "High Jump Kick"
     ],
     "tmMoves": [
       "Acrobatics",
@@ -75143,8 +75233,8 @@ const POKEDEX = [
     ],
     "eggMoves": [
       "Accelerock",
+      "Dragon Dance",
       "Flare Blitz",
-      "Shift Gear",
       "Volt Tackle"
     ],
     "tmMoves": [
@@ -75290,8 +75380,8 @@ const POKEDEX = [
     ],
     "eggMoves": [
       "Accelerock",
+      "Dragon Dance",
       "Flare Blitz",
-      "Shift Gear",
       "Volt Tackle"
     ],
     "tmMoves": [
@@ -75532,11 +75622,11 @@ const POKEDEX = [
     },
     "levelUpMoves": [
       {
-        "name": "Wide Guard",
-        "level": -1
+        "name": "Block",
+        "level": 0
       },
       {
-        "name": "Block",
+        "name": "Wide Guard",
         "level": 0
       },
       {
@@ -75598,6 +75688,7 @@ const POKEDEX = [
       "Attract",
       "Avalanche",
       "Blizzard",
+      "Body Press",
       "Body Slam",
       "Bulldoze",
       "Confide",
@@ -77140,9 +77231,9 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Fire Lash",
-      "Flower Trick",
+      "Heat Wave",
       "Sleep Powder",
+      "Solar Blade",
       "Strength Sap"
     ],
     "tmMoves": [
@@ -77191,7 +77282,7 @@ const POKEDEX = [
     "abilities": [
       "Flower Gift"
     ],
-    "passive": "Orichalcum Pulse",
+    "passive": "Drought",
     "baseStats": {
       "bst": "450",
       "hp": "70",
@@ -77260,9 +77351,9 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Fire Lash",
-      "Flower Trick",
+      "Heat Wave",
       "Sleep Powder",
+      "Solar Blade",
       "Strength Sap"
     ],
     "tmMoves": [
@@ -77314,7 +77405,7 @@ const POKEDEX = [
     "abilities": [
       "Flower Gift"
     ],
-    "passive": "Orichalcum Pulse",
+    "passive": "Chlorophyll",
     "baseStats": {
       "bst": "450",
       "hp": "70",
@@ -77383,9 +77474,9 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Fire Lash",
-      "Flower Trick",
+      "Heat Wave",
       "Sleep Powder",
+      "Solar Blade",
       "Strength Sap"
     ],
     "tmMoves": [
@@ -78219,6 +78310,7 @@ const POKEDEX = [
       "Attract",
       "Body Slam",
       "Brutal Swing",
+      "Calm Mind",
       "Charge Beam",
       "Confide",
       "Curse",
@@ -78385,6 +78477,7 @@ const POKEDEX = [
       "Attract",
       "Body Slam",
       "Brutal Swing",
+      "Calm Mind",
       "Charge Beam",
       "Confide",
       "Curse",
@@ -78591,6 +78684,7 @@ const POKEDEX = [
       "Thunder Wave",
       "Thunderbolt",
       "Toxic",
+      "Triple Axel",
       "Uproar",
       "Water Pulse",
       "Work Up"
@@ -78775,6 +78869,7 @@ const POKEDEX = [
       "Thunder Wave",
       "Thunderbolt",
       "Toxic",
+      "Triple Axel",
       "U Turn",
       "Uproar",
       "Water Pulse",
@@ -78958,6 +79053,7 @@ const POKEDEX = [
       "Thunder Wave",
       "Thunderbolt",
       "Toxic",
+      "Triple Axel",
       "U Turn",
       "Uproar",
       "Water Pulse",
@@ -78986,39 +79082,39 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Confuse Ray",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Confusion",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Hex",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Mean Look",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Pain Split",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Payback",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Perish Song",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Psybeam",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Shadow Ball",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Astonish",
@@ -79798,9 +79894,9 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Ceaseless Edge",
       "Dire Claw",
       "Fire Lash",
+      "Parting Shot",
       "Recover"
     ],
     "tmMoves": [
@@ -79961,9 +80057,9 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Ceaseless Edge",
       "Dire Claw",
       "Fire Lash",
+      "Parting Shot",
       "Recover"
     ],
     "tmMoves": [
@@ -81000,8 +81096,8 @@ const POKEDEX = [
     ],
     "eggMoves": [
       "Baddy Bad",
-      "Bitter Malice",
       "Parting Shot",
+      "Spirit Break",
       "Strength Sap"
     ],
     "tmMoves": [
@@ -84186,7 +84282,7 @@ const POKEDEX = [
     "abilities": [
       "Snow Warning"
     ],
-    "passive": "Seed Sower",
+    "passive": "Grassy Surge",
     "baseStats": {
       "bst": "594",
       "hp": "90",
@@ -84517,6 +84613,7 @@ const POKEDEX = [
       "Torment",
       "Toxic",
       "Trailblaze",
+      "Triple Axel",
       "Upper Hand",
       "Water Pulse",
       "Whirlpool",
@@ -85066,7 +85163,7 @@ const POKEDEX = [
       "Leaf Guard",
       "Regenerator"
     ],
-    "passive": "Seed Sower",
+    "passive": "Tangling Hair",
     "baseStats": {
       "bst": "535",
       "hp": "100",
@@ -85155,8 +85252,8 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
+      "Jungle Healing",
       "Natures Madness",
-      "Parting Shot",
       "Sappy Seed",
       "Snap Trap"
     ],
@@ -85771,7 +85868,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Hypnosis",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Air Cutter",
@@ -85922,11 +86019,11 @@ const POKEDEX = [
     },
     "levelUpMoves": [
       {
-        "name": "Veevee Volley",
-        "level": -1
+        "name": "Sappy Seed",
+        "level": 0
       },
       {
-        "name": "Sappy Seed",
+        "name": "Veevee Volley",
         "level": 0
       },
       {
@@ -86114,11 +86211,11 @@ const POKEDEX = [
     },
     "levelUpMoves": [
       {
-        "name": "Veevee Volley",
-        "level": -1
+        "name": "Freezy Frost",
+        "level": 0
       },
       {
-        "name": "Freezy Frost",
+        "name": "Veevee Volley",
         "level": 0
       },
       {
@@ -87436,6 +87533,7 @@ const POKEDEX = [
     "tmMoves": [
       "Ally Switch",
       "Attract",
+      "Body Press",
       "Body Slam",
       "Bulldoze",
       "Confide",
@@ -88679,43 +88777,43 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Ally Switch",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Expanding Force",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Iron Tail",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Magic Room",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Psycho Cut",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Round",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Safeguard",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Snore",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Tri Attack",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Wonder Room",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Confusion",
@@ -88871,43 +88969,43 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Ally Switch",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Expanding Force",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Iron Tail",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Magic Room",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Psycho Cut",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Round",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Safeguard",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Snore",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Tri Attack",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Wonder Room",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Confusion",
@@ -89062,55 +89160,55 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Ally Switch",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Assurance",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Expanding Force",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Iron Tail",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Magic Room",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Payback",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Psycho Cut",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Round",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Safeguard",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Self Destruct",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Snore",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Tri Attack",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Wonder Room",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Confusion",
@@ -89878,7 +89976,7 @@ const POKEDEX = [
       "Flash Fire",
       "Flame Body"
     ],
-    "passive": "Earth Eater",
+    "passive": "Filter",
     "baseStats": {
       "bst": "600",
       "hp": "91",
@@ -96279,11 +96377,11 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Endure",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Hammer Arm",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Arm Thrust",
@@ -97044,11 +97142,11 @@ const POKEDEX = [
     },
     "levelUpMoves": [
       {
-        "name": "Work Up",
-        "level": -1
+        "name": "Confuse Ray",
+        "level": 0
       },
       {
-        "name": "Confuse Ray",
+        "name": "Work Up",
         "level": 0
       },
       {
@@ -97678,6 +97776,7 @@ const POKEDEX = [
       "Dream Eater",
       "Echoed Voice",
       "Embargo",
+      "Encore",
       "Endure",
       "Facade",
       "Fake Tears",
@@ -97813,6 +97912,7 @@ const POKEDEX = [
       "Dream Eater",
       "Echoed Voice",
       "Embargo",
+      "Encore",
       "Endure",
       "Facade",
       "Fake Tears",
@@ -98028,51 +98128,51 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Acrobatics",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Bite",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Crunch",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Fling",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Grass Knot",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Leech Seed",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Natural Gift",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Play Nice",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Recycle",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Scratch",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Torment",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Vine Whip",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Fury Swipes",
@@ -98275,6 +98375,7 @@ const POKEDEX = [
       "Knock Off",
       "Low Kick",
       "Low Sweep",
+      "Nasty Plot",
       "Overheat",
       "Payback",
       "Protect",
@@ -98324,51 +98425,51 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Acrobatics",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Amnesia",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Bite",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Crunch",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Fire Blast",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Fling",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Incinerate",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Natural Gift",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Play Nice",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Recycle",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Scratch",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Yawn",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Flame Burst",
@@ -98423,6 +98524,7 @@ const POKEDEX = [
       "Knock Off",
       "Low Kick",
       "Low Sweep",
+      "Nasty Plot",
       "Overheat",
       "Payback",
       "Power Up Punch",
@@ -98573,6 +98675,7 @@ const POKEDEX = [
       "Knock Off",
       "Low Kick",
       "Low Sweep",
+      "Nasty Plot",
       "Payback",
       "Protect",
       "Rain Dance",
@@ -98622,51 +98725,51 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Acrobatics",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Bite",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Brine",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Crunch",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Fling",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Natural Gift",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Play Nice",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Recycle",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Scratch",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Taunt",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Water Gun",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Water Sport",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Fury Swipes",
@@ -98722,6 +98825,7 @@ const POKEDEX = [
       "Knock Off",
       "Low Kick",
       "Low Sweep",
+      "Nasty Plot",
       "Payback",
       "Power Up Punch",
       "Protect",
@@ -99741,6 +99845,7 @@ const POKEDEX = [
     ],
     "tmMoves": [
       "Attract",
+      "Body Press",
       "Bulldoze",
       "Confide",
       "Curse",
@@ -99861,6 +99966,7 @@ const POKEDEX = [
     ],
     "tmMoves": [
       "Attract",
+      "Body Press",
       "Bulldoze",
       "Confide",
       "Curse",
@@ -99981,6 +100087,7 @@ const POKEDEX = [
     ],
     "tmMoves": [
       "Attract",
+      "Body Press",
       "Bulldoze",
       "Confide",
       "Curse",
@@ -100152,6 +100259,7 @@ const POKEDEX = [
       "Snore",
       "Speed Swap",
       "Steel Wing",
+      "Stored Power",
       "Substitute",
       "Super Fang",
       "Swagger",
@@ -100304,6 +100412,7 @@ const POKEDEX = [
       "Snore",
       "Speed Swap",
       "Steel Wing",
+      "Stored Power",
       "Substitute",
       "Super Fang",
       "Swagger",
@@ -101061,6 +101170,7 @@ const POKEDEX = [
       "Dig",
       "Double Edge",
       "Double Team",
+      "Drain Punch",
       "Endure",
       "Facade",
       "Fire Punch",
@@ -101206,6 +101316,7 @@ const POKEDEX = [
       "Dig",
       "Double Edge",
       "Double Team",
+      "Drain Punch",
       "Endure",
       "Facade",
       "Fire Punch",
@@ -101354,6 +101465,7 @@ const POKEDEX = [
       "Dig",
       "Double Edge",
       "Double Team",
+      "Drain Punch",
       "Earthquake",
       "Endure",
       "Facade",
@@ -102362,18 +102474,18 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Bug Bite",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Bug Buzz",
-        "level": -1
-      },
-      {
-        "name": "Sticky Web",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Slash",
+        "level": 0
+      },
+      {
+        "name": "Sticky Web",
         "level": 0
       },
       {
@@ -105383,7 +105495,7 @@ const POKEDEX = [
       "Gunk Shot",
       "Slack Off",
       "Sucker Punch",
-      "Thunderous Kick"
+      "Triple Axel"
     ],
     "tmMoves": [
       "Acid Spray",
@@ -105554,7 +105666,7 @@ const POKEDEX = [
       "Gunk Shot",
       "Slack Off",
       "Sucker Punch",
-      "Thunderous Kick"
+      "Triple Axel"
     ],
     "tmMoves": [
       "Acid Spray",
@@ -106512,6 +106624,7 @@ const POKEDEX = [
       "Dragon Pulse",
       "Dual Wingbeat",
       "Earth Power",
+      "Earthquake",
       "Endure",
       "Facade",
       "Heat Wave",
@@ -106530,6 +106643,7 @@ const POKEDEX = [
       "Rock Polish",
       "Rock Smash",
       "Rock Tomb",
+      "Roost",
       "Round",
       "Sandstorm",
       "Secret Power",
@@ -106665,6 +106779,7 @@ const POKEDEX = [
       "Dragon Tail",
       "Dual Wingbeat",
       "Earth Power",
+      "Earthquake",
       "Endure",
       "Facade",
       "Fly",
@@ -106688,6 +106803,7 @@ const POKEDEX = [
       "Rock Polish",
       "Rock Smash",
       "Rock Tomb",
+      "Roost",
       "Round",
       "Sandstorm",
       "Secret Power",
@@ -107629,50 +107745,50 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "After You",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Baby Doll Eyes",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Echoed Voice",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Encore",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Helping Hand",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Hyper Voice",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Last Resort",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Rock Blast",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Slam",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Swift",
-        "level": -1
-      },
-      {
-        "name": "Tickle",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Tail Slap",
+        "level": 0
+      },
+      {
+        "name": "Tickle",
         "level": 0
       },
       {
@@ -109066,6 +109182,7 @@ const POKEDEX = [
     "tmMoves": [
       "Ally Switch",
       "Attract",
+      "Aurora Veil",
       "Confide",
       "Double Team",
       "Endure",
@@ -109187,6 +109304,7 @@ const POKEDEX = [
     "tmMoves": [
       "Ally Switch",
       "Attract",
+      "Aurora Veil",
       "Confide",
       "Double Team",
       "Endure",
@@ -109320,6 +109438,7 @@ const POKEDEX = [
     "tmMoves": [
       "Ally Switch",
       "Attract",
+      "Aurora Veil",
       "Beat Up",
       "Confide",
       "Double Team",
@@ -110995,6 +111114,7 @@ const POKEDEX = [
       "Energy Ball",
       "Facade",
       "Flash",
+      "Foul Play",
       "Gastro Acid",
       "Grass Knot",
       "Grassy Terrain",
@@ -111003,6 +111123,7 @@ const POKEDEX = [
       "Magical Leaf",
       "Nature Power",
       "Payback",
+      "Pollen Puff",
       "Protect",
       "Rain Dance",
       "Rest",
@@ -111119,6 +111240,7 @@ const POKEDEX = [
       "Energy Ball",
       "Facade",
       "Flash",
+      "Foul Play",
       "Gastro Acid",
       "Giga Impact",
       "Grass Knot",
@@ -111130,6 +111252,7 @@ const POKEDEX = [
       "Magical Leaf",
       "Nature Power",
       "Payback",
+      "Pollen Puff",
       "Protect",
       "Rain Dance",
       "Rest",
@@ -111545,6 +111668,7 @@ const POKEDEX = [
       "Double Team",
       "Endure",
       "Facade",
+      "Flip Turn",
       "Giga Impact",
       "Hail",
       "Hidden Power",
@@ -112724,11 +112848,11 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Acid Spray",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Thunderbolt",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Acid",
@@ -114568,6 +114692,7 @@ const POKEDEX = [
     "tmMoves": [
       "Acrobatics",
       "Attract",
+      "Aurora Veil",
       "Avalanche",
       "Blizzard",
       "Body Slam",
@@ -115599,6 +115724,7 @@ const POKEDEX = [
       "Dig",
       "Double Edge",
       "Double Team",
+      "Drain Punch",
       "Earth Power",
       "Endure",
       "Facade",
@@ -115682,11 +115808,11 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Focus Punch",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Mud Slap",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Astonish",
@@ -115773,6 +115899,7 @@ const POKEDEX = [
       "Dig",
       "Double Edge",
       "Double Team",
+      "Drain Punch",
       "Earth Power",
       "Endure",
       "Facade",
@@ -116446,7 +116573,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Brave Bird",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Superpower",
@@ -116670,6 +116797,7 @@ const POKEDEX = [
       "Fake Tears",
       "Feather Dance",
       "Fly",
+      "Foul Play",
       "Heat Wave",
       "Hidden Power",
       "Incinerate",
@@ -116683,6 +116811,7 @@ const POKEDEX = [
       "Return",
       "Rock Smash",
       "Rock Tomb",
+      "Roost",
       "Round",
       "Scary Face",
       "Secret Power",
@@ -116819,6 +116948,7 @@ const POKEDEX = [
       "Fake Tears",
       "Feather Dance",
       "Fly",
+      "Foul Play",
       "Giga Impact",
       "Heat Wave",
       "Hidden Power",
@@ -116835,6 +116965,7 @@ const POKEDEX = [
       "Return",
       "Rock Smash",
       "Rock Tomb",
+      "Roost",
       "Round",
       "Sandstorm",
       "Scary Face",
@@ -116978,6 +117109,7 @@ const POKEDEX = [
       "Hidden Power",
       "Knock Off",
       "Low Kick",
+      "Overheat",
       "Power Up Punch",
       "Protect",
       "Rain Dance",
@@ -118239,7 +118371,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Take Down",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Helping Hand",
@@ -121688,6 +121820,7 @@ const POKEDEX = [
       "Swagger",
       "Swift",
       "Swords Dance",
+      "Synthesis",
       "Taunt",
       "Tera Blast",
       "Thunder Punch",
@@ -121854,6 +121987,7 @@ const POKEDEX = [
       "Swagger",
       "Swift",
       "Swords Dance",
+      "Synthesis",
       "Taunt",
       "Tera Blast",
       "Thunder Punch",
@@ -122051,6 +122185,7 @@ const POKEDEX = [
       "Swagger",
       "Swift",
       "Swords Dance",
+      "Synthesis",
       "Taunt",
       "Tera Blast",
       "Thunder Punch",
@@ -125452,22 +125587,22 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Bug Bite",
-        "level": -1
-      },
-      {
-        "name": "String Shot",
-        "level": -1
-      },
-      {
-        "name": "Stun Spore",
-        "level": -1
-      },
-      {
-        "name": "Tackle",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Protect",
+        "level": 0
+      },
+      {
+        "name": "String Shot",
+        "level": 0
+      },
+      {
+        "name": "Stun Spore",
+        "level": 0
+      },
+      {
+        "name": "Tackle",
         "level": 0
       },
       {
@@ -125512,22 +125647,22 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Bug Bite",
-        "level": -1
-      },
-      {
-        "name": "String Shot",
-        "level": -1
-      },
-      {
-        "name": "Stun Spore",
-        "level": -1
-      },
-      {
-        "name": "Tackle",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Protect",
+        "level": 0
+      },
+      {
+        "name": "String Shot",
+        "level": 0
+      },
+      {
+        "name": "Stun Spore",
+        "level": 0
+      },
+      {
+        "name": "Tackle",
         "level": 0
       },
       {
@@ -125572,22 +125707,22 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Bug Bite",
-        "level": -1
-      },
-      {
-        "name": "String Shot",
-        "level": -1
-      },
-      {
-        "name": "Stun Spore",
-        "level": -1
-      },
-      {
-        "name": "Tackle",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Protect",
+        "level": 0
+      },
+      {
+        "name": "String Shot",
+        "level": 0
+      },
+      {
+        "name": "Stun Spore",
+        "level": 0
+      },
+      {
+        "name": "Tackle",
         "level": 0
       },
       {
@@ -125632,22 +125767,22 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Bug Bite",
-        "level": -1
-      },
-      {
-        "name": "String Shot",
-        "level": -1
-      },
-      {
-        "name": "Stun Spore",
-        "level": -1
-      },
-      {
-        "name": "Tackle",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Protect",
+        "level": 0
+      },
+      {
+        "name": "String Shot",
+        "level": 0
+      },
+      {
+        "name": "Stun Spore",
+        "level": 0
+      },
+      {
+        "name": "Tackle",
         "level": 0
       },
       {
@@ -125692,22 +125827,22 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Bug Bite",
-        "level": -1
-      },
-      {
-        "name": "String Shot",
-        "level": -1
-      },
-      {
-        "name": "Stun Spore",
-        "level": -1
-      },
-      {
-        "name": "Tackle",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Protect",
+        "level": 0
+      },
+      {
+        "name": "String Shot",
+        "level": 0
+      },
+      {
+        "name": "Stun Spore",
+        "level": 0
+      },
+      {
+        "name": "Tackle",
         "level": 0
       },
       {
@@ -125752,22 +125887,22 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Bug Bite",
-        "level": -1
-      },
-      {
-        "name": "String Shot",
-        "level": -1
-      },
-      {
-        "name": "Stun Spore",
-        "level": -1
-      },
-      {
-        "name": "Tackle",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Protect",
+        "level": 0
+      },
+      {
+        "name": "String Shot",
+        "level": 0
+      },
+      {
+        "name": "Stun Spore",
+        "level": 0
+      },
+      {
+        "name": "Tackle",
         "level": 0
       },
       {
@@ -125812,22 +125947,22 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Bug Bite",
-        "level": -1
-      },
-      {
-        "name": "String Shot",
-        "level": -1
-      },
-      {
-        "name": "Stun Spore",
-        "level": -1
-      },
-      {
-        "name": "Tackle",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Protect",
+        "level": 0
+      },
+      {
+        "name": "String Shot",
+        "level": 0
+      },
+      {
+        "name": "Stun Spore",
+        "level": 0
+      },
+      {
+        "name": "Tackle",
         "level": 0
       },
       {
@@ -125872,22 +126007,22 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Bug Bite",
-        "level": -1
-      },
-      {
-        "name": "String Shot",
-        "level": -1
-      },
-      {
-        "name": "Stun Spore",
-        "level": -1
-      },
-      {
-        "name": "Tackle",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Protect",
+        "level": 0
+      },
+      {
+        "name": "String Shot",
+        "level": 0
+      },
+      {
+        "name": "Stun Spore",
+        "level": 0
+      },
+      {
+        "name": "Tackle",
         "level": 0
       },
       {
@@ -125932,22 +126067,22 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Bug Bite",
-        "level": -1
-      },
-      {
-        "name": "String Shot",
-        "level": -1
-      },
-      {
-        "name": "Stun Spore",
-        "level": -1
-      },
-      {
-        "name": "Tackle",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Protect",
+        "level": 0
+      },
+      {
+        "name": "String Shot",
+        "level": 0
+      },
+      {
+        "name": "Stun Spore",
+        "level": 0
+      },
+      {
+        "name": "Tackle",
         "level": 0
       },
       {
@@ -125992,22 +126127,22 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Bug Bite",
-        "level": -1
-      },
-      {
-        "name": "String Shot",
-        "level": -1
-      },
-      {
-        "name": "Stun Spore",
-        "level": -1
-      },
-      {
-        "name": "Tackle",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Protect",
+        "level": 0
+      },
+      {
+        "name": "String Shot",
+        "level": 0
+      },
+      {
+        "name": "Stun Spore",
+        "level": 0
+      },
+      {
+        "name": "Tackle",
         "level": 0
       },
       {
@@ -126052,22 +126187,22 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Bug Bite",
-        "level": -1
-      },
-      {
-        "name": "String Shot",
-        "level": -1
-      },
-      {
-        "name": "Stun Spore",
-        "level": -1
-      },
-      {
-        "name": "Tackle",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Protect",
+        "level": 0
+      },
+      {
+        "name": "String Shot",
+        "level": 0
+      },
+      {
+        "name": "Stun Spore",
+        "level": 0
+      },
+      {
+        "name": "Tackle",
         "level": 0
       },
       {
@@ -126112,22 +126247,22 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Bug Bite",
-        "level": -1
-      },
-      {
-        "name": "String Shot",
-        "level": -1
-      },
-      {
-        "name": "Stun Spore",
-        "level": -1
-      },
-      {
-        "name": "Tackle",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Protect",
+        "level": 0
+      },
+      {
+        "name": "String Shot",
+        "level": 0
+      },
+      {
+        "name": "Stun Spore",
+        "level": 0
+      },
+      {
+        "name": "Tackle",
         "level": 0
       },
       {
@@ -126172,22 +126307,22 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Bug Bite",
-        "level": -1
-      },
-      {
-        "name": "String Shot",
-        "level": -1
-      },
-      {
-        "name": "Stun Spore",
-        "level": -1
-      },
-      {
-        "name": "Tackle",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Protect",
+        "level": 0
+      },
+      {
+        "name": "String Shot",
+        "level": 0
+      },
+      {
+        "name": "Stun Spore",
+        "level": 0
+      },
+      {
+        "name": "Tackle",
         "level": 0
       },
       {
@@ -126232,22 +126367,22 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Bug Bite",
-        "level": -1
-      },
-      {
-        "name": "String Shot",
-        "level": -1
-      },
-      {
-        "name": "Stun Spore",
-        "level": -1
-      },
-      {
-        "name": "Tackle",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Protect",
+        "level": 0
+      },
+      {
+        "name": "String Shot",
+        "level": 0
+      },
+      {
+        "name": "Stun Spore",
+        "level": 0
+      },
+      {
+        "name": "Tackle",
         "level": 0
       },
       {
@@ -126292,22 +126427,22 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Bug Bite",
-        "level": -1
-      },
-      {
-        "name": "String Shot",
-        "level": -1
-      },
-      {
-        "name": "Stun Spore",
-        "level": -1
-      },
-      {
-        "name": "Tackle",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Protect",
+        "level": 0
+      },
+      {
+        "name": "String Shot",
+        "level": 0
+      },
+      {
+        "name": "Stun Spore",
+        "level": 0
+      },
+      {
+        "name": "Tackle",
         "level": 0
       },
       {
@@ -126352,22 +126487,22 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Bug Bite",
-        "level": -1
-      },
-      {
-        "name": "String Shot",
-        "level": -1
-      },
-      {
-        "name": "Stun Spore",
-        "level": -1
-      },
-      {
-        "name": "Tackle",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Protect",
+        "level": 0
+      },
+      {
+        "name": "String Shot",
+        "level": 0
+      },
+      {
+        "name": "Stun Spore",
+        "level": 0
+      },
+      {
+        "name": "Tackle",
         "level": 0
       },
       {
@@ -126412,22 +126547,22 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Bug Bite",
-        "level": -1
-      },
-      {
-        "name": "String Shot",
-        "level": -1
-      },
-      {
-        "name": "Stun Spore",
-        "level": -1
-      },
-      {
-        "name": "Tackle",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Protect",
+        "level": 0
+      },
+      {
+        "name": "String Shot",
+        "level": 0
+      },
+      {
+        "name": "Stun Spore",
+        "level": 0
+      },
+      {
+        "name": "Tackle",
         "level": 0
       },
       {
@@ -126472,22 +126607,22 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Bug Bite",
-        "level": -1
-      },
-      {
-        "name": "String Shot",
-        "level": -1
-      },
-      {
-        "name": "Stun Spore",
-        "level": -1
-      },
-      {
-        "name": "Tackle",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Protect",
+        "level": 0
+      },
+      {
+        "name": "String Shot",
+        "level": 0
+      },
+      {
+        "name": "Stun Spore",
+        "level": 0
+      },
+      {
+        "name": "Tackle",
         "level": 0
       },
       {
@@ -126532,22 +126667,22 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Bug Bite",
-        "level": -1
-      },
-      {
-        "name": "String Shot",
-        "level": -1
-      },
-      {
-        "name": "Stun Spore",
-        "level": -1
-      },
-      {
-        "name": "Tackle",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Protect",
+        "level": 0
+      },
+      {
+        "name": "String Shot",
+        "level": 0
+      },
+      {
+        "name": "Stun Spore",
+        "level": 0
+      },
+      {
+        "name": "Tackle",
         "level": 0
       },
       {
@@ -132179,6 +132314,7 @@ const POKEDEX = [
       "Facade",
       "Giga Drain",
       "Grass Knot",
+      "Grassy Glide",
       "Grassy Terrain",
       "Helping Hand",
       "Hidden Power",
@@ -132333,9 +132469,11 @@ const POKEDEX = [
       "Giga Drain",
       "Giga Impact",
       "Grass Knot",
+      "Grassy Glide",
       "Grassy Terrain",
       "Helping Hand",
       "Hidden Power",
+      "High Horsepower",
       "Hyper Beam",
       "Iron Tail",
       "Leaf Storm",
@@ -132467,6 +132605,7 @@ const POKEDEX = [
       "Dark Pulse",
       "Dig",
       "Double Team",
+      "Drain Punch",
       "Echoed Voice",
       "Endeavor",
       "Endure",
@@ -132632,6 +132771,7 @@ const POKEDEX = [
       "Dig",
       "Double Team",
       "Dragon Claw",
+      "Drain Punch",
       "Earthquake",
       "Echoed Voice",
       "Embargo",
@@ -132780,8 +132920,8 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Combat Torque",
-      "Multi Attack",
+      "Body Slam",
+      "Bonemerang",
       "Slack Off",
       "Tidy Up"
     ],
@@ -132901,8 +133041,8 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Combat Torque",
-      "Multi Attack",
+      "Body Slam",
+      "Bonemerang",
       "Slack Off",
       "Tidy Up"
     ],
@@ -133022,8 +133162,8 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Combat Torque",
-      "Multi Attack",
+      "Body Slam",
+      "Bonemerang",
       "Slack Off",
       "Tidy Up"
     ],
@@ -133143,8 +133283,8 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Combat Torque",
-      "Multi Attack",
+      "Body Slam",
+      "Bonemerang",
       "Slack Off",
       "Tidy Up"
     ],
@@ -133264,8 +133404,8 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Combat Torque",
-      "Multi Attack",
+      "Body Slam",
+      "Bonemerang",
       "Slack Off",
       "Tidy Up"
     ],
@@ -133385,8 +133525,8 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Combat Torque",
-      "Multi Attack",
+      "Body Slam",
+      "Bonemerang",
       "Slack Off",
       "Tidy Up"
     ],
@@ -133506,8 +133646,8 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Combat Torque",
-      "Multi Attack",
+      "Body Slam",
+      "Bonemerang",
       "Slack Off",
       "Tidy Up"
     ],
@@ -133627,8 +133767,8 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Combat Torque",
-      "Multi Attack",
+      "Body Slam",
+      "Bonemerang",
       "Slack Off",
       "Tidy Up"
     ],
@@ -133748,8 +133888,8 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Combat Torque",
-      "Multi Attack",
+      "Body Slam",
+      "Bonemerang",
       "Slack Off",
       "Tidy Up"
     ],
@@ -133869,8 +134009,8 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Combat Torque",
-      "Multi Attack",
+      "Body Slam",
+      "Bonemerang",
       "Slack Off",
       "Tidy Up"
     ],
@@ -136220,7 +136360,7 @@ const POKEDEX = [
       "Poison Touch",
       "Adaptability"
     ],
-    "passive": "Dragons Maw",
+    "passive": "Regenerator",
     "baseStats": {
       "bst": "494",
       "hp": "65",
@@ -136900,6 +137040,7 @@ const POKEDEX = [
       "Thunder Punch",
       "Toxic",
       "U Turn",
+      "Weather Ball",
       "Wild Charge"
     ]
   },
@@ -137536,11 +137677,11 @@ const POKEDEX = [
     },
     "levelUpMoves": [
       {
-        "name": "Veevee Volley",
-        "level": -1
+        "name": "Sparkly Swirl",
+        "level": 0
       },
       {
-        "name": "Sparkly Swirl",
+        "name": "Veevee Volley",
         "level": 0
       },
       {
@@ -137785,8 +137926,8 @@ const POKEDEX = [
     ],
     "eggMoves": [
       "Floaty Fall",
-      "High Horsepower",
-      "Triple Axel",
+      "Headlong Rush",
+      "Thunderous Kick",
       "Wicked Blow"
     ],
     "tmMoves": [
@@ -138097,11 +138238,12 @@ const POKEDEX = [
     "eggMoves": [
       "Body Press",
       "Diamond Storm",
-      "Shore Up",
+      "Recover",
       "Sparkly Swirl"
     ],
     "tmMoves": [
       "Ally Switch",
+      "Body Press",
       "Body Slam",
       "Calm Mind",
       "Charm",
@@ -140474,6 +140616,7 @@ const POKEDEX = [
     "tmMoves": [
       "Attract",
       "Aurora Veil",
+      "Body Press",
       "Bulldoze",
       "Chilling Water",
       "Confide",
@@ -141299,7 +141442,7 @@ const POKEDEX = [
     "abilities": [
       "Aura Break"
     ],
-    "passive": "Unnerve",
+    "passive": "Teraform Zero",
     "baseStats": {
       "bst": "600",
       "hp": "108",
@@ -141450,7 +141593,7 @@ const POKEDEX = [
     "abilities": [
       "Aura Break"
     ],
-    "passive": "Moxie",
+    "passive": "Teraform Zero",
     "baseStats": {
       "bst": "486",
       "hp": "54",
@@ -141601,7 +141744,7 @@ const POKEDEX = [
     "abilities": [
       "Power Construct"
     ],
-    "passive": "Unnerve",
+    "passive": "Teraform Zero",
     "baseStats": {
       "bst": "600",
       "hp": "108",
@@ -141752,7 +141895,7 @@ const POKEDEX = [
     "abilities": [
       "Power Construct"
     ],
-    "passive": "Moxie",
+    "passive": "Teraform Zero",
     "baseStats": {
       "bst": "486",
       "hp": "54",
@@ -141903,7 +142046,7 @@ const POKEDEX = [
     "abilities": [
       "Power Construct"
     ],
-    "passive": "Adaptability",
+    "passive": "Teraform Zero",
     "baseStats": {
       "bst": "708",
       "hp": "216",
@@ -142130,7 +142273,7 @@ const POKEDEX = [
       "Fiery Dance",
       "Geomancy",
       "Magical Torque",
-      "Shore Up"
+      "Recover"
     ],
     "tmMoves": [
       "Ally Switch",
@@ -142288,7 +142431,7 @@ const POKEDEX = [
       "Fiery Dance",
       "Geomancy",
       "Magical Torque",
-      "Shore Up"
+      "Recover"
     ],
     "tmMoves": [
       "Ally Switch",
@@ -142458,7 +142601,7 @@ const POKEDEX = [
       "Fiery Wrath",
       "Photon Geyser",
       "Secret Sword",
-      "Shell Smash"
+      "Sucker Punch"
     ],
     "tmMoves": [
       "Brick Break",
@@ -142621,7 +142764,7 @@ const POKEDEX = [
       "Fiery Wrath",
       "Photon Geyser",
       "Secret Sword",
-      "Shell Smash"
+      "Sucker Punch"
     ],
     "tmMoves": [
       "Brick Break",
@@ -142792,8 +142935,8 @@ const POKEDEX = [
     ],
     "eggMoves": [
       "Calm Mind",
-      "Hydro Steam",
       "Searing Shot",
+      "Strange Steam",
       "Thunderclap"
     ],
     "tmMoves": [
@@ -142941,7 +143084,7 @@ const POKEDEX = [
     ],
     "eggMoves": [
       "First Impression",
-      "Shadow Bone",
+      "Stone Edge",
       "Thousand Arrows",
       "Victory Dance"
     ],
@@ -143085,7 +143228,7 @@ const POKEDEX = [
     ],
     "eggMoves": [
       "First Impression",
-      "Shadow Bone",
+      "Stone Edge",
       "Thousand Arrows",
       "Victory Dance"
     ],
@@ -143250,7 +143393,7 @@ const POKEDEX = [
     ],
     "eggMoves": [
       "First Impression",
-      "Shadow Bone",
+      "Stone Edge",
       "Thousand Arrows",
       "Victory Dance"
     ],
@@ -143615,19 +143758,19 @@ const POKEDEX = [
     },
     "levelUpMoves": [
       {
+        "name": "Darkest Lariat",
+        "level": 0
+      },
+      {
         "name": "Growl",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Scratch",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Throat Chop",
-        "level": -1
-      },
-      {
-        "name": "Darkest Lariat",
         "level": 0
       },
       {
@@ -144171,6 +144314,7 @@ const POKEDEX = [
       "Protect",
       "Psych Up",
       "Psychic",
+      "Psychic Noise",
       "Rain Dance",
       "Reflect",
       "Rest",
@@ -144348,7 +144492,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Echoed Voice",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Growl",
@@ -145137,30 +145281,30 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Bug Bite",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Dig",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Iron Defense",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Mud Slap",
-        "level": -1
-      },
-      {
-        "name": "Vise Grip",
-        "level": -1
-      },
-      {
-        "name": "X Scissor",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Thunderbolt",
+        "level": 0
+      },
+      {
+        "name": "Vise Grip",
+        "level": 0
+      },
+      {
+        "name": "X Scissor",
         "level": 0
       },
       {
@@ -145441,7 +145585,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Crabhammer",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Ice Punch",
@@ -147762,8 +147906,8 @@ const POKEDEX = [
     ],
     "eggMoves": [
       "Body Press",
+      "Heat Crash",
       "Shore Up",
-      "Thousand Waves",
       "Yawn"
     ],
     "tmMoves": [
@@ -147884,12 +148028,13 @@ const POKEDEX = [
     ],
     "eggMoves": [
       "Body Press",
+      "Heat Crash",
       "Shore Up",
-      "Thousand Waves",
       "Yawn"
     ],
     "tmMoves": [
       "Attract",
+      "Body Press",
       "Body Slam",
       "Close Combat",
       "Confide",
@@ -148471,6 +148616,7 @@ const POKEDEX = [
       "Sleep Talk",
       "Snore",
       "Substitute",
+      "Superpower",
       "Swagger",
       "Swords Dance",
       "Take Down",
@@ -148567,6 +148713,7 @@ const POKEDEX = [
       "Attract",
       "Confide",
       "Double Team",
+      "Draining Kiss",
       "Endure",
       "Energy Ball",
       "Facade",
@@ -148693,6 +148840,7 @@ const POKEDEX = [
       "Confide",
       "Double Team",
       "Drain Punch",
+      "Draining Kiss",
       "Endure",
       "Energy Ball",
       "Facade",
@@ -149283,6 +149431,7 @@ const POKEDEX = [
       "Darkest Lariat",
       "Double Team",
       "Dragon Claw",
+      "Drain Punch",
       "Earthquake",
       "Facade",
       "Fling",
@@ -149565,6 +149714,7 @@ const POKEDEX = [
       "Tera Blast",
       "Toxic",
       "Trailblaze",
+      "Triple Axel",
       "Worry Seed",
       "Zen Headbutt"
     ]
@@ -149720,6 +149870,7 @@ const POKEDEX = [
       "Tera Blast",
       "Toxic",
       "Trailblaze",
+      "Triple Axel",
       "U Turn",
       "Worry Seed",
       "Zen Headbutt"
@@ -154441,6 +154592,7 @@ const POKEDEX = [
       "Confide",
       "Dazzling Gleam",
       "Double Team",
+      "Earth Power",
       "Earthquake",
       "Endeavor",
       "Endure",
@@ -154576,6 +154728,7 @@ const POKEDEX = [
       "Confide",
       "Dazzling Gleam",
       "Double Team",
+      "Earth Power",
       "Earthquake",
       "Endeavor",
       "Endure",
@@ -154711,6 +154864,7 @@ const POKEDEX = [
       "Confide",
       "Dazzling Gleam",
       "Double Team",
+      "Earth Power",
       "Earthquake",
       "Endeavor",
       "Endure",
@@ -154846,6 +155000,7 @@ const POKEDEX = [
       "Confide",
       "Dazzling Gleam",
       "Double Team",
+      "Earth Power",
       "Earthquake",
       "Endeavor",
       "Endure",
@@ -154981,6 +155136,7 @@ const POKEDEX = [
       "Confide",
       "Dazzling Gleam",
       "Double Team",
+      "Earth Power",
       "Earthquake",
       "Endeavor",
       "Endure",
@@ -155116,6 +155272,7 @@ const POKEDEX = [
       "Confide",
       "Dazzling Gleam",
       "Double Team",
+      "Earth Power",
       "Earthquake",
       "Endeavor",
       "Endure",
@@ -155386,6 +155543,7 @@ const POKEDEX = [
       "Confide",
       "Dazzling Gleam",
       "Double Team",
+      "Earth Power",
       "Earthquake",
       "Endeavor",
       "Endure",
@@ -155521,6 +155679,7 @@ const POKEDEX = [
       "Confide",
       "Dazzling Gleam",
       "Double Team",
+      "Earth Power",
       "Earthquake",
       "Endeavor",
       "Endure",
@@ -155656,6 +155815,7 @@ const POKEDEX = [
       "Confide",
       "Dazzling Gleam",
       "Double Team",
+      "Earth Power",
       "Earthquake",
       "Endeavor",
       "Endure",
@@ -155791,6 +155951,7 @@ const POKEDEX = [
       "Confide",
       "Dazzling Gleam",
       "Double Team",
+      "Earth Power",
       "Earthquake",
       "Endeavor",
       "Endure",
@@ -155926,6 +156087,7 @@ const POKEDEX = [
       "Confide",
       "Dazzling Gleam",
       "Double Team",
+      "Earth Power",
       "Earthquake",
       "Endeavor",
       "Endure",
@@ -156061,6 +156223,7 @@ const POKEDEX = [
       "Confide",
       "Dazzling Gleam",
       "Double Team",
+      "Earth Power",
       "Earthquake",
       "Endeavor",
       "Endure",
@@ -156203,6 +156366,7 @@ const POKEDEX = [
       "Hyper Beam",
       "Ice Spinner",
       "Iron Head",
+      "Knock Off",
       "Low Kick",
       "Low Sweep",
       "Metal Claw",
@@ -156327,6 +156491,7 @@ const POKEDEX = [
     ],
     "tmMoves": [
       "Attract",
+      "Body Press",
       "Brutal Swing",
       "Bulk Up",
       "Bulldoze",
@@ -157232,7 +157397,7 @@ const POKEDEX = [
     ],
     "eggMoves": [
       "Ivy Cudgel",
-      "Shadow Bone",
+      "Spirit Shackle",
       "Strength Sap",
       "Triple Dive"
     ],
@@ -157610,7 +157775,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Belly Drum",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Clanging Scales",
@@ -157700,6 +157865,7 @@ const POKEDEX = [
       "Aqua Tail",
       "Attract",
       "Aura Sphere",
+      "Body Press",
       "Body Slam",
       "Breaking Swipe",
       "Brick Break",
@@ -158176,9 +158342,9 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
+      "Grassy Glide",
       "Lands Wrath",
-      "Magical Torque",
-      "Sappy Seed",
+      "Play Rough",
       "Victory Dance"
     ],
     "tmMoves": [
@@ -159757,8 +159923,8 @@ const POKEDEX = [
     ],
     "eggMoves": [
       "Comeuppance",
+      "Dragon Hammer",
       "Shed Tail",
-      "Slack Off",
       "Sucker Punch"
     ],
     "tmMoves": [
@@ -160511,7 +160677,7 @@ const POKEDEX = [
     "abilities": [
       "Soul Heart"
     ],
-    "passive": "Steely Spirit",
+    "passive": "Mirror Armor",
     "baseStats": {
       "bst": "600",
       "hp": "80",
@@ -160604,10 +160770,10 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Earth Power",
+      "Flamethrower",
       "Make It Rain",
       "Moonblast",
-      "Recover"
+      "Take Heart"
     ],
     "tmMoves": [
       "Agility",
@@ -160695,7 +160861,7 @@ const POKEDEX = [
     "abilities": [
       "Soul Heart"
     ],
-    "passive": "Steely Spirit",
+    "passive": "Mirror Armor",
     "baseStats": {
       "bst": "600",
       "hp": "80",
@@ -160788,10 +160954,10 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Earth Power",
+      "Flamethrower",
       "Make It Rain",
       "Moonblast",
-      "Recover"
+      "Take Heart"
     ],
     "tmMoves": [
       "Agility",
@@ -161060,7 +161226,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Dragon Pulse",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Acid",
@@ -161408,6 +161574,7 @@ const POKEDEX = [
       "Gravity",
       "Gyro Ball",
       "Heat Crash",
+      "Heavy Slam",
       "Hidden Power",
       "High Horsepower",
       "Infestation",
@@ -161680,8 +161847,8 @@ const POKEDEX = [
     "eggMoves": [
       "Collision Course",
       "Fire Lash",
-      "Swords Dance",
-      "Triple Axel"
+      "Ice Punch",
+      "Swords Dance"
     ],
     "tmMoves": [
       "Acrobatics",
@@ -162168,6 +162335,7 @@ const POKEDEX = [
       "Giga Drain",
       "Grass Knot",
       "Grass Pledge",
+      "Grassy Glide",
       "Grassy Terrain",
       "Hidden Power",
       "Leaf Storm",
@@ -162294,6 +162462,7 @@ const POKEDEX = [
       "Giga Drain",
       "Grass Knot",
       "Grass Pledge",
+      "Grassy Glide",
       "Grassy Terrain",
       "Hidden Power",
       "Leaf Storm",
@@ -162449,6 +162618,7 @@ const POKEDEX = [
       "Giga Impact",
       "Grass Knot",
       "Grass Pledge",
+      "Grassy Glide",
       "Hidden Power",
       "High Horsepower",
       "Hyper Beam",
@@ -162610,6 +162780,7 @@ const POKEDEX = [
       "Giga Impact",
       "Grass Knot",
       "Grass Pledge",
+      "Grassy Glide",
       "Hidden Power",
       "High Horsepower",
       "Hyper Beam",
@@ -164057,6 +164228,7 @@ const POKEDEX = [
       "Revenge",
       "Reversal",
       "Rock Smash",
+      "Roost",
       "Round",
       "Secret Power",
       "Sleep Talk",
@@ -164171,6 +164343,7 @@ const POKEDEX = [
       "Revenge",
       "Reversal",
       "Rock Smash",
+      "Roost",
       "Round",
       "Secret Power",
       "Sleep Talk",
@@ -164283,6 +164456,7 @@ const POKEDEX = [
       "Air Slash",
       "Assurance",
       "Attract",
+      "Body Press",
       "Body Slam",
       "Bulk Up",
       "Curse",
@@ -164315,6 +164489,7 @@ const POKEDEX = [
       "Revenge",
       "Reversal",
       "Rock Smash",
+      "Roost",
       "Round",
       "Secret Power",
       "Sleep Talk",
@@ -164426,6 +164601,7 @@ const POKEDEX = [
       "Air Slash",
       "Assurance",
       "Attract",
+      "Body Press",
       "Body Slam",
       "Bulk Up",
       "Curse",
@@ -164458,6 +164634,7 @@ const POKEDEX = [
       "Revenge",
       "Reversal",
       "Rock Smash",
+      "Roost",
       "Round",
       "Secret Power",
       "Sleep Talk",
@@ -164503,9 +164680,9 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Heal Order",
+      "Cosmic Power",
       "Luster Purge",
-      "Sleep Powder",
+      "Recover",
       "Tail Glow"
     ],
     "tmMoves": [
@@ -164553,9 +164730,9 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Heal Order",
+      "Cosmic Power",
       "Luster Purge",
-      "Sleep Powder",
+      "Recover",
       "Tail Glow"
     ],
     "tmMoves": [
@@ -164690,9 +164867,9 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Heal Order",
+      "Cosmic Power",
       "Luster Purge",
-      "Sleep Powder",
+      "Recover",
       "Tail Glow"
     ],
     "tmMoves": [
@@ -164826,9 +165003,9 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Heal Order",
+      "Cosmic Power",
       "Luster Purge",
-      "Sleep Powder",
+      "Recover",
       "Tail Glow"
     ],
     "tmMoves": [
@@ -165215,7 +165392,7 @@ const POKEDEX = [
       "Regenerator",
       "Effect Spore"
     ],
-    "passive": "Grassy Surge",
+    "passive": "Seed Sower",
     "baseStats": {
       "bst": "460",
       "hp": "60",
@@ -165506,6 +165683,7 @@ const POKEDEX = [
       "Agility",
       "Attract",
       "Baton Pass",
+      "Body Press",
       "Body Slam",
       "Bounce",
       "Counter",
@@ -165614,6 +165792,7 @@ const POKEDEX = [
       "Gastro Acid",
       "Hidden Power",
       "Hydro Pump",
+      "Ice Fang",
       "Mud Shot",
       "Payback",
       "Poison Jab",
@@ -165746,6 +165925,7 @@ const POKEDEX = [
       "Hydro Pump",
       "Hyper Beam",
       "Ice Beam",
+      "Ice Fang",
       "Ice Spinner",
       "Iron Defense",
       "Iron Tail",
@@ -165894,6 +166074,7 @@ const POKEDEX = [
       "Hydro Pump",
       "Hyper Beam",
       "Ice Beam",
+      "Ice Fang",
       "Ice Spinner",
       "Iron Defense",
       "Iron Tail",
@@ -166032,6 +166213,7 @@ const POKEDEX = [
       "Swift",
       "Tera Blast",
       "Thunder",
+      "Thunder Fang",
       "Thunder Wave",
       "Thunderbolt",
       "Uproar",
@@ -166149,6 +166331,7 @@ const POKEDEX = [
       "Swift",
       "Tera Blast",
       "Thunder",
+      "Thunder Fang",
       "Thunder Wave",
       "Thunderbolt",
       "Uproar",
@@ -166699,10 +166882,10 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Combat Torque",
       "Core Enforcer",
       "Matcha Gotcha",
-      "Sappy Seed"
+      "Sappy Seed",
+      "Temper Flare"
     ],
     "tmMoves": [
       "Attract",
@@ -166809,10 +166992,10 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Combat Torque",
       "Core Enforcer",
       "Matcha Gotcha",
-      "Sappy Seed"
+      "Sappy Seed",
+      "Temper Flare"
     ],
     "tmMoves": [
       "Aerial Ace",
@@ -166950,10 +167133,10 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Combat Torque",
       "Core Enforcer",
       "Matcha Gotcha",
-      "Sappy Seed"
+      "Sappy Seed",
+      "Temper Flare"
     ],
     "tmMoves": [
       "Aerial Ace",
@@ -167093,10 +167276,10 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Combat Torque",
       "Core Enforcer",
       "Matcha Gotcha",
-      "Sappy Seed"
+      "Sappy Seed",
+      "Temper Flare"
     ],
     "tmMoves": [
       "Amnesia",
@@ -167242,10 +167425,10 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Combat Torque",
       "Core Enforcer",
       "Matcha Gotcha",
-      "Sappy Seed"
+      "Sappy Seed",
+      "Temper Flare"
     ],
     "tmMoves": [
       "Amnesia",
@@ -167686,7 +167869,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Belch",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Peck",
@@ -167784,6 +167967,7 @@ const POKEDEX = [
       "Steel Wing",
       "Substitute",
       "Superpower",
+      "Surf",
       "Tailwind",
       "Take Down",
       "Tera Blast",
@@ -167817,7 +168001,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Belch",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Peck",
@@ -167915,6 +168099,7 @@ const POKEDEX = [
       "Steel Wing",
       "Substitute",
       "Superpower",
+      "Surf",
       "Tailwind",
       "Take Down",
       "Tera Blast",
@@ -167948,7 +168133,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Belch",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Peck",
@@ -168046,6 +168231,7 @@ const POKEDEX = [
       "Steel Wing",
       "Substitute",
       "Superpower",
+      "Surf",
       "Tailwind",
       "Take Down",
       "Tera Blast",
@@ -171230,6 +171416,7 @@ const POKEDEX = [
       "Dig",
       "Double Team",
       "Endure",
+      "Facade",
       "Fake Tears",
       "Fire Punch",
       "Fling",
@@ -173779,8 +173966,8 @@ const POKEDEX = [
     "eggMoves": [
       "Earth Power",
       "Frost Breath",
-      "Heal Order",
-      "Spore"
+      "Roost",
+      "Sleep Powder"
     ],
     "tmMoves": [
       "Attract",
@@ -173903,8 +174090,8 @@ const POKEDEX = [
     "eggMoves": [
       "Earth Power",
       "Frost Breath",
-      "Heal Order",
-      "Spore"
+      "Roost",
+      "Sleep Powder"
     ],
     "tmMoves": [
       "Acrobatics",
@@ -174409,6 +174596,7 @@ const POKEDEX = [
       "Draining Kiss",
       "Endure",
       "Energy Ball",
+      "Expanding Force",
       "Facade",
       "Future Sight",
       "Gravity",
@@ -174535,6 +174723,7 @@ const POKEDEX = [
       "Draining Kiss",
       "Endure",
       "Energy Ball",
+      "Expanding Force",
       "Facade",
       "Future Sight",
       "Gravity",
@@ -174943,9 +175132,9 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Combat Torque",
       "Curse",
       "Gigaton Hammer",
+      "Hammer Arm",
       "Liquidation"
     ],
     "tmMoves": [
@@ -174954,6 +175143,7 @@ const POKEDEX = [
       "Body Slam",
       "Brick Break",
       "Brutal Swing",
+      "Curse",
       "Double Edge",
       "Double Team",
       "Earth Power",
@@ -175072,9 +175262,9 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Combat Torque",
       "Curse",
       "Gigaton Hammer",
+      "Hammer Arm",
       "Liquidation"
     ],
     "tmMoves": [
@@ -175083,6 +175273,7 @@ const POKEDEX = [
       "Body Slam",
       "Brick Break",
       "Brutal Swing",
+      "Curse",
       "Double Edge",
       "Double Team",
       "Earth Power",
@@ -175211,9 +175402,9 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Combat Torque",
       "Curse",
       "Gigaton Hammer",
+      "Hammer Arm",
       "Liquidation"
     ],
     "tmMoves": [
@@ -175222,6 +175413,7 @@ const POKEDEX = [
       "Body Slam",
       "Brick Break",
       "Brutal Swing",
+      "Curse",
       "Double Edge",
       "Double Team",
       "Earth Power",
@@ -175548,7 +175740,7 @@ const POKEDEX = [
       "Strong Jaw",
       "Sand Rush"
     ],
-    "passive": "Thermal Exchange",
+    "passive": "Mold Breaker",
     "baseStats": {
       "bst": "505",
       "hp": "90",
@@ -175758,6 +175950,7 @@ const POKEDEX = [
       "Hydro Pump",
       "Hyper Beam",
       "Ice Beam",
+      "Ice Fang",
       "Icicle Spear",
       "Iron Defense",
       "Iron Head",
@@ -175867,6 +176060,7 @@ const POKEDEX = [
     ],
     "tmMoves": [
       "Attract",
+      "Body Press",
       "Body Slam",
       "Brick Break",
       "Dark Pulse",
@@ -175994,6 +176188,7 @@ const POKEDEX = [
     ],
     "tmMoves": [
       "Attract",
+      "Body Press",
       "Body Slam",
       "Brick Break",
       "Dark Pulse",
@@ -176280,11 +176475,11 @@ const POKEDEX = [
     },
     "levelUpMoves": [
       {
-        "name": "Dragon Pulse",
-        "level": -1
+        "name": "Dragon Darts",
+        "level": 0
       },
       {
-        "name": "Dragon Darts",
+        "name": "Dragon Pulse",
         "level": 0
       },
       {
@@ -176780,6 +176975,7 @@ const POKEDEX = [
     ],
     "tmMoves": [
       "Agility",
+      "Body Press",
       "Body Slam",
       "Brick Break",
       "Coaching",
@@ -176923,6 +177119,7 @@ const POKEDEX = [
     ],
     "tmMoves": [
       "Agility",
+      "Body Press",
       "Body Slam",
       "Brick Break",
       "Coaching",
@@ -177042,7 +177239,7 @@ const POKEDEX = [
         "level": 48
       },
       {
-        "name": "Eternabeam",
+        "name": "Dynamax Cannon",
         "level": 56
       },
       {
@@ -177481,6 +177678,7 @@ const POKEDEX = [
       "Dig",
       "Double Edge",
       "Double Team",
+      "Drain Punch",
       "Facade",
       "False Swipe",
       "Fire Punch",
@@ -177641,6 +177839,7 @@ const POKEDEX = [
       "Dive",
       "Double Edge",
       "Double Team",
+      "Drain Punch",
       "Facade",
       "False Swipe",
       "Fire Punch",
@@ -177799,6 +177998,7 @@ const POKEDEX = [
       "Dig",
       "Double Edge",
       "Double Team",
+      "Drain Punch",
       "Facade",
       "False Swipe",
       "Fire Punch",
@@ -177951,6 +178151,7 @@ const POKEDEX = [
       "Dig",
       "Double Edge",
       "Double Team",
+      "Drain Punch",
       "Facade",
       "False Swipe",
       "Fire Punch",
@@ -178649,7 +178850,7 @@ const POKEDEX = [
     "eggMoves": [
       "Glacial Lance",
       "High Horsepower",
-      "Slack Off",
+      "Recover",
       "Speed Swap"
     ],
     "tmMoves": [
@@ -178668,6 +178869,7 @@ const POKEDEX = [
       "Hail",
       "Heavy Slam",
       "Hidden Power",
+      "High Horsepower",
       "Hyper Beam",
       "Ice Beam",
       "Icicle Spear",
@@ -179941,7 +180143,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Final Gambit",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Phantom Force",
@@ -180091,7 +180293,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Final Gambit",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Phantom Force",
@@ -181058,14 +181260,14 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Double Team",
-        "level": -1
-      },
-      {
-        "name": "Trick",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Flower Trick",
+        "level": 0
+      },
+      {
+        "name": "Trick",
         "level": 0
       },
       {
@@ -181198,7 +181400,8 @@ const POKEDEX = [
       "Thunder Punch",
       "Toxic Spikes",
       "Trailblaze",
-      "Trick Room"
+      "Trick Room",
+      "Triple Axel"
     ]
   },
   {
@@ -181461,14 +181664,14 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Sing",
-        "level": -1
-      },
-      {
-        "name": "Yawn",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Torch Song",
+        "level": 0
+      },
+      {
+        "name": "Yawn",
         "level": 0
       },
       {
@@ -181547,6 +181750,7 @@ const POKEDEX = [
       "Slack Off"
     ],
     "tmMoves": [
+      "Alluring Voice",
       "Attract",
       "Blast Burn",
       "Body Slam",
@@ -181822,6 +182026,7 @@ const POKEDEX = [
       "Swift",
       "Take Down",
       "Tera Blast",
+      "Triple Axel",
       "Water Pledge",
       "Whirlpool"
     ]
@@ -181848,11 +182053,11 @@ const POKEDEX = [
     },
     "levelUpMoves": [
       {
-        "name": "Counter",
-        "level": -1
+        "name": "Aqua Step",
+        "level": 0
       },
       {
-        "name": "Aqua Step",
+        "name": "Counter",
         "level": 0
       },
       {
@@ -181981,6 +182186,7 @@ const POKEDEX = [
       "Take Down",
       "Taunt",
       "Tera Blast",
+      "Triple Axel",
       "U Turn",
       "Upper Hand",
       "Water Pledge",
@@ -182456,6 +182662,7 @@ const POKEDEX = [
       "Grass Knot",
       "Hidden Power",
       "Knock Off",
+      "Leech Life",
       "Lunge",
       "Poison Jab",
       "Pounce",
@@ -182583,6 +182790,7 @@ const POKEDEX = [
       "Grass Knot",
       "Hidden Power",
       "Knock Off",
+      "Leech Life",
       "Low Kick",
       "Lunge",
       "Pain Split",
@@ -182835,6 +183043,7 @@ const POKEDEX = [
       "Fling",
       "Giga Impact",
       "Hidden Power",
+      "Knock Off",
       "Lash Out",
       "Leech Life",
       "Low Sweep",
@@ -183379,6 +183588,7 @@ const POKEDEX = [
     "tmMoves": [
       "Aerial Ace",
       "Agility",
+      "Baton Pass",
       "Crunch",
       "Dig",
       "Double Edge",
@@ -184016,6 +184226,7 @@ const POKEDEX = [
       "Bullet Seed",
       "Charm",
       "Double Team",
+      "Earth Power",
       "Endure",
       "Facade",
       "Giga Drain",
@@ -184124,6 +184335,7 @@ const POKEDEX = [
       "Bullet Seed",
       "Charm",
       "Double Team",
+      "Earth Power",
       "Endure",
       "Facade",
       "Giga Drain",
@@ -184250,6 +184462,7 @@ const POKEDEX = [
       "Charm",
       "Dazzling Gleam",
       "Double Team",
+      "Earth Power",
       "Encore",
       "Endure",
       "Facade",
@@ -185063,11 +185276,11 @@ const POKEDEX = [
     },
     "levelUpMoves": [
       {
-        "name": "Iron Defense",
-        "level": -1
+        "name": "Hammer Arm",
+        "level": 0
       },
       {
-        "name": "Hammer Arm",
+        "name": "Iron Defense",
         "level": 0
       },
       {
@@ -185460,22 +185673,22 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Night Slash",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Quick Guard",
-        "level": -1
-      },
-      {
-        "name": "Shadow Sneak",
-        "level": -1
-      },
-      {
-        "name": "Solar Blade",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Shadow Claw",
+        "level": 0
+      },
+      {
+        "name": "Shadow Sneak",
+        "level": 0
+      },
+      {
+        "name": "Solar Blade",
         "level": 0
       },
       {
@@ -186176,6 +186389,7 @@ const POKEDEX = [
       "Lash Out",
       "Play Rough",
       "Protect",
+      "Psychic Fangs",
       "Rain Dance",
       "Rest",
       "Retaliate",
@@ -186312,6 +186526,7 @@ const POKEDEX = [
       "Pain Split",
       "Play Rough",
       "Protect",
+      "Psychic Fangs",
       "Rain Dance",
       "Rest",
       "Return",
@@ -186455,6 +186670,7 @@ const POKEDEX = [
       "Take Down",
       "Tera Blast",
       "Thief",
+      "Toxic",
       "Trailblaze",
       "Venoshock"
     ]
@@ -186596,6 +186812,7 @@ const POKEDEX = [
       "Tera Blast",
       "Thief",
       "Throat Chop",
+      "Toxic",
       "Trailblaze",
       "Venoshock",
       "X Scissor"
@@ -187333,9 +187550,9 @@ const POKEDEX = [
     ],
     "eggMoves": [
       "Apple Acid",
+      "Fire Lash",
       "Frost Breath",
-      "Strength Sap",
-      "Torch Song"
+      "Strength Sap"
     ],
     "tmMoves": [
       "Attract",
@@ -187461,9 +187678,9 @@ const POKEDEX = [
     ],
     "eggMoves": [
       "Apple Acid",
+      "Fire Lash",
       "Frost Breath",
-      "Strength Sap",
-      "Torch Song"
+      "Strength Sap"
     ],
     "tmMoves": [
       "Attract",
@@ -187623,14 +187840,14 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Psych Up",
-        "level": -1
-      },
-      {
-        "name": "Safeguard",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Revival Blessing",
+        "level": 0
+      },
+      {
+        "name": "Safeguard",
         "level": 0
       },
       {
@@ -187860,6 +188077,7 @@ const POKEDEX = [
       "Reflect",
       "Rest",
       "Return",
+      "Roost",
       "Sandstorm",
       "Secret Power",
       "Seed Bomb",
@@ -188005,6 +188223,7 @@ const POKEDEX = [
       "Reflect",
       "Rest",
       "Return",
+      "Roost",
       "Sandstorm",
       "Secret Power",
       "Seed Bomb",
@@ -188113,9 +188332,9 @@ const POKEDEX = [
     ],
     "eggMoves": [
       "Ivy Cudgel",
-      "Magical Torque",
-      "Pyro Ball",
-      "Shift Gear"
+      "Nuzzle",
+      "Obstruct",
+      "Pyro Ball"
     ],
     "tmMoves": [
       "Attract",
@@ -188242,9 +188461,9 @@ const POKEDEX = [
     ],
     "eggMoves": [
       "Ivy Cudgel",
-      "Magical Torque",
-      "Pyro Ball",
-      "Shift Gear"
+      "Nuzzle",
+      "Obstruct",
+      "Pyro Ball"
     ],
     "tmMoves": [
       "Attract",
@@ -188375,9 +188594,9 @@ const POKEDEX = [
     ],
     "eggMoves": [
       "Ivy Cudgel",
-      "Magical Torque",
-      "Pyro Ball",
-      "Shift Gear"
+      "Nuzzle",
+      "Obstruct",
+      "Pyro Ball"
     ],
     "tmMoves": [
       "Attract",
@@ -189011,6 +189230,7 @@ const POKEDEX = [
       "Counter",
       "Disarming Voice",
       "Double Team",
+      "Drain Punch",
       "Draining Kiss",
       "Endeavor",
       "Endure",
@@ -189159,6 +189379,7 @@ const POKEDEX = [
       "Counter",
       "Disarming Voice",
       "Double Team",
+      "Drain Punch",
       "Draining Kiss",
       "Endeavor",
       "Endure",
@@ -190401,6 +190622,7 @@ const POKEDEX = [
     ],
     "tmMoves": [
       "Attract",
+      "Body Press",
       "Body Slam",
       "Curse",
       "Double Edge",
@@ -191031,10 +191253,10 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
+      "Aqua Step",
       "Floaty Fall",
       "Thunderous Kick",
-      "Triple Axel",
-      "Victory Dance"
+      "Triple Axel"
     ],
     "tmMoves": [
       "Acrobatics",
@@ -191184,6 +191406,7 @@ const POKEDEX = [
       "Heavy Slam",
       "Helping Hand",
       "Hidden Power",
+      "High Horsepower",
       "Hyper Beam",
       "Hyper Voice",
       "Ice Beam",
@@ -191312,6 +191535,7 @@ const POKEDEX = [
       "Heavy Slam",
       "Helping Hand",
       "Hidden Power",
+      "High Horsepower",
       "Hyper Beam",
       "Hyper Voice",
       "Ice Beam",
@@ -192029,6 +192253,7 @@ const POKEDEX = [
       "Dig",
       "Double Edge",
       "Double Team",
+      "Drain Punch",
       "Earthquake",
       "Encore",
       "Endeavor",
@@ -193082,7 +193307,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Sunny Day",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Disable",
@@ -193247,7 +193472,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Sunny Day",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Absorb",
@@ -193380,7 +193605,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Sunny Day",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Astonish",
@@ -193514,7 +193739,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Sunny Day",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Bug Bite",
@@ -193659,7 +193884,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Sunny Day",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Electric Terrain",
@@ -193935,7 +194160,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Electric Terrain",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Present",
@@ -194060,7 +194285,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Electric Terrain",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Arm Thrust",
@@ -194144,6 +194369,7 @@ const POKEDEX = [
       "Bulldoze",
       "Double Edge",
       "Double Team",
+      "Drain Punch",
       "Earthquake",
       "Endure",
       "Facade",
@@ -194203,7 +194429,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Electric Terrain",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Air Cutter",
@@ -194344,7 +194570,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Electric Terrain",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Acid Spray",
@@ -194484,7 +194710,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Electric Terrain",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Fire Fang",
@@ -194557,9 +194783,9 @@ const POKEDEX = [
     ],
     "eggMoves": [
       "Diamond Storm",
+      "Icicle Crash",
       "Plasma Fists",
-      "Shift Gear",
-      "Shore Up"
+      "Shift Gear"
     ],
     "tmMoves": [
       "Blizzard",
@@ -194959,6 +195185,7 @@ const POKEDEX = [
       "Double Team",
       "Draco Meteor",
       "Dragon Cheer",
+      "Dragon Dance",
       "Dragon Pulse",
       "Earthquake",
       "Endure",
@@ -195595,9 +195822,9 @@ const POKEDEX = [
     ],
     "eggMoves": [
       "Ceaseless Edge",
-      "Precipice Blades",
-      "Sappy Seed",
-      "Shore Up"
+      "Curse",
+      "Horn Leech",
+      "Precipice Blades"
     ],
     "tmMoves": [
       "Body Press",
@@ -195790,19 +196017,19 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Breaking Swipe",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Jaw Lock",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Scale Shot",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Sunny Day",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Bite",
@@ -195955,7 +196182,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Electric Terrain",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Disable",
@@ -196031,9 +196258,9 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Magical Torque",
       "No Retreat",
       "Photon Geyser",
+      "Play Rough",
       "Secret Sword"
     ],
     "tmMoves": [
@@ -196417,11 +196644,11 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Hone Claws",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Sunny Day",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Aqua Jet",
@@ -196554,11 +196781,11 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Electric Terrain",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Quash",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Helping Hand",
@@ -196702,11 +196929,11 @@ const POKEDEX = [
     },
     "levelUpMoves": [
       {
-        "name": "Dragon Cheer",
-        "level": -1
+        "name": "Double Hit",
+        "level": 0
       },
       {
-        "name": "Double Hit",
+        "name": "Dragon Cheer",
         "level": 0
       },
       {
@@ -196771,10 +196998,10 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Combat Torque",
       "Core Enforcer",
       "Matcha Gotcha",
-      "Sappy Seed"
+      "Sappy Seed",
+      "Temper Flare"
     ],
     "tmMoves": [
       "Attract",
@@ -197177,7 +197404,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Giga Drain",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Matcha Gotcha",
@@ -197705,19 +197932,19 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Counter",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Double Kick",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Horn Leech",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Retaliate",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Follow Me",
@@ -197859,19 +198086,19 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Counter",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Double Kick",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Horn Leech",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Retaliate",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Follow Me",
@@ -198013,19 +198240,19 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Counter",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Double Kick",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Horn Leech",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Retaliate",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Follow Me",
@@ -198167,19 +198394,19 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Counter",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Double Kick",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Horn Leech",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Retaliate",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Follow Me",
@@ -198321,19 +198548,19 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Counter",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Double Kick",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Horn Leech",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Retaliate",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Follow Me",
@@ -198475,19 +198702,19 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Counter",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Double Kick",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Horn Leech",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Retaliate",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Follow Me",
@@ -198629,19 +198856,19 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Counter",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Double Kick",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Horn Leech",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Retaliate",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Follow Me",
@@ -198783,19 +199010,19 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Counter",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Double Kick",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Horn Leech",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Retaliate",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Follow Me",
@@ -198938,11 +199165,11 @@ const POKEDEX = [
     },
     "levelUpMoves": [
       {
-        "name": "Laser Focus",
-        "level": -1
+        "name": "Electro Shot",
+        "level": 0
       },
       {
-        "name": "Electro Shot",
+        "name": "Laser Focus",
         "level": 0
       },
       {
@@ -199007,6 +199234,7 @@ const POKEDEX = [
     "tmMoves": [
       "Attract",
       "Aura Sphere",
+      "Body Press",
       "Body Slam",
       "Brick Break",
       "Dark Pulse",
@@ -199079,22 +199307,22 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Double Hit",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Dragon Cheer",
-        "level": -1
-      },
-      {
-        "name": "Infestation",
-        "level": -1
-      },
-      {
-        "name": "Yawn",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Fickle Beam",
+        "level": 0
+      },
+      {
+        "name": "Infestation",
+        "level": 0
+      },
+      {
+        "name": "Yawn",
         "level": 0
       },
       {
@@ -199163,10 +199391,10 @@ const POKEDEX = [
       }
     ],
     "eggMoves": [
-      "Combat Torque",
       "Core Enforcer",
       "Matcha Gotcha",
-      "Sappy Seed"
+      "Sappy Seed",
+      "Temper Flare"
     ],
     "tmMoves": [
       "Attract",
@@ -199234,15 +199462,15 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Ancient Power",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Double Kick",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Noble Roar",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Incinerate",
@@ -199328,6 +199556,7 @@ const POKEDEX = [
       "Double Team",
       "Draco Meteor",
       "Dragon Cheer",
+      "Dragon Dance",
       "Dragon Pulse",
       "Earthquake",
       "Endure",
@@ -199387,7 +199616,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Ancient Power",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Shock Wave",
@@ -200188,15 +200417,15 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Defense Curl",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Mean Look",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Rollout",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Astonish",
@@ -200938,66 +201167,66 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Blizzard",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Defense Curl",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Fury Cutter",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Fury Swipes",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Gyro Ball",
-        "level": -1
-      },
-      {
-        "name": "Iron Defense",
-        "level": -1
-      },
-      {
-        "name": "Iron Head",
-        "level": -1
-      },
-      {
-        "name": "Metal Burst",
-        "level": -1
-      },
-      {
-        "name": "Mist",
-        "level": -1
-      },
-      {
-        "name": "Powder Snow",
-        "level": -1
-      },
-      {
-        "name": "Rapid Spin",
-        "level": -1
-      },
-      {
-        "name": "Rollout",
-        "level": -1
-      },
-      {
-        "name": "Scratch",
-        "level": -1
-      },
-      {
-        "name": "Snowscape",
-        "level": -1
-      },
-      {
-        "name": "Swift",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Icicle Spear",
+        "level": 0
+      },
+      {
+        "name": "Iron Defense",
+        "level": 0
+      },
+      {
+        "name": "Iron Head",
+        "level": 0
+      },
+      {
+        "name": "Metal Burst",
+        "level": 0
+      },
+      {
+        "name": "Mist",
+        "level": 0
+      },
+      {
+        "name": "Powder Snow",
+        "level": 0
+      },
+      {
+        "name": "Rapid Spin",
+        "level": 0
+      },
+      {
+        "name": "Rollout",
+        "level": 0
+      },
+      {
+        "name": "Scratch",
+        "level": 0
+      },
+      {
+        "name": "Snowscape",
+        "level": 0
+      },
+      {
+        "name": "Swift",
         "level": 0
       },
       {
@@ -201273,54 +201502,54 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Aurora Beam",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Aurora Veil",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Confuse Ray",
-        "level": -1
-      },
-      {
-        "name": "Disable",
-        "level": -1
-      },
-      {
-        "name": "Extrasensory",
-        "level": -1
-      },
-      {
-        "name": "Freeze Dry",
-        "level": -1
-      },
-      {
-        "name": "Ice Beam",
-        "level": -1
-      },
-      {
-        "name": "Ice Shard",
-        "level": -1
-      },
-      {
-        "name": "Mist",
-        "level": -1
-      },
-      {
-        "name": "Nasty Plot",
-        "level": -1
-      },
-      {
-        "name": "Powder Snow",
-        "level": -1
-      },
-      {
-        "name": "Spite",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Dazzling Gleam",
+        "level": 0
+      },
+      {
+        "name": "Disable",
+        "level": 0
+      },
+      {
+        "name": "Extrasensory",
+        "level": 0
+      },
+      {
+        "name": "Freeze Dry",
+        "level": 0
+      },
+      {
+        "name": "Ice Beam",
+        "level": 0
+      },
+      {
+        "name": "Ice Shard",
+        "level": 0
+      },
+      {
+        "name": "Mist",
+        "level": 0
+      },
+      {
+        "name": "Nasty Plot",
+        "level": 0
+      },
+      {
+        "name": "Powder Snow",
+        "level": 0
+      },
+      {
+        "name": "Spite",
         "level": 0
       },
       {
@@ -201543,6 +201772,7 @@ const POKEDEX = [
       "Substitute",
       "Sunny Day",
       "Swagger",
+      "Swords Dance",
       "Take Down",
       "Tera Blast",
       "Thief",
@@ -201702,6 +201932,7 @@ const POKEDEX = [
       "Substitute",
       "Sunny Day",
       "Swagger",
+      "Swords Dance",
       "Take Down",
       "Tera Blast",
       "Thief",
@@ -202881,11 +203112,11 @@ const POKEDEX = [
     },
     "levelUpMoves": [
       {
-        "name": "Growth",
-        "level": -1
+        "name": "Dragon Hammer",
+        "level": 0
       },
       {
-        "name": "Dragon Hammer",
+        "name": "Growth",
         "level": 0
       },
       {
@@ -205099,18 +205330,18 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Chilly Reception",
-        "level": -1
-      },
-      {
-        "name": "Future Sight",
-        "level": -1
-      },
-      {
-        "name": "Toxic",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Eerie Spell",
+        "level": 0
+      },
+      {
+        "name": "Future Sight",
+        "level": 0
+      },
+      {
+        "name": "Toxic",
         "level": 0
       },
       {
@@ -205526,6 +205757,7 @@ const POKEDEX = [
       "Dig",
       "Double Team",
       "Endure",
+      "Facade",
       "Fake Tears",
       "Fling",
       "Grass Knot",
@@ -205677,6 +205909,7 @@ const POKEDEX = [
       "Dig",
       "Double Team",
       "Endure",
+      "Facade",
       "Fake Tears",
       "Fling",
       "Giga Impact",
@@ -208090,7 +208323,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Brave Bird",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Esper Wing",
@@ -208636,6 +208869,7 @@ const POKEDEX = [
     "tmMoves": [
       "Attract",
       "Aurora Veil",
+      "Body Press",
       "Body Slam",
       "Bulldoze",
       "Chilling Water",
@@ -208699,7 +208933,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Nasty Plot",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Triple Arrows",
@@ -208772,7 +209006,7 @@ const POKEDEX = [
     ],
     "eggMoves": [
       "First Impression",
-      "Shadow Bone",
+      "Stone Edge",
       "Thousand Arrows",
       "Victory Dance"
     ],
@@ -209401,7 +209635,7 @@ const POKEDEX = [
     "levelUpMoves": [
       {
         "name": "Moonlight",
-        "level": -1
+        "level": 0
       },
       {
         "name": "Headlong Rush",
