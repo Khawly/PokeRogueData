@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "PokeRogueData",
-  "version": "1.11.7",
+  "version": "1.11.18",
   "description": "Displays enemy Pokémon data: base stats, possible abilities, and possible movesets.",
 
   "permissions": [
